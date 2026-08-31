@@ -1,0 +1,1128 @@
+/* =========================================================
+   HEADER CONTAINER
+========================================================= */
+
+.headerContainer {
+    width: 100%;
+    position: fixed;
+    top: 18px;
+    left: 0;
+    z-index: 1000;
+    padding: 0 24px;
+    box-sizing: border-box;
+    animation: headerEnter 0.7s ease both;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* =========================================================
+   MAIN HEADER
+========================================================= */
+
+.header {
+    width: 100%;
+    max-width: 1500px;
+    min-height: 76px;
+    margin: 0 auto;
+    padding: 8px 10px 8px 18px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: rgba(255, 255, 255, 0.97);
+    border: 1px solid #d5e7ec;
+    border-radius: 18px;
+    box-shadow:
+        0 12px 35px rgba(8, 126, 164, 0.10),
+        0 3px 10px rgba(129, 11, 56, 0.04);
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    transition:
+        box-shadow 0.3s ease,
+        border-color 0.3s ease,
+        max-height 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.header:hover {
+    border-color: #b9d8e0;
+
+    box-shadow:
+        0 17px 42px rgba(8, 126, 164, 0.14),
+        0 5px 15px rgba(129, 11, 56, 0.06);
+}
+
+
+/* =========================================================
+   TOP ACCENT LINE
+========================================================= */
+
+.header::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background:
+        linear-gradient(90deg,
+            #087ea4,
+            #0a91b7,
+            #810b38);
+
+    opacity: 0.9;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.brand {
+    min-width: 215px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    flex-shrink: 0;
+
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   BRAND ICON
+========================================================= */
+
+.brandIcon {
+    width: 47px;
+    height: 47px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(145deg,
+            #087ea4,
+            #0a91b7);
+
+    color: #ffffff;
+
+    font-size: 21px;
+
+    box-shadow:
+        0 7px 18px rgba(8, 126, 164, 0.22);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.brand:hover .brandIcon {
+    transform:
+        translateY(-2px) rotate(-2deg);
+
+    box-shadow:
+        0 10px 24px rgba(8, 126, 164, 0.30);
+}
+
+
+/* =========================================================
+   BRAND TEXT
+========================================================= */
+
+.brandText {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 4px;
+
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+
+.brandText strong {
+    color: #087ea4;
+
+    font-size: 17px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.3px;
+}
+
+
+.brandText span {
+    color: #738791;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.navigation {
+    flex: 1;
+
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 4px;
+}
+
+
+/* =========================================================
+   NAV ITEM
+========================================================= */
+
+.navItem {
+    min-height: 46px;
+
+    padding: 0 14px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    position: relative;
+
+    border: 1px solid transparent;
+
+    border-radius: 11px;
+
+    background: transparent;
+
+    color: #637984;
+
+    text-decoration: none;
+
+    font-family: "Segoe UI", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    transition:
+        color 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.navItem i {
+    font-size: 16px;
+
+    transition:
+        transform 0.25s ease;
+}
+
+
+/* =========================================================
+   NAV HOVER
+========================================================= */
+
+.navItem:hover {
+    color: #087ea4;
+
+    background: #eef8fa;
+
+    border-color: #d4e9ee;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 14px rgba(8, 126, 164, 0.07);
+}
+
+
+.navItem:hover i {
+    transform:
+        translateY(-1px) scale(1.08);
+}
+
+
+/* =========================================================
+   ACTIVE NAV
+========================================================= */
+
+.navItem.active {
+    color: #ffffff;
+
+    background:
+        linear-gradient(135deg,
+            #087ea4,
+            #0a91b7);
+
+    border-color: #087ea4;
+
+    box-shadow:
+        0 7px 17px rgba(8, 126, 164, 0.20);
+
+    transform: translateY(-1px);
+}
+
+
+.navItem.active i {
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   ACTIVE INDICATOR
+========================================================= */
+
+.navItem.active::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 4px;
+
+    left: 50%;
+
+    width: 18px;
+    height: 2px;
+
+    transform: translateX(-50%);
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.85);
+}
+
+
+/* =========================================================
+   LOGOUT BUTTON
+========================================================= */
+
+.logoutButton {
+    min-height: 46px;
+
+    padding: 0 15px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    flex-shrink: 0;
+
+    border: 1px solid #c9dfe6;
+
+    border-radius: 11px;
+
+    background: #ffffff;
+
+    color: #087ea4;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 750;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.logoutButton i {
+    font-size: 16px;
+}
+
+
+.logoutButton:hover {
+    color: #ffffff;
+
+    background:
+        linear-gradient(135deg,
+            #810b38,
+            #9a1648);
+
+    border-color: #810b38;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 7px 17px rgba(129, 11, 56, 0.18);
+}
+
+
+/* =========================================================
+   MENU BUTTON
+========================================================= */
+
+.menuButton {
+    width: 45px;
+    height: 45px;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border: 1px solid #c9dfe6;
+
+    border-radius: 11px;
+
+    background: #f3fafb;
+
+    color: #087ea4;
+
+    font-size: 21px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.3s ease,
+        border-color 0.25s ease;
+}
+
+
+.menuButton:hover {
+    color: #ffffff;
+
+    background: #087ea4;
+
+    border-color: #087ea4;
+
+    transform: translateY(-1px);
+}
+
+
+.menuButtonOpen {
+    color: #ffffff;
+
+    background: #087ea4;
+
+    border-color: #087ea4;
+
+    transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1400px) {
+
+    .headerContainer {
+        top: 24px;
+
+        padding: 0 32px;
+    }
+
+
+    .header {
+        min-height: 82px;
+
+        padding:
+            9px 12px 9px 22px;
+
+        gap: 24px;
+
+        border-radius: 20px;
+    }
+
+
+    .brand {
+        min-width: 230px;
+    }
+
+
+    .brandIcon {
+        width: 51px;
+        height: 51px;
+
+        font-size: 23px;
+    }
+
+
+    .brandText strong {
+        font-size: 19px;
+    }
+
+
+    .brandText span {
+        font-size: 9px;
+    }
+
+
+    .navItem {
+        min-height: 50px;
+
+        padding: 0 17px;
+
+        font-size: 13px;
+    }
+
+
+    .navItem i {
+        font-size: 17px;
+    }
+
+
+    .logoutButton {
+        min-height: 50px;
+
+        padding: 0 18px;
+
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .header {
+        gap: 10px;
+
+        padding-left: 13px;
+    }
+
+
+    .brand {
+        min-width: 175px;
+    }
+
+
+    .brandText strong {
+        font-size: 16px;
+    }
+
+
+    .navItem {
+        padding: 0 9px;
+
+        font-size: 11px;
+
+        gap: 6px;
+    }
+
+
+    .navItem i {
+        font-size: 14px;
+    }
+
+
+    .logoutButton {
+        padding: 0 11px;
+
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 980px) {
+
+    .headerContainer {
+        top: 15px;
+
+        padding: 0 16px;
+    }
+
+
+    .header {
+        min-height: 69px;
+
+        padding: 7px 9px 7px 12px;
+
+        gap: 9px;
+
+        border-radius: 16px;
+    }
+
+
+    .brand {
+        min-width: 150px;
+
+        gap: 8px;
+    }
+
+
+    .brandIcon {
+        width: 42px;
+        height: 42px;
+
+        border-radius: 10px;
+
+        font-size: 19px;
+    }
+
+
+    .brandText strong {
+        font-size: 15px;
+    }
+
+
+    .brandText span {
+        font-size: 7px;
+    }
+
+
+    .navigation {
+        gap: 2px;
+    }
+
+
+    .navItem {
+        min-height: 42px;
+
+        padding: 0 7px;
+
+        font-size: 10px;
+
+        gap: 5px;
+    }
+
+
+    .navItem i {
+        font-size: 13px;
+    }
+
+
+    .logoutButton {
+        min-height: 42px;
+
+        padding: 0 9px;
+
+        font-size: 10px;
+    }
+
+
+    .logoutButton i {
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+
+    .headerContainer {
+        top: 9px;
+
+        padding: 0 10px;
+    }
+
+
+    /* =====================================================
+       CLOSED HEADER
+    ===================================================== */
+
+    .header {
+        min-height: 53px;
+
+        max-height: 53px;
+
+        padding: 7px;
+
+        display: grid;
+
+        grid-template-columns: 1fr auto;
+
+        grid-template-areas:
+            "brand menu"
+            "navigation navigation"
+            "logout logout";
+
+        gap: 0;
+
+        border-radius: 14px;
+
+        overflow: hidden;
+
+        transition:
+            max-height 0.65s cubic-bezier(0.4, 0, 0.2, 1),
+            box-shadow 0.3s ease;
+    }
+
+
+    /* =====================================================
+       OPEN HEADER
+    ===================================================== */
+
+    .headerOpen {
+        max-height: 500px;
+
+        box-shadow:
+            0 18px 45px rgba(8, 126, 164, 0.16),
+            0 6px 18px rgba(129, 11, 56, 0.07);
+    }
+
+
+    /* =====================================================
+       BRAND
+    ===================================================== */
+
+    .brand {
+        grid-area: brand;
+
+        min-width: 0;
+
+        gap: 8px;
+    }
+
+
+    .brandIcon {
+        width: 38px;
+        height: 38px;
+
+        border-radius: 9px;
+
+        font-size: 17px;
+    }
+
+
+    .brandText strong {
+        font-size: 14px;
+    }
+
+
+    .brandText span {
+        display: none;
+    }
+
+
+    /* =====================================================
+       MENU
+    ===================================================== */
+
+    .menuButton {
+        grid-area: menu;
+
+        display: flex;
+
+        width: 38px;
+        height: 38px;
+
+        border-radius: 9px;
+
+        font-size: 19px;
+    }
+
+
+    /* =====================================================
+       NAVIGATION
+    ===================================================== */
+
+    .navigation {
+        grid-area: navigation;
+
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 6px;
+
+        max-height: 0;
+
+        padding-top: 0;
+
+        opacity: 0;
+
+        overflow: hidden;
+
+        pointer-events: none;
+
+        transform: translateY(-10px);
+
+        transition:
+            max-height 0.55s ease,
+            opacity 0.3s ease,
+            transform 0.45s ease,
+            padding-top 0.4s ease;
+    }
+
+
+    .navigationOpen {
+        max-height: 360px;
+
+        padding-top: 11px;
+
+        opacity: 1;
+
+        pointer-events: auto;
+
+        transform: translateY(0);
+    }
+
+
+    /* =====================================================
+       MOBILE NAV ITEMS
+    ===================================================== */
+
+    .navItem {
+        width: 100%;
+
+        min-height: 45px;
+
+        padding: 0 13px;
+
+        justify-content: flex-start;
+
+        gap: 11px;
+
+        border-radius: 10px;
+
+        font-size: 12px;
+
+        box-sizing: border-box;
+    }
+
+
+    .navItem i {
+        width: 22px;
+
+        text-align: center;
+
+        font-size: 15px;
+    }
+
+
+    /* =====================================================
+       LOGOUT
+    ===================================================== */
+
+    .logoutButton {
+        grid-area: logout;
+
+        width: 100%;
+
+        min-height: 45px;
+
+        margin-top: 0;
+
+        padding: 0 13px;
+
+        justify-content: flex-start;
+
+        border-radius: 10px;
+
+        font-size: 12px;
+
+        opacity: 0;
+
+        max-height: 0;
+
+        overflow: hidden;
+
+        pointer-events: none;
+
+        transform: translateY(-7px);
+
+        border-color: transparent;
+
+        transition:
+            max-height 0.45s ease,
+            opacity 0.3s ease,
+            margin-top 0.35s ease,
+            transform 0.35s ease,
+            border-color 0.25s ease;
+    }
+
+
+    .navigationOpen~.logoutButton {
+        max-height: 55px;
+
+        margin-top: 7px;
+
+        opacity: 1;
+
+        pointer-events: auto;
+
+        transform: translateY(0);
+
+        border-color: #c9dfe6;
+    }
+
+
+    .logoutButton:hover {
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .headerContainer {
+        top: 7px;
+
+        padding: 0 8px;
+    }
+
+
+    .header {
+        min-height: 50px;
+
+        max-height: 50px;
+
+        padding: 6px;
+
+        border-radius: 13px;
+    }
+
+
+    .headerOpen {
+        max-height: 470px;
+    }
+
+
+    .brand {
+        gap: 7px;
+    }
+
+
+    .brandIcon {
+        width: 35px;
+        height: 35px;
+
+        border-radius: 8px;
+
+        font-size: 16px;
+    }
+
+
+    .brandText strong {
+        font-size: 13px;
+    }
+
+
+    .menuButton {
+        width: 35px;
+        height: 35px;
+
+        border-radius: 8px;
+
+        font-size: 18px;
+    }
+
+
+    .navigationOpen {
+        padding-top: 9px;
+    }
+
+
+    .navItem {
+        min-height: 44px;
+
+        padding: 0 12px;
+
+        font-size: 12px;
+    }
+
+
+    .logoutButton {
+        min-height: 43px;
+
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .headerContainer {
+        top: 6px;
+
+        padding: 0 6px;
+    }
+
+
+    .header {
+        min-height: 47px;
+
+        max-height: 47px;
+
+        padding: 5px;
+
+        border-radius: 12px;
+    }
+
+
+    .headerOpen {
+        max-height: 450px;
+    }
+
+
+    .brandIcon {
+        width: 33px;
+        height: 33px;
+
+        font-size: 15px;
+    }
+
+
+    .brandText strong {
+        font-size: 12px;
+    }
+
+
+    .menuButton {
+        width: 33px;
+        height: 33px;
+
+        font-size: 17px;
+    }
+
+
+    .navItem {
+        min-height: 42px;
+
+        font-size: 11px;
+    }
+
+
+    .logoutButton {
+        min-height: 41px;
+
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================================
+   FOCUS ACCESSIBILITY
+========================================================= */
+
+.navItem:focus-visible,
+.logoutButton:focus-visible,
+.menuButton:focus-visible {
+    outline: 3px solid rgba(8, 126, 164, 0.22);
+
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   REMOVE TEXT SELECTION
+========================================================= */
+
+.header,
+.brand,
+.navItem,
+.logoutButton,
+.menuButton {
+    user-select: none;
+
+    -webkit-user-select: none;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .header,
+    .header::before,
+    .brandIcon,
+    .navItem,
+    .navItem i,
+    .logoutButton,
+    .menuButton,
+    .navigation {
+        animation: none !important;
+
+        transition: none !important;
+    }
+}
+
+
+/* =========================================================
+   HEADER ENTRY ANIMATION
+========================================================= */
+
+@keyframes headerEnter {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(-15px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}

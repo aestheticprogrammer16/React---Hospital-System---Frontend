@@ -1,0 +1,2358 @@
+.b5 {
+    display: none;
+}
+
+/* =========================================================
+   SETTINGS PAGE
+========================================================= */
+
+.settingsPage {
+    width: 100%;
+    min-height: 100vh;
+    padding: 35px;
+    background: #f3f8fa;
+    color: #172033;
+    /* font-family: "Segoe UI", Arial, sans-serif; */
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.pageHeader {
+    width: 100%;
+    max-width: 1550px;
+    margin: 0 auto 30px;
+}
+
+.headerContent {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.headerIcon {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+    background: #087ea4;
+    color: #ffffff;
+
+    font-size: 27px;
+
+    box-shadow:
+        0 10px 25px rgba(8, 126, 164, 0.18);
+
+    animation: headerFloat 4s ease-in-out infinite;
+}
+
+@keyframes headerFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+.headerLabel {
+    display: block;
+    margin-bottom: 5px;
+
+    color: #087ea4;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 1.8px;
+}
+
+.headerContent h1 {
+    margin: 0;
+
+    color: #172f3b;
+
+    font-size: 32px;
+    font-weight: 750;
+
+    letter-spacing: -0.7px;
+}
+
+.headerContent p {
+    margin: 7px 0 0;
+
+    color: #687d88;
+
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   SETTINGS NAVIGATION
+========================================================= */
+
+.settingsNavigation {
+    width: 100%;
+    max-width: 1550px;
+
+    margin: 0 auto 32px;
+    padding: 8px;
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    background: #ffffff;
+
+    border: 1px solid #d6e3e8;
+    border-radius: 13px;
+
+    box-sizing: border-box;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+
+    box-shadow:
+        0 5px 18px rgba(32, 64, 77, 0.04);
+}
+
+.settingsNavigation::-webkit-scrollbar {
+    display: none;
+}
+
+.settingsNavItem {
+    min-height: 48px;
+
+    padding: 0 20px;
+
+    flex-shrink: 0;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: transparent;
+
+    color: #5f737e;
+
+    font-family: inherit;
+
+    font-size: 13px;
+    font-weight: 650;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.settingsNavItem i {
+    font-size: 17px;
+}
+
+.settingsNavItem:hover {
+    background: #eaf6f9;
+    color: #087ea4;
+
+    transform: translateY(-1px);
+}
+
+.settingsNavItem.active {
+    background: #087ea4;
+    color: #ffffff;
+
+    box-shadow:
+        0 7px 18px rgba(8, 126, 164, 0.18);
+}
+
+
+/* =========================================================
+   SETTINGS SECTION
+========================================================= */
+
+.settingsSection {
+    width: 100%;
+    max-width: 1550px;
+
+    margin: 0 auto 42px;
+}
+
+.sectionHeader {
+    margin-bottom: 20px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+.sectionHeader>div:first-child {
+    min-width: 0;
+}
+
+.sectionHeader span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #087ea4;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 1.7px;
+}
+
+.sectionHeader h2 {
+    margin: 0;
+
+    color: #203944;
+
+    font-size: 25px;
+    font-weight: 750;
+
+    letter-spacing: -0.3px;
+}
+
+.sectionHeader p {
+    max-width: 760px;
+
+    margin: 7px 0 0;
+
+    color: #71858f;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.sectionIcon {
+    width: 50px;
+    height: 50px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #dff1f5;
+    color: #087ea4;
+
+    font-size: 21px;
+
+    box-shadow:
+        inset 0 0 0 1px rgba(8, 126, 164, 0.05);
+}
+
+
+/* =========================================================
+   SETTINGS CARD
+========================================================= */
+
+.settingsCard {
+    width: 100%;
+
+    margin-bottom: 19px;
+    padding: 28px;
+
+    background: #ffffff;
+
+    border: 1px solid #d7e3e8;
+    border-radius: 14px;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 5px 20px rgba(28, 61, 74, 0.045);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.settingsCard:hover {
+    border-color: #c7dce3;
+
+    box-shadow:
+        0 10px 30px rgba(28, 61, 74, 0.07);
+}
+
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.cardTitle {
+    margin-bottom: 25px;
+    padding-bottom: 18px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-bottom: 1px solid #e2ebee;
+}
+
+.cardTitle>div {
+    min-width: 0;
+}
+
+.cardTitle h3 {
+    margin: 0;
+
+    color: #29424e;
+
+    font-size: 18px;
+    font-weight: 750;
+}
+
+.cardTitle p {
+    margin: 6px 0 0;
+
+    color: #788b95;
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.cardTitle>i {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #e1f2f6;
+    color: #087ea4;
+
+    font-size: 19px;
+}
+
+
+/* =========================================================
+   FORM GRID
+========================================================= */
+
+.formGrid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 23px 26px;
+}
+
+.formGroup {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.formGroup.fullWidth {
+    grid-column: 1 / -1;
+}
+
+.formGroup label {
+    margin-bottom: 8px;
+
+    color: #415a66;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+    width: 100%;
+
+    min-height: 50px;
+
+    padding: 0 15px;
+
+    border: 1px solid #cedde3;
+    border-radius: 9px;
+
+    outline: none;
+
+    background: #f9fbfc;
+
+    color: #263e49;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    box-sizing: border-box;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.formGroup textarea {
+    min-height: 120px;
+
+    padding: 13px 15px;
+
+    resize: vertical;
+
+    line-height: 1.65;
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+    color: #9aaab2;
+}
+
+.formGroup input:hover,
+.formGroup select:hover,
+.formGroup textarea:hover {
+    border-color: #afcbd5;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+    border-color: #087ea4;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 4px rgba(8, 126, 164, 0.09);
+
+    transform: translateY(-1px);
+}
+
+.formGroup input:read-only {
+    background: #edf3f5;
+
+    color: #778991;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   SELECT
+========================================================= */
+
+.formGroup select {
+    appearance: none;
+    -webkit-appearance: none;
+
+    padding-right: 42px;
+
+    cursor: pointer;
+
+    background-image:
+        linear-gradient(45deg,
+            transparent 50%,
+            #617984 50%),
+        linear-gradient(135deg,
+            #617984 50%,
+            transparent 50%);
+
+    background-position:
+        calc(100% - 19px) 21px,
+        calc(100% - 13px) 21px;
+
+    background-size: 6px 6px;
+
+    background-repeat: no-repeat;
+}
+
+
+/* =========================================================
+   LOGO UPLOAD
+========================================================= */
+
+.logoUploadArea {
+    min-height: 145px;
+
+    padding: 22px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 22px;
+
+    border: 1px dashed #bcd3dc;
+    border-radius: 12px;
+
+    background:
+        linear-gradient(135deg,
+            #f7fbfc,
+            #edf7f9);
+
+    box-sizing: border-box;
+}
+
+.logoPreview {
+    width: 92px;
+    height: 92px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: #087ea4;
+
+    color: #ffffff;
+
+    font-size: 35px;
+
+    box-shadow:
+        0 8px 20px rgba(8, 126, 164, 0.16);
+
+    animation: logoPulse 4s ease-in-out infinite;
+}
+
+@keyframes logoPulse {
+
+    0%,
+    100% {
+        box-shadow:
+            0 8px 20px rgba(8, 126, 164, 0.16);
+    }
+
+    50% {
+        box-shadow:
+            0 11px 28px rgba(8, 126, 164, 0.25);
+    }
+}
+
+.logoUploadInfo {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logoUploadInfo strong {
+    color: #304954;
+
+    font-size: 15px;
+    font-weight: 750;
+}
+
+.logoUploadInfo span {
+    margin-top: 5px;
+
+    color: #7c8e97;
+
+    font-size: 12px;
+}
+
+.logoUploadInfo button {
+    min-height: 40px;
+
+    margin-top: 13px;
+    padding: 0 15px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    border: 1px solid #bcd4dc;
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #526a75;
+
+    font-family: inherit;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.logoUploadInfo button:hover {
+    border-color: #087ea4;
+
+    background: #087ea4;
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+.logoUploadInfo button i {
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   SAVE AREA
+========================================================= */
+
+.saveArea {
+    width: 100%;
+
+    margin-top: 7px;
+    padding: 18px 21px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    border-radius: 11px;
+
+    background: #dff1f5;
+
+    border: 1px solid #c8e4eb;
+
+    box-sizing: border-box;
+}
+
+.saveArea>div {
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+}
+
+.saveArea>div i {
+    flex-shrink: 0;
+
+    color: #087ea4;
+
+    font-size: 18px;
+}
+
+.saveArea>div span {
+    color: #58707b;
+
+    font-size: 12px;
+    line-height: 1.55;
+}
+
+.saveButton {
+    min-height: 47px;
+
+    padding: 0 20px;
+
+    flex-shrink: 0;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    border: 1px solid #087ea4;
+    border-radius: 9px;
+
+    background: #087ea4;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 7px 17px rgba(8, 126, 164, 0.16);
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.saveButton:hover {
+    background: #066c8b;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 23px rgba(8, 126, 164, 0.22);
+}
+
+.saveButton i {
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   USER TOOLBAR
+========================================================= */
+
+.userToolbar {
+    width: 100%;
+
+    margin-bottom: 18px;
+    padding: 17px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    background: #ffffff;
+
+    border: 1px solid #d7e3e8;
+    border-radius: 12px;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 4px 16px rgba(28, 61, 74, 0.035);
+}
+
+.userSearch {
+    min-width: 260px;
+
+    flex: 1;
+
+    height: 47px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 0 14px;
+
+    border: 1px solid #d2e0e5;
+    border-radius: 9px;
+
+    background: #f9fbfc;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.userSearch:focus-within {
+    border-color: #087ea4;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 4px rgba(8, 126, 164, 0.08);
+}
+
+.userSearch i {
+    color: #738993;
+
+    font-size: 17px;
+}
+
+.userSearch input {
+    width: 100%;
+    min-width: 0;
+
+    height: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #304752;
+
+    font-family: inherit;
+
+    font-size: 13px;
+}
+
+.userSearch input::placeholder {
+    color: #9aaab2;
+}
+
+
+/* =========================================================
+   USER FILTERS
+========================================================= */
+
+.userFilters {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+}
+
+.userFilters select {
+    width: 145px;
+    height: 47px;
+
+    padding: 0 35px 0 13px;
+
+    border: 1px solid #d2e0e5;
+    border-radius: 9px;
+
+    outline: none;
+
+    background: #f9fbfc;
+
+    color: #526a75;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+.userFilters select:focus {
+    border-color: #087ea4;
+
+    box-shadow:
+        0 0 0 3px rgba(8, 126, 164, 0.07);
+}
+
+
+/* =========================================================
+   ADD USER BUTTON
+========================================================= */
+
+.addUserButton {
+    height: 47px;
+
+    padding: 0 17px;
+
+    flex-shrink: 0;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    border: 1px solid #087ea4;
+    border-radius: 9px;
+
+    background: #087ea4;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 16px rgba(8, 126, 164, 0.15);
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.addUserButton:hover {
+    background: #066c8b;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 9px 20px rgba(8, 126, 164, 0.22);
+}
+
+.addUserButton i {
+    font-size: 16px;
+}
+
+/* =========================================================
+   USERS TABLE
+========================================================= */
+
+.usersTableCard {
+    width: 100%;
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #d5e2e7;
+    border-radius: 14px;
+
+    box-shadow:
+        0 6px 22px rgba(28, 61, 74, 0.05);
+}
+
+.tableHeader {
+    min-height: 78px;
+
+    padding: 18px 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-bottom: 1px solid #e1eaed;
+
+    box-sizing: border-box;
+}
+
+.tableHeader h3 {
+    margin: 0;
+
+    color: #29424e;
+
+    font-size: 17px;
+    font-weight: 750;
+}
+
+.tableHeader p {
+    margin: 5px 0 0;
+
+    color: #7a8d96;
+
+    font-size: 12px;
+}
+
+.userCount {
+    min-height: 32px;
+
+    padding: 0 12px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background: #dff1f5;
+    color: #087ea4;
+
+    font-size: 11px;
+    font-weight: 750;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   TABLE WRAPPER
+========================================================= */
+
+.tableWrapper {
+    width: 100%;
+
+    overflow-x: auto;
+
+    scrollbar-width: thin;
+    scrollbar-color: #b9cdd5 transparent;
+}
+
+.tableWrapper::-webkit-scrollbar {
+    height: 7px;
+}
+
+.tableWrapper::-webkit-scrollbar-track {
+    background: #f4f8f9;
+}
+
+.tableWrapper::-webkit-scrollbar-thumb {
+    background: #b9cdd5;
+    border-radius: 20px;
+}
+
+.tableWrapper table {
+    width: 100%;
+
+    min-width: 900px;
+
+    border-collapse: collapse;
+}
+
+
+/* =========================================================
+   TABLE HEADER CELLS
+========================================================= */
+
+.tableWrapper th {
+    height: 51px;
+
+    padding: 0 20px;
+
+    text-align: left;
+
+    background: #f1f7f9;
+
+    color: #607782;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 0.7px;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   TABLE CELLS
+========================================================= */
+
+.tableWrapper td {
+    min-height: 70px;
+
+    padding: 14px 20px;
+
+    border-top: 1px solid #e7eef1;
+
+    color: #536b76;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+}
+
+.tableWrapper tbody tr {
+    transition:
+        background 0.2s ease;
+}
+
+.tableWrapper tbody tr:hover {
+    background: #f7fbfc;
+}
+
+
+/* =========================================================
+   USER CELL
+========================================================= */
+
+.userCell {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.userAvatar {
+    width: 43px;
+    height: 43px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #dff1f5;
+    color: #087ea4;
+
+    font-size: 17px;
+}
+
+.userCell>div:last-child {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.userCell strong {
+    color: #304954;
+
+    font-size: 13px;
+    font-weight: 750;
+}
+
+.userCell span {
+    color: #8a9ba3;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   ROLE BADGES
+========================================================= */
+
+.roleBadge {
+    min-height: 28px;
+
+    padding: 0 10px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+    font-weight: 750;
+}
+
+.roleBadge.doctor {
+    background: #dff1f5;
+    color: #087ea4;
+}
+
+.roleBadge.nurse {
+    background: #f6e9f2;
+    color: #9a4d82;
+}
+
+.roleBadge.admin {
+    background: #ebe8f7;
+    color: #62519c;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.statusBadge {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.statusBadge i {
+    font-size: 7px;
+}
+
+.activeStatus {
+    color: #25855d;
+}
+
+.inactiveStatus {
+    color: #a06b48;
+}
+
+
+/* =========================================================
+   TABLE ACTIONS
+========================================================= */
+
+.tableActions {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+}
+
+.tableActions button {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #d5e2e7;
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #647984;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.tableActions button:hover {
+    background: #eaf6f9;
+
+    border-color: #087ea4;
+
+    color: #087ea4;
+
+    transform: translateY(-2px);
+}
+
+.tableActions .deleteAction:hover {
+    background: #fff1f1;
+
+    border-color: #d46b6b;
+
+    color: #c24e4e;
+}
+
+.tableActions .protectedAction {
+    background: #f3f0fa;
+
+    border-color: #e2dcef;
+
+    color: #6654a1;
+}
+
+
+/* =========================================================
+   PROFILE HEADER
+========================================================= */
+
+.profileHeader {
+    margin-bottom: 25px;
+    padding-bottom: 22px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 17px;
+
+    border-bottom: 1px solid #e1eaed;
+}
+
+.largeAvatar {
+    width: 75px;
+    height: 75px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: #087ea4;
+    color: #ffffff;
+
+    font-size: 29px;
+
+    box-shadow:
+        0 8px 22px rgba(8, 126, 164, 0.15);
+}
+
+.profileHeader h3 {
+    margin: 0;
+
+    color: #2b434e;
+
+    font-size: 19px;
+    font-weight: 750;
+}
+
+.profileHeader span {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #71858e;
+
+    font-size: 12px;
+}
+
+.profileHeader small {
+    margin-top: 8px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    color: #27865d;
+
+    font-size: 10px;
+    font-weight: 750;
+}
+
+.profileHeader small i {
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   CARD FOOTER
+========================================================= */
+
+.cardFooter {
+    margin-top: 25px;
+    padding-top: 19px;
+
+    display: flex;
+    justify-content: flex-end;
+
+    border-top: 1px solid #e3eaed;
+}
+
+
+/* =========================================================
+   SECURITY GRID
+========================================================= */
+
+.securityGrid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+.securityCard {
+    min-width: 0;
+
+    padding: 24px;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 16px;
+
+    background: #ffffff;
+
+    border: 1px solid #d6e3e8;
+    border-radius: 13px;
+
+    box-sizing: border-box;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.securityCard:hover {
+    border-color: #c3dce4;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 28px rgba(28, 61, 74, 0.08);
+}
+
+.securityCardIcon {
+    width: 49px;
+    height: 49px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: #dff1f5;
+    color: #087ea4;
+
+    font-size: 21px;
+}
+
+.securityCard h3 {
+    margin: 0;
+
+    color: #304954;
+
+    font-size: 15px;
+    font-weight: 750;
+}
+
+.securityCard p {
+    margin: 6px 0 15px;
+
+    color: #7a8d96;
+
+    font-size: 11px;
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   SECONDARY BUTTON
+========================================================= */
+
+.secondaryButton {
+    min-height: 40px;
+
+    padding: 0 14px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    border: 1px solid #cddde3;
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #526a75;
+
+    font-family: inherit;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.secondaryButton:hover {
+    background: #087ea4;
+
+    border-color: #087ea4;
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+.secondaryButton i {
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   SYSTEM PREFERENCES
+========================================================= */
+
+.preferenceRow {
+    min-height: 82px;
+
+    padding: 18px 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    border-bottom: 1px solid #e3ebee;
+
+    box-sizing: border-box;
+}
+
+.preferenceRow:first-child {
+    padding-top: 0;
+}
+
+.preferenceRow:last-child {
+    padding-bottom: 0;
+
+    border-bottom: none;
+}
+
+.preferenceIcon {
+    width: 45px;
+    height: 45px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #dff1f5;
+    color: #087ea4;
+
+    font-size: 18px;
+}
+
+.preferenceText {
+    min-width: 0;
+
+    flex: 1;
+}
+
+.preferenceText h3 {
+    margin: 0;
+
+    color: #304954;
+
+    font-size: 13px;
+    font-weight: 750;
+}
+
+.preferenceText p {
+    margin: 4px 0 0;
+
+    color: #81919a;
+
+    font-size: 11px;
+    line-height: 1.55;
+}
+
+.preferenceRow select {
+    width: 170px;
+    height: 43px;
+
+    padding: 0 12px;
+
+    flex-shrink: 0;
+
+    border: 1px solid #d2e0e5;
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #f9fbfc;
+
+    color: #526a75;
+
+    font-family: inherit;
+
+    font-size: 11px;
+}
+
+.preferenceRow select:focus {
+    border-color: #087ea4;
+
+    box-shadow:
+        0 0 0 3px rgba(8, 126, 164, 0.08);
+}
+
+
+/* =========================================================
+   SWITCH
+========================================================= */
+
+.switch {
+    width: 47px;
+    height: 26px;
+
+    position: relative;
+
+    flex-shrink: 0;
+
+    display: inline-block;
+}
+
+.switch input {
+    width: 0;
+    height: 0;
+
+    opacity: 0;
+}
+
+.switch span {
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 30px;
+
+    background: #cbd8dd;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease;
+}
+
+.switch span::after {
+    content: "";
+
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+
+    left: 3px;
+    top: 3px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.16);
+
+    transition:
+        transform 0.25s ease;
+}
+
+.switch input:checked+span {
+    background: #087ea4;
+}
+
+.switch input:checked+span::after {
+    transform: translateX(21px);
+}
+
+
+/* =========================================================
+   SETTINGS NOTICE
+========================================================= */
+
+.settingsNotice {
+    width: 100%;
+    max-width: 1550px;
+
+    margin: 0 auto 22px;
+
+    padding: 17px 20px;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 12px;
+
+    border: 1px solid #cfe1e7;
+    border-radius: 11px;
+
+    background: #e7f4f7;
+
+    box-sizing: border-box;
+}
+
+.settingsNotice>i {
+    margin-top: 2px;
+
+    flex-shrink: 0;
+
+    color: #087ea4;
+
+    font-size: 18px;
+}
+
+.settingsNotice strong {
+    display: block;
+
+    color: #3e5965;
+
+    font-size: 12px;
+    font-weight: 750;
+}
+
+.settingsNotice p {
+    margin: 4px 0 0;
+
+    color: #71858e;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   DANGER ZONE
+========================================================= */
+
+.dangerZone {
+    margin-top: 25px;
+
+    padding: 22px;
+
+    border: 1px solid #ecd7d7;
+    border-radius: 12px;
+
+    background: #fffafa;
+}
+
+.dangerZoneHeader {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.dangerZoneHeader i {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #fdeaea;
+
+    color: #c65252;
+
+    font-size: 18px;
+}
+
+.dangerZoneHeader h3 {
+    margin: 0;
+
+    color: #814545;
+
+    font-size: 15px;
+    font-weight: 750;
+}
+
+.dangerZone p {
+    margin: 13px 0 17px;
+
+    color: #927676;
+
+    font-size: 11px;
+
+    line-height: 1.65;
+}
+
+.dangerButton {
+    min-height: 42px;
+
+    padding: 0 16px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    border: 1px solid #d16a6a;
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #bd5050;
+
+    font-family: inherit;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.dangerButton:hover {
+    background: #c65252;
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1400px) {
+
+    .settingsPage {
+        padding: 45px 55px;
+    }
+
+    .headerIcon {
+        width: 68px;
+        height: 68px;
+
+        font-size: 30px;
+    }
+
+    .headerContent h1 {
+        font-size: 36px;
+    }
+
+    .headerContent p {
+        font-size: 16px;
+    }
+
+    .settingsNavItem {
+        min-height: 53px;
+
+        padding: 0 23px;
+
+        font-size: 14px;
+    }
+
+    .sectionHeader h2 {
+        font-size: 28px;
+    }
+
+    .sectionHeader p {
+        font-size: 15px;
+    }
+
+    .settingsCard {
+        padding: 32px;
+    }
+
+    .cardTitle h3 {
+        font-size: 20px;
+    }
+
+    .cardTitle p {
+        font-size: 14px;
+    }
+
+    .formGroup label {
+        font-size: 14px;
+    }
+
+    .formGroup input,
+    .formGroup select,
+    .formGroup textarea {
+        min-height: 54px;
+
+        font-size: 15px;
+    }
+
+    .formGroup textarea {
+        min-height: 130px;
+    }
+
+    .saveButton {
+        min-height: 52px;
+
+        padding: 0 24px;
+
+        font-size: 14px;
+    }
+
+    .userSearch,
+    .userFilters select,
+    .addUserButton {
+        height: 52px;
+    }
+
+    .tableWrapper th {
+        height: 56px;
+
+        font-size: 11px;
+    }
+
+    .tableWrapper td {
+        padding: 17px 22px;
+
+        font-size: 13px;
+    }
+
+    .userCell strong {
+        font-size: 14px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .settingsPage {
+        padding: 28px;
+    }
+
+    .formGrid {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 20px;
+    }
+
+    .userToolbar {
+        flex-wrap: wrap;
+    }
+
+    .userSearch {
+        flex-basis: 100%;
+    }
+
+    .userFilters {
+        flex: 1;
+    }
+
+    .userFilters select {
+        flex: 1;
+        width: auto;
+    }
+
+    .addUserButton {
+        min-width: 135px;
+    }
+
+    .securityGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .settingsPage {
+        padding: 22px 16px 35px;
+    }
+
+    .pageHeader {
+        margin-bottom: 23px;
+    }
+
+    .headerContent {
+        align-items: flex-start;
+
+        gap: 13px;
+    }
+
+    .headerIcon {
+        width: 52px;
+        height: 52px;
+
+        border-radius: 13px;
+
+        font-size: 22px;
+    }
+
+    .headerLabel {
+        font-size: 9px;
+    }
+
+    .headerContent h1 {
+        font-size: 27px;
+    }
+
+    .headerContent p {
+        font-size: 12px;
+
+        line-height: 1.55;
+    }
+
+    .settingsNavigation {
+        margin-bottom: 27px;
+
+        padding: 6px;
+    }
+
+    .settingsNavItem {
+        min-height: 45px;
+
+        padding: 0 15px;
+
+        font-size: 12px;
+    }
+
+    .settingsNavItem i {
+        font-size: 15px;
+    }
+
+    .sectionHeader {
+        margin-bottom: 17px;
+
+        gap: 12px;
+    }
+
+    .sectionHeader span {
+        font-size: 9px;
+    }
+
+    .sectionHeader h2 {
+        font-size: 22px;
+    }
+
+    .sectionHeader p {
+        font-size: 12px;
+    }
+
+    .sectionIcon {
+        width: 43px;
+        height: 43px;
+
+        font-size: 18px;
+    }
+
+    .settingsCard {
+        padding: 21px;
+
+        border-radius: 12px;
+    }
+
+    .cardTitle h3 {
+        font-size: 16px;
+    }
+
+    .cardTitle p {
+        font-size: 11px;
+    }
+
+    .formGrid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .formGroup.fullWidth {
+        grid-column: auto;
+    }
+
+    .formGroup label {
+        font-size: 12px;
+    }
+
+    .formGroup input,
+    .formGroup select,
+    .formGroup textarea {
+        min-height: 49px;
+
+        font-size: 13px;
+    }
+
+    .formGroup textarea {
+        min-height: 115px;
+    }
+
+    .logoUploadArea {
+        padding: 18px;
+
+        align-items: flex-start;
+    }
+
+    .logoPreview {
+        width: 78px;
+        height: 78px;
+
+        font-size: 29px;
+    }
+
+    .logoUploadInfo strong {
+        font-size: 13px;
+    }
+
+    .logoUploadInfo span {
+        font-size: 11px;
+    }
+
+    .saveArea {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 17px;
+    }
+
+    .saveButton {
+        width: 100%;
+
+        min-height: 48px;
+    }
+
+    .userToolbar {
+        padding: 13px;
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .userSearch {
+        width: 100%;
+
+        min-width: 0;
+
+        flex: none;
+
+        box-sizing: border-box;
+    }
+
+    .userFilters {
+        width: 100%;
+
+        display: flex;
+    }
+
+    .userFilters select {
+        width: 50%;
+    }
+
+    .addUserButton {
+        width: 100%;
+    }
+
+    .tableHeader {
+        padding: 18px;
+    }
+
+    .tableHeader h3 {
+        font-size: 15px;
+    }
+
+    .tableHeader p {
+        font-size: 11px;
+    }
+
+    .profileHeader {
+        align-items: flex-start;
+    }
+
+    .largeAvatar {
+        width: 63px;
+        height: 63px;
+
+        font-size: 25px;
+    }
+
+    .securityCard {
+        padding: 20px;
+    }
+
+    .securityCard h3 {
+        font-size: 14px;
+    }
+
+    .securityCard p {
+        font-size: 11px;
+    }
+
+    .preferenceRow {
+        min-height: 75px;
+
+        align-items: center;
+    }
+
+    .preferenceIcon {
+        width: 41px;
+        height: 41px;
+    }
+
+    .preferenceText h3 {
+        font-size: 12px;
+    }
+
+    .preferenceText p {
+        font-size: 10px;
+    }
+
+    .preferenceRow select {
+        width: 125px;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 450px) {
+
+    .settingsPage {
+        padding: 18px 12px 30px;
+    }
+
+    .headerIcon {
+        width: 46px;
+        height: 46px;
+
+        font-size: 20px;
+    }
+
+    .headerContent h1 {
+        font-size: 24px;
+    }
+
+    .headerContent p {
+        font-size: 11px;
+    }
+
+    .settingsNavigation {
+        border-radius: 10px;
+    }
+
+    .settingsNavItem {
+        min-height: 43px;
+
+        padding: 0 12px;
+
+        font-size: 11px;
+    }
+
+    .sectionHeader h2 {
+        font-size: 20px;
+    }
+
+    .sectionHeader p {
+        font-size: 11px;
+    }
+
+    .sectionIcon {
+        width: 39px;
+        height: 39px;
+
+        font-size: 16px;
+    }
+
+    .settingsCard {
+        padding: 17px;
+    }
+
+    .cardTitle {
+        gap: 10px;
+    }
+
+    .cardTitle h3 {
+        font-size: 15px;
+    }
+
+    .cardTitle p {
+        font-size: 10px;
+    }
+
+    .cardTitle>i {
+        width: 35px;
+        height: 35px;
+
+        font-size: 15px;
+    }
+
+    .logoUploadArea {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .logoPreview {
+        width: 72px;
+        height: 72px;
+    }
+
+    .userFilters {
+        flex-direction: column;
+    }
+
+    .userFilters select {
+        width: 100%;
+    }
+
+    .securityCard {
+        flex-direction: column;
+    }
+
+    .securityCardIcon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .preferenceRow {
+        flex-wrap: wrap;
+
+        align-items: flex-start;
+    }
+
+    .preferenceText {
+        min-width: 150px;
+
+        padding-top: 3px;
+    }
+
+    .preferenceRow select {
+        width: 100%;
+
+        margin-left: 56px;
+    }
+
+    .switch {
+        margin-left: auto;
+    }
+
+    .settingsNotice {
+        padding: 14px;
+    }
+
+    .settingsNotice strong {
+        font-size: 11px;
+    }
+
+    .settingsNotice p {
+        font-size: 10px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
