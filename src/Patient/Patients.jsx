@@ -88,7 +88,7 @@ function Patients() {
         }
 
         const results = fetchedPatients.filter((fdp) => {
-            return fdp.first_name.toLowerCase().includes(e.toLowerCase())
+            return fdp.first_name.toLowerCase().includes(e.toLowerCase()) || fdp.last_name.toLowerCase().includes(e.toLowerCase())
         })
 
         setFilteredPatients(results)
