@@ -10,6 +10,8 @@ function Patients() {
     const [active, setActive] = useState(false);
     const [menu, setMenu] = useState(null);
 
+    const [tt, setTT] = useState("");
+    const [filteredPatients, setFilteredPatients] = useState([]);
     const [fetchedPatients, setFetchedPatients] = useState([]);
     const [fetchedSinglePatients, setFetchedSinglePatients] = useState([]);
 
@@ -79,6 +81,21 @@ function Patients() {
 
     }, []);
 
+   function search(e) {
+        if (e === "") {
+            return setFilteredPatients(fetchedPatients)
+        }
+
+        const results = fetchedPatients.filter((fdp) => {
+            return fdp.first_name.toLowerCase().includes(e.toLowerCase())
+        })
+
+        setFilteredPatients(results)
+
+
+    }
+
+    
     return (
         <div className={P.patientsPage}>
             <Helmet>
@@ -184,6 +201,10 @@ function Patients() {
                     <i className="bi bi-search"></i>
                     <input
                         type="text"
+                         onChange={(e) => {
+                            setTT(e.target.value)
+                            search(e.target.value)
+                        }}
                         placeholder="Search by patient name or patient ID..."
                     />
                 </div>
@@ -216,7 +237,7 @@ function Patients() {
             {/* PATIENT FOLDERS */}
             <div className={P.patientGrid}>
 
-                {fetchedPatients.map((fp) => (
+                {filteredPatients.map((fp) => (
                     <div className={P.patientFolder} key={fp.id}>
 
                         <div className={P.folderTop}>
