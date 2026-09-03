@@ -23,6 +23,7 @@ function Patients() {
             const results = response.data;
             if (results.success === true) {
                 setFetchedPatients(results.patients);
+                setFilteredPatients(results.patients);
             } else {
                 alert(`Failed `)
             }
