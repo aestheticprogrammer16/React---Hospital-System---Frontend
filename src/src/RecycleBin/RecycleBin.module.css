@@ -1,0 +1,801 @@
+.recycleBinPage {
+    width: 100%;
+    min-height: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+    color: #334155;
+}
+
+
+/* =========================
+   PAGE HEADER
+========================= */
+
+.pageHeader {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.headerIcon {
+    width: 58px;
+    height: 58px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: rgba(14, 116, 144, 0.08);
+    border: 1px solid #0e7490;
+
+    animation: recycleHeaderIcon 2.5s ease-in-out infinite;
+}
+
+.headerIcon i {
+    color: #0e7490;
+    font-size: 26px;
+}
+
+.pageHeader h2 {
+    margin: 0 0 5px;
+
+    color: #334155;
+
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.pageHeader p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   MAIN SECTION
+========================= */
+
+.recycleSection {
+    width: 100%;
+
+    padding: 25px;
+
+    margin-bottom: 25px;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.05);
+
+    animation: sectionFadeIn 0.5s ease;
+}
+
+
+/* =========================
+   SECTION HEADER
+========================= */
+
+.sectionHeader {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+}
+
+.sectionTitle {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    min-width: 0;
+}
+
+.sectionIcon {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: rgba(14, 116, 144, 0.07);
+    border: 1px solid #0e7490;
+}
+
+.sectionIcon i {
+    color: #0e7490;
+
+    font-size: 22px;
+}
+
+.sectionTitle h3 {
+    margin: 0 0 4px;
+
+    color: #334155;
+
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.sectionTitle p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   ITEM COUNT
+========================= */
+
+.itemCount {
+    flex-shrink: 0;
+
+    padding: 7px 13px;
+
+    border-radius: 20px;
+
+    color: #0e7490;
+
+    background: rgba(14, 116, 144, 0.07);
+
+    border: 1px solid rgba(14, 116, 144, 0.25);
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.searchContainer {
+    width: 100%;
+
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+
+    padding: 0 14px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.searchContainer:focus-within {
+    border-color: #0e7490;
+
+    box-shadow: 0 0 0 3px rgba(14, 116, 144, 0.08);
+}
+
+.searchContainer i {
+    flex-shrink: 0;
+
+    color: #64748b;
+
+    font-size: 17px;
+}
+
+.searchContainer input {
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #334155;
+
+    font-family: inherit;
+
+    font-size: 14px;
+}
+
+.searchContainer input::placeholder {
+    color: #94a3b8;
+}
+
+
+/* =========================
+   ITEMS CONTAINER
+========================= */
+
+.itemsContainer {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+/* =========================
+   EMPTY RECYCLE BIN
+========================= */
+
+.emptyRecycle {
+    width: 100%;
+
+    min-height: 220px;
+
+    padding: 30px 20px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    border: 1px dashed #cbd5e1;
+    border-radius: 14px;
+
+    background: #f8fafc;
+
+    animation: emptyStateFade 0.6s ease;
+}
+
+.emptyIcon {
+    width: 65px;
+    height: 65px;
+
+    margin-bottom: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(14, 116, 144, 0.07);
+    border: 1px solid #0e7490;
+
+    animation: emptyIconFloat 2.5s ease-in-out infinite;
+}
+
+.emptyIcon i {
+    color: #0e7490;
+
+    font-size: 28px;
+}
+
+.emptyRecycle h4 {
+    margin: 0 0 7px;
+
+    color: #334155;
+
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.emptyRecycle p {
+    max-width: 420px;
+
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   DELETED ITEM
+   Use this when retrieving
+   actual deleted records
+========================= */
+
+.recycleItem {
+    width: 100%;
+
+    padding: 18px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.recycleItem:hover {
+    transform: translateY(-2px);
+
+    border-color: #0e7490;
+
+    box-shadow: 0 7px 20px rgba(15, 23, 42, 0.07);
+}
+
+.recycleItemInfo {
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+}
+
+.recycleItemIcon {
+    width: 45px;
+    height: 45px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    color: #0e7490;
+
+    background: rgba(14, 116, 144, 0.07);
+
+    border: 1px solid rgba(14, 116, 144, 0.25);
+}
+
+.recycleItemIcon i {
+    font-size: 20px;
+}
+
+.recycleItemDetails {
+    min-width: 0;
+}
+
+.recycleItemDetails h4 {
+    margin: 0 0 4px;
+
+    color: #334155;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.recycleItemDetails p {
+    margin: 0;
+    color: #64748b;
+    font-size: 12px;
+}
+
+
+/* =========================
+   ITEM ACTIONS
+========================= */
+
+.recycleItemActions {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.restoreButton,
+.permanentDeleteButton {
+    min-height: 38px;
+
+    padding: 8px 13px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    border-radius: 8px;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+
+/* Restore */
+
+.restoreButton {
+    color: #0e7490;
+
+    background: rgba(14, 116, 144, 0.07);
+
+    border: 1px solid #0e7490;
+}
+
+.restoreButton:hover {
+    color: #ffffff;
+
+    background: #0e7490;
+
+    transform: translateY(-2px);
+}
+
+
+/* Permanent delete */
+
+.permanentDeleteButton {
+    color: #dc2626;
+
+    background: rgba(220, 38, 38, 0.06);
+
+    border: 1px solid #fecaca;
+}
+
+.permanentDeleteButton:hover {
+    color: #ffffff;
+
+    background: #dc2626;
+
+    border-color: #dc2626;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes recycleHeaderIcon {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+@keyframes sectionFadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes emptyStateFade {
+
+    from {
+        opacity: 0;
+        transform: scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes emptyIconFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+
+/* =========================
+   LARGE SCREENS
+========================= */
+
+@media (min-width: 1200px) {
+
+    .recycleBinPage {
+        padding: 40px;
+    }
+
+    .pageHeader {
+        margin-bottom: 35px;
+    }
+
+    .pageHeader h2 {
+        font-size: 30px;
+    }
+
+    .recycleSection {
+        padding: 30px;
+        margin-bottom: 30px;
+    }
+
+    .sectionTitle h3 {
+        font-size: 20px;
+    }
+
+    .emptyRecycle {
+        min-height: 250px;
+    }
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+
+
+    .recycleBinPage {
+        padding: 25px;
+    }
+
+    .recycleSection {
+        padding: 22px;
+    }
+
+    .recycleItem {
+        align-items: flex-start;
+    }
+
+    .recycleItemActions {
+        flex-direction: column;
+    }
+
+    .restoreButton,
+    .permanentDeleteButton {
+        width: 150px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .recycleBinPage {
+        padding: 18px;
+    }
+
+    .pageHeader {
+        align-items: flex-start;
+
+        gap: 13px;
+
+        margin-bottom: 22px;
+    }
+
+    .headerIcon {
+        width: 50px;
+        height: 50px;
+
+        border-radius: 12px;
+    }
+
+    .headerIcon i {
+        font-size: 22px;
+    }
+
+    .pageHeader h2 {
+        font-size: 23px;
+    }
+
+    .pageHeader p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+
+    .recycleSection {
+        padding: 18px;
+
+        margin-bottom: 18px;
+
+        border-radius: 14px;
+    }
+
+
+    .sectionHeader {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    .sectionTitle {
+        width: 100%;
+    }
+
+    .sectionIcon {
+        width: 43px;
+        height: 43px;
+    }
+
+    .sectionIcon i {
+        font-size: 19px;
+    }
+
+    .sectionTitle h3 {
+        font-size: 17px;
+    }
+
+    .sectionTitle p {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .itemCount {
+        align-self: flex-start;
+    }
+
+
+    .searchContainer {
+        height: 43px;
+    }
+
+
+    .emptyRecycle {
+        min-height: 200px;
+
+        padding: 25px 15px;
+    }
+
+    .emptyIcon {
+        width: 58px;
+        height: 58px;
+    }
+
+    .emptyIcon i {
+        font-size: 25px;
+    }
+
+    .emptyRecycle h4 {
+        font-size: 16px;
+    }
+
+    .emptyRecycle p {
+        font-size: 12px;
+    }
+
+
+    /* Deleted items */
+
+    .recycleItem {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        padding: 15px;
+
+        gap: 15px;
+    }
+
+    .recycleItemInfo {
+        width: 100%;
+    }
+
+    .recycleItemActions {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 8px;
+    }
+
+    .restoreButton,
+    .permanentDeleteButton {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 400px) {
+    .recycleBinPage {
+        padding: 12px;
+    }
+
+    .recycleSection {
+        padding: 15px;
+    }
+
+    .pageHeader h2 {
+        font-size: 20px;
+    }
+
+    .pageHeader p {
+        font-size: 12px;
+    }
+
+    .sectionTitle h3 {
+        font-size: 16px;
+    }
+
+    .sectionTitle p {
+        font-size: 11px;
+    }
+
+    .deleteWarning {
+        font-size: 12px;
+    }
+
+    .recycleItemActions {
+        grid-template-columns: 1fr;
+    }
+
+    .restoreButton,
+    .permanentDeleteButton {
+        width: 100%;
+    }
+}

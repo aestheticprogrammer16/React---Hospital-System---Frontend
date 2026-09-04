@@ -1,0 +1,1566 @@
+/* =========================================================
+   PRINT REPORTS PAGE
+========================================================= */
+
+.printReportsPage {
+    width: 100%;
+    min-height: 100vh;
+    padding: 28px;
+    background: #f3f7fa;
+    color: #172033;
+    /* font-family: "Segoe UI", Arial, sans-serif; */
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+
+/* =========================================================
+   TOP NAVIGATION
+========================================================= */
+
+.topNavigation {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.backButton,
+.printAllButton {
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    font-family: inherit;
+    transition: all 0.25s ease;
+}
+
+.backButton {
+    min-height: 46px;
+    padding: 0 18px;
+    border-radius: 9px;
+    background: #ffffff;
+    color: #405466;
+    border: 1px solid #dce5ea;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.backButton:hover {
+    color: #087ea4;
+    border-color: #b9dce8;
+    transform: translateX(-3px);
+}
+
+.backButton i {
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   TOP TITLE
+========================================================= */
+
+.topTitle {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.topTitle>i {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #e3f3f7;
+    color: #087ea4;
+    font-size: 20px;
+}
+
+.topTitle span {
+    display: block;
+    margin-bottom: 2px;
+    color: #087ea4;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.topTitle h1 {
+    margin: 0;
+    color: #172033;
+    font-size: 22px;
+    font-weight: 750;
+    letter-spacing: -0.3px;
+}
+
+
+.printAllButton {
+    min-height: 46px;
+    padding: 0 19px;
+    border-radius: 9px;
+    background: #087ea4;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: 0 5px 14px rgba(8, 126, 164, 0.16);
+}
+
+.printAllButton:hover {
+    background: #066b8b;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(8, 126, 164, 0.2);
+}
+
+.printAllButton i {
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   PATIENT SUMMARY
+========================================================= */
+
+.patientSummary {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto 22px;
+    padding: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background: #ffffff;
+    border: 1px solid #dfe8ed;
+    border-radius: 13px;
+    box-sizing: border-box;
+}
+
+.patientIdentity {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-width: 250px;
+}
+
+.patientAvatar {
+    width: 55px;
+    height: 55px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #e5f4f8;
+    color: #087ea4;
+    font-size: 24px;
+}
+
+.patientLabel {
+    display: block;
+    margin-bottom: 2px;
+    color: #7a8b98;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+}
+
+.patientIdentity h2 {
+    margin: 0;
+    color: #172033;
+    font-size: 21px;
+    font-weight: 750;
+}
+
+.patientIdentity p {
+    margin: 4px 0 0;
+    color: #71818e;
+    font-size: 13px;
+}
+
+.patientIdentity p strong {
+    color: #087ea4;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   PATIENT DETAILS
+========================================================= */
+
+.patientDetails {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+    gap: 18px;
+}
+
+.patientDetails>div {
+    min-width: 0;
+}
+
+.patientDetails span {
+    display: block;
+    margin-bottom: 5px;
+    color: #83929d;
+    font-size: 11px;
+    font-weight: 650;
+}
+
+.patientDetails strong {
+    display: block;
+    color: #253747;
+    font-size: 14px;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   REPORT INSTRUCTION
+========================================================= */
+
+.reportInstruction {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto 18px;
+    padding: 17px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #edf7fa;
+    border: 1px solid #cce8ef;
+    border-radius: 11px;
+    box-sizing: border-box;
+}
+
+.instructionIcon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    background: #d8eff5;
+    color: #087ea4;
+    font-size: 18px;
+}
+
+.reportInstruction h3 {
+    margin: 0 0 3px;
+    color: #234052;
+    font-size: 14px;
+    font-weight: 750;
+}
+
+.reportInstruction p {
+    margin: 0;
+    color: #617582;
+    font-size: 12px;
+    line-height: 1.55;
+}
+
+.selectionActions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.selectionActions button {
+    min-height: 35px;
+    padding: 0 11px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border: 1px solid #cddde3;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #526673;
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 650;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.selectionActions button:hover {
+    color: #087ea4;
+    border-color: #9ccbd8;
+    background: #f8fcfd;
+}
+
+.selectionActions i {
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   REPORT SUMMARY BAR
+========================================================= */
+
+.reportSummaryBar {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto 22px;
+    padding: 12px 17px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    box-sizing: border-box;
+}
+
+.reportSummaryBar>div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #667985;
+    font-size: 12px;
+    font-weight: 650;
+}
+
+.reportSummaryBar>div:first-child i {
+    color: #087ea4;
+    font-size: 16px;
+}
+
+.selectedCount {
+    color: #4c6977 !important;
+}
+
+.selectedCount i {
+    color: #4d9a76;
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   PRINTABLE REPORT DOCUMENT
+========================================================= */
+
+.reportDocument {
+    width: 100%;
+    max-width: 1120px;
+    min-height: 900px;
+    margin: 0 auto 38px;
+    padding: 43px 48px;
+    background: #ffffff;
+    border: 1px solid #d7e0e5;
+    box-shadow: 0 12px 35px rgba(28, 57, 72, 0.08);
+    box-sizing: border-box;
+    position: relative;
+}
+
+
+/* =========================================================
+   HOSPITAL HEADER
+========================================================= */
+
+.documentHospitalHeader {
+    padding-bottom: 19px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+    border-bottom: 1px solid #cfdbe1;
+}
+
+.hospitalBrand {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.hospitalLogo {
+    width: 49px;
+    height: 49px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: #087ea4;
+    color: #ffffff;
+    font-size: 23px;
+}
+
+.hospitalBrand h2 {
+    margin: 0;
+    color: #152b38;
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+}
+
+.hospitalBrand p {
+    margin: 4px 0 0;
+    color: #748692;
+    font-size: 10px;
+    letter-spacing: 0.7px;
+}
+
+
+.hospitalContact {
+    max-width: 310px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+.hospitalContact span {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #657783;
+    font-size: 10px;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+.hospitalContact i {
+    color: #087ea4;
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   DOCUMENT TITLE
+========================================================= */
+
+.documentTitle {
+    padding: 20px 0 17px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.documentTitle>div {
+    min-width: 0;
+}
+
+.documentTitle span {
+    display: block;
+    margin-bottom: 3px;
+    color: #087ea4;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.6px;
+}
+
+.documentTitle h2 {
+    margin: 0;
+    color: #1c303d;
+    font-size: 20px;
+    font-weight: 750;
+}
+
+.recordReference {
+    margin: 5px 0 0;
+    color: #84939d;
+    font-size: 10px;
+}
+
+.includeRecord {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #61737e;
+    font-size: 11px;
+    font-weight: 650;
+    white-space: nowrap;
+}
+
+.includeRecord input,
+.reportField input {
+    width: 15px;
+    height: 15px;
+    margin: 0;
+    accent-color: #087ea4;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   PATIENT INFORMATION ON DOCUMENT
+========================================================= */
+
+.documentPatientInfo {
+    padding: 13px 0;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 0;
+    border-top: 1px solid #e0e7eb;
+    border-bottom: 1px solid #e0e7eb;
+}
+
+.documentPatientInfo>div {
+    min-width: 0;
+    padding: 0 12px;
+    border-right: 1px dotted #c6d3d9;
+}
+
+.documentPatientInfo>div:first-child {
+    padding-left: 0;
+}
+
+.documentPatientInfo>div:last-child {
+    padding-right: 0;
+    border-right: none;
+}
+
+.documentPatientInfo span {
+    display: block;
+    margin-bottom: 4px;
+    color: #8796a0;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+
+.documentPatientInfo strong {
+    display: block;
+    color: #263d4a;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+}
+
+.completedStatus {
+    color: #3e8666 !important;
+}
+
+.updatedStatus {
+    color: #087ea4 !important;
+}
+
+
+/* =========================================================
+   DOCUMENT SECTION
+========================================================= */
+
+.documentSection {
+    padding-top: 22px;
+}
+
+.documentSectionHeader {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.documentSectionHeader span {
+    display: block;
+    margin-bottom: 3px;
+    color: #087ea4;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+.documentSectionHeader h3 {
+    margin: 0;
+    color: #263c49;
+    font-size: 15px;
+    font-weight: 750;
+}
+
+.documentSectionHeader>i {
+    color: #087ea4;
+    font-size: 19px;
+}
+
+
+/* =========================================================
+   MEDICAL TABLE
+========================================================= */
+
+.medicalTable {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 1px solid #dce5e9;
+    border-bottom: 1px solid #dce5e9;
+}
+
+.medicalColumn {
+    min-width: 0;
+    padding: 0 18px;
+}
+
+.medicalColumn:first-child {
+    padding-left: 0;
+    border-right: 1px dotted #aebfc7;
+}
+
+.medicalColumn:last-child {
+    padding-right: 0;
+}
+
+.reportField {
+    min-width: 0;
+    padding: 13px 0;
+    border-bottom: 1px dotted #d2dde2;
+}
+
+.medicalColumn .reportField:last-child {
+    border-bottom: none;
+}
+
+.reportField label {
+    min-width: 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 7px;
+    color: #506673;
+    font-size: 10px;
+    font-weight: 750;
+    line-height: 1.4;
+}
+
+.reportField label span {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.reportValue {
+    margin-top: 5px;
+    padding-left: 22px;
+    color: #263d4a;
+    font-size: 11px;
+    line-height: 1.65;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: normal;
+}
+
+/* =========================================================
+   RECORD DETAILS
+========================================================= */
+
+.recordDetails {
+    margin-top: 22px;
+    padding: 14px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px 25px;
+    border-top: 1px solid #dce5e9;
+    border-bottom: 1px solid #dce5e9;
+}
+
+.recordDetails>div {
+    min-width: 0;
+}
+
+.recordDetails span {
+    display: block;
+    margin-bottom: 5px;
+    color: #8998a2;
+    font-size: 9px;
+    font-weight: 750;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+
+.recordDetails strong {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #314754;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+}
+
+.recordDetails strong i {
+    flex-shrink: 0;
+    color: #087ea4;
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   DOCTOR DECLARATION
+========================================================= */
+
+.doctorDeclaration {
+    margin-top: 22px;
+    padding: 15px 17px;
+    background: #f7fafb;
+    border-left: 3px solid #087ea4;
+}
+
+.declarationHeader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 9px;
+}
+
+.declarationHeader>i {
+    color: #087ea4;
+    font-size: 18px;
+}
+
+.declarationHeader span {
+    display: block;
+    margin-bottom: 2px;
+    color: #087ea4;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+}
+
+.declarationHeader h3 {
+    margin: 0;
+    color: #304753;
+    font-size: 12px;
+    font-weight: 750;
+}
+
+.doctorDeclaration p {
+    margin: 0;
+    color: #5e707b;
+    font-size: 10px;
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   SIGNATURE SECTION
+========================================================= */
+
+.signatureSection {
+    margin-top: 34px;
+    padding-top: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 35px;
+}
+
+.signatureBox {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.signatureSpace {
+    height: 48px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.signatureLine {
+    width: 100%;
+    height: 1px;
+    margin-bottom: 7px;
+    background: #596b75;
+}
+
+.signatureBox strong {
+    color: #263d49;
+    font-size: 10px;
+    font-weight: 750;
+    overflow-wrap: anywhere;
+}
+
+.signatureBox span {
+    margin-top: 2px;
+    color: #71818b;
+    font-size: 9px;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+.signatureBox small {
+    margin-top: 7px;
+    color: #9aa7ae;
+    font-size: 8px;
+    font-style: italic;
+}
+
+
+/* =========================================================
+   CONFIDENTIALITY NOTICE
+========================================================= */
+
+.confidentialityNotice {
+    margin-top: 28px;
+    padding: 12px 14px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: #fafcfd;
+    border: 1px solid #e1e8eb;
+}
+
+.confidentialityNotice>i {
+    flex-shrink: 0;
+    margin-top: 1px;
+    color: #087ea4;
+    font-size: 14px;
+}
+
+.confidentialityNotice strong {
+    display: block;
+    margin-bottom: 3px;
+    color: #4b5e69;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+}
+
+.confidentialityNotice p {
+    margin: 0;
+    color: #7a8992;
+    font-size: 8px;
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   DOCUMENT FOOTER
+========================================================= */
+
+.documentFooter {
+    margin-top: 24px;
+    padding-top: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    border-top: 1px solid #dce5e9;
+}
+
+.documentFooter>div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.documentFooter i {
+    color: #087ea4;
+    font-size: 12px;
+}
+
+.documentFooter span {
+    color: #8998a1;
+    font-size: 8px;
+    font-weight: 650;
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   FINAL ACTION AREA
+========================================================= */
+
+.finalActions {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto 25px;
+    padding: 19px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    background: #ffffff;
+    border: 1px solid #dce6eb;
+    border-radius: 11px;
+    box-sizing: border-box;
+}
+
+.finalMessage {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.finalIcon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: #e6f4f8;
+    color: #087ea4;
+    font-size: 18px;
+}
+
+.finalMessage h3 {
+    margin: 0 0 3px;
+    color: #2d4350;
+    font-size: 13px;
+    font-weight: 750;
+}
+
+.finalMessage p {
+    margin: 0;
+    color: #788892;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.finalButtons {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    flex-shrink: 0;
+}
+
+.cancelPrintButton,
+.printButton {
+    min-height: 40px;
+    padding: 0 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    border-radius: 7px;
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.cancelPrintButton {
+    border: 1px solid #d5e0e5;
+    background: #ffffff;
+    color: #5c707b;
+}
+
+.cancelPrintButton:hover {
+    border-color: #a9c5cf;
+    color: #087ea4;
+}
+
+.printButton {
+    border: 1px solid #087ea4;
+    background: #087ea4;
+    color: #ffffff;
+    box-shadow: 0 5px 13px rgba(8, 126, 164, 0.16);
+}
+
+.printButton:hover {
+    background: #066b8b;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   PAGE FOOTER
+========================================================= */
+
+.pageFooter {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 5px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.pageFooter>div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pageFooter i {
+    color: #087ea4;
+    font-size: 11px;
+}
+
+.pageFooter span {
+    color: #8a99a2;
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   SMALL ANIMATIONS
+========================================================= */
+
+.printButton i,
+.printAllButton i {
+    animation: printerPulse 2.8s ease-in-out infinite;
+}
+
+@keyframes printerPulse {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2px);
+    }
+}
+
+
+/* =========================================================
+   LARGE SCREENS
+========================================================= */
+
+@media (min-width: 1500px) {
+
+    .printReportsPage {
+        padding: 35px 45px;
+    }
+
+    .topTitle h1 {
+        font-size: 25px;
+    }
+
+    .patientSummary {
+        padding: 28px;
+    }
+
+    .patientIdentity h2 {
+        font-size: 23px;
+    }
+
+    .patientDetails strong {
+        font-size: 15px;
+    }
+
+    .reportDocument {
+        max-width: 1180px;
+        padding: 52px 58px;
+    }
+
+    .hospitalBrand h2 {
+        font-size: 21px;
+    }
+
+    .documentTitle h2 {
+        font-size: 22px;
+    }
+
+    .documentPatientInfo strong {
+        font-size: 12px;
+    }
+
+    .reportField label {
+        font-size: 11px;
+    }
+
+    .reportValue {
+        font-size: 12px;
+    }
+
+    .recordDetails strong {
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .printReportsPage {
+        padding: 22px;
+    }
+
+    .topNavigation {
+        flex-wrap: wrap;
+    }
+
+    .topTitle {
+        order: -1;
+        width: 100%;
+    }
+
+    .patientSummary {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .patientDetails {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .reportInstruction {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .selectionActions {
+        width: 100%;
+        margin-left: 55px;
+    }
+
+    .reportDocument {
+        padding: 35px;
+    }
+
+    .documentPatientInfo {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 14px;
+    }
+
+    .documentPatientInfo>div:nth-child(3) {
+        border-right: none;
+    }
+
+    .recordDetails {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .printReportsPage {
+        padding: 14px;
+    }
+
+
+    /* TOP NAVIGATION */
+
+    .topNavigation {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 12px;
+    }
+
+    .topTitle {
+        grid-column: 1 / -1;
+        order: -1;
+    }
+
+    .topTitle h1 {
+        font-size: 20px;
+    }
+
+    .topTitle>i {
+        width: 42px;
+        height: 42px;
+    }
+
+    .backButton {
+        justify-self: start;
+    }
+
+    .printAllButton {
+        justify-self: end;
+    }
+
+
+    /* PATIENT */
+
+    .patientSummary {
+        padding: 18px;
+    }
+
+    .patientIdentity {
+        width: 100%;
+    }
+
+    .patientDetails {
+        grid-template-columns: 1fr 1fr;
+        gap: 17px 15px;
+    }
+
+
+    /* INSTRUCTION */
+
+    .reportInstruction {
+        padding: 16px;
+    }
+
+    .selectionActions {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .selectionActions button {
+        flex: 1;
+    }
+
+
+    /* SUMMARY */
+
+    .reportSummaryBar {
+        padding: 8px 2px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+
+    /* DOCUMENT */
+
+    .reportDocument {
+        min-height: auto;
+        padding: 25px 20px;
+        margin-bottom: 25px;
+    }
+
+
+    /* HOSPITAL HEADER */
+
+    .documentHospitalHeader {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hospitalContact {
+        max-width: none;
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .hospitalContact span {
+        text-align: left;
+    }
+
+
+    /* TITLE */
+
+    .documentTitle {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+
+    /* PATIENT INFORMATION */
+
+    .documentPatientInfo {
+        grid-template-columns: 1fr 1fr;
+        gap: 13px 0;
+    }
+
+    .documentPatientInfo>div {
+        padding: 0 10px;
+    }
+
+    .documentPatientInfo>div:nth-child(odd) {
+        padding-left: 0;
+    }
+
+    .documentPatientInfo>div:nth-child(even) {
+        padding-right: 0;
+    }
+
+    .documentPatientInfo>div:nth-child(3),
+    .documentPatientInfo>div:nth-child(5) {
+        border-right: 1px dotted #c6d3d9;
+    }
+
+    .documentPatientInfo>div:nth-child(2),
+    .documentPatientInfo>div:nth-child(4),
+    .documentPatientInfo>div:nth-child(6) {
+        border-right: none;
+    }
+
+
+    /* MEDICAL DATA */
+
+    .medicalTable {
+        grid-template-columns: 1fr;
+    }
+
+    .medicalColumn {
+        padding: 0;
+    }
+
+    .medicalColumn:first-child {
+        border-right: none;
+    }
+
+    .medicalColumn:last-child {
+        border-top: 1px dotted #aebfc7;
+    }
+
+    .reportField {
+        padding: 14px 0;
+    }
+
+    .reportValue {
+        padding-left: 22px;
+        font-size: 11px;
+        line-height: 1.7;
+    }
+
+
+    /* RECORD DETAILS */
+
+    .recordDetails {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+
+    /* SIGNATURES */
+
+    .signatureSection {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .signatureSpace {
+        height: 55px;
+    }
+
+
+    /* FINAL ACTIONS */
+
+    .finalActions {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 17px;
+    }
+
+    .finalButtons {
+        width: 100%;
+    }
+
+    .cancelPrintButton,
+    .printButton {
+        flex: 1;
+    }
+
+
+    /* FOOTER */
+
+    .documentFooter,
+    .pageFooter {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 430px) {
+
+    .printReportsPage {
+        padding: 10px;
+    }
+
+    .topNavigation {
+        grid-template-columns: 1fr;
+    }
+
+    .backButton,
+    .printAllButton {
+        width: 100%;
+    }
+
+    .topTitle {
+        justify-content: flex-start;
+    }
+
+    .patientDetails {
+        grid-template-columns: 1fr;
+    }
+
+    .patientIdentity h2 {
+        font-size: 19px;
+    }
+
+    .documentPatientInfo {
+        grid-template-columns: 1fr;
+    }
+
+    .documentPatientInfo>div,
+    .documentPatientInfo>div:nth-child(odd),
+    .documentPatientInfo>div:nth-child(even) {
+        padding: 0 0 10px;
+        border-right: none;
+        border-bottom: 1px dotted #d3dfe4;
+    }
+
+    .documentPatientInfo>div:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .hospitalBrand h2 {
+        font-size: 16px;
+    }
+
+    .documentTitle h2 {
+        font-size: 18px;
+    }
+
+    .reportDocument {
+        padding: 22px 15px;
+    }
+
+    .confidentialityNotice {
+        padding: 10px;
+    }
+}
+
+
+/* =========================================================
+   PRINT STYLES
+========================================================= */
+
+@media print {
+
+    @page {
+        size: A4;
+        margin: 12mm;
+    }
+
+
+    html,
+    body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background: #ffffff !important;
+    }
+
+
+    .printReportsPage {
+        width: 100%;
+        min-height: auto;
+        padding: 0;
+        margin: 0;
+        background: #ffffff !important;
+    }
+
+
+    /* Hide application controls */
+
+    .topNavigation,
+    .patientSummary,
+    .reportInstruction,
+    .reportSummaryBar,
+    .finalActions,
+    .pageFooter {
+        display: none !important;
+    }
+
+
+    /* Printable document */
+
+    .reportDocument {
+        width: 100%;
+        max-width: none;
+        min-height: auto;
+        margin: 0;
+        padding: 0;
+        border: none;
+        box-shadow: none;
+        page-break-after: always;
+        break-after: page;
+    }
+
+
+    .reportDocument:last-of-type {
+        page-break-after: auto;
+        break-after: auto;
+    }
+
+
+    .documentHospitalHeader,
+    .documentTitle,
+    .documentPatientInfo,
+    .documentSection,
+    .recordDetails,
+    .doctorDeclaration,
+    .signatureSection,
+    .confidentialityNotice,
+    .documentFooter {
+        break-inside: avoid;
+    }
+
+
+    .documentHospitalHeader {
+        border-bottom: 1px solid #b8c5ca;
+    }
+
+
+    .medicalTable {
+        break-inside: auto;
+    }
+
+
+    .reportField {
+        break-inside: avoid;
+    }
+
+
+    /* Keep text black/dark when printed */
+
+    .hospitalLogo {
+        background: #087ea4 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .topTitle>i,
+    .instructionIcon,
+    .finalIcon {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+
+    /* Checkboxes should remain visible */
+
+    .reportField input,
+    .includeRecord input {
+        appearance: auto;
+        -webkit-appearance: checkbox;
+    }
+
+
+    /* Hide unchecked information when printing */
+
+    .reportField:has(input:not(:checked)) {
+        display: none;
+    }
+
+
+    /* Hide entire record if its checkbox is unchecked */
+
+    .reportDocument:has(.includeRecord input:not(:checked)) {
+        display: none;
+    }
+
+
+    /* Remove unnecessary animation during printing */
+
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}

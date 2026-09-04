@@ -1,0 +1,3840 @@
+/* =========================================================
+   GLOBAL PAGE
+   ========================================================= */
+
+.recordsPage {
+    width: 100%;
+    min-height: 100vh;
+    padding: 25px;
+    background: #f5f8fa;
+    color: #334155;
+    /* font-family: "Segoe UI", Arial, sans-serif; */
+    box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+}
+
+.recordsPage *,
+.recordsPage *::before,
+.recordsPage *::after {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   TOP NAVIGATION
+   ========================================================= */
+
+.topNavigation {
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+
+/* =========================================================
+   BACK BUTTON
+   ========================================================= */
+
+.backButton {
+    min-height: 42px;
+
+    padding: 0 15px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    background: #ffffff;
+
+    color: #334155;
+
+    border: 1px solid #d9e3e8;
+    border-radius: 8px;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.backButton:hover {
+    color: #0e7490;
+
+    background: #eef8fa;
+
+    border-color: #a9d2dc;
+}
+
+.backButton i {
+    color: #0e7490;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   TOP ACTIONS
+   ========================================================= */
+
+.topActions {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+/* =========================================================
+   PRINT BUTTON
+   ========================================================= */
+
+.printButton {
+    min-height: 42px;
+
+    padding: 0 15px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    background: #ffffff;
+
+    color: #334155;
+
+    border: 1px solid #d9e3e8;
+    border-radius: 8px;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.printButton:hover {
+    background: #eef8fa;
+
+    color: #0e7490;
+
+    border-color: #a9d2dc;
+}
+
+.printButton i {
+    color: #0e7490;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   MORE OPTIONS BUTTON
+   ========================================================= */
+
+.patientAction {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+
+    color: #475569;
+
+    border: 1px solid #d9e3e8;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.patientAction:hover {
+    background: #eef8fa;
+
+    color: #0e7490;
+
+    border-color: #a9d2dc;
+}
+
+.patientAction i {
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   PATIENT HEADER
+   ========================================================= */
+
+.patientHeader {
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 0 auto;
+
+    padding: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 35px;
+
+    background: #0e7490;
+
+    color: #ffffff;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 7px 20px rgba(14, 116, 144, 0.14);
+}
+
+
+/* =========================================================
+   PATIENT IDENTITY
+   ========================================================= */
+
+.patientIdentity {
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+/* =========================================================
+   PATIENT AVATAR
+   ========================================================= */
+
+.patientAvatar {
+    width: 76px;
+    height: 76px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.18);
+
+    color: #ffffff;
+
+    border: 2px solid rgba(255, 255, 255, 0.45);
+    border-radius: 50%;
+
+    font-size: 24px;
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   PATIENT NAME
+   ========================================================= */
+
+.patientName {
+    min-width: 0;
+}
+
+
+/* =========================================================
+   PATIENT LABEL
+   ========================================================= */
+
+.patientLabel {
+    margin-bottom: 5px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+.patientLabel i {
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   PATIENT NAME H1
+   ========================================================= */
+
+.patientName h1 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 28px;
+    line-height: 1.25;
+    font-weight: 750;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   PATIENT ID
+   ========================================================= */
+
+.patientName p {
+    margin: 7px 0 0;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.patientName p strong {
+    color: #ffffff;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   PATIENT DETAILS
+   ========================================================= */
+
+.patientDetails {
+    min-width: 0;
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+
+    gap: 0;
+
+    border-left: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+
+/* =========================================================
+   INDIVIDUAL PATIENT DETAIL
+   ========================================================= */
+
+.patientDetails>div {
+    min-width: 0;
+
+    padding: 0 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+.patientDetails>div:first-child {
+    padding-left: 22px;
+}
+
+
+/* DETAIL LABEL */
+
+.patientDetails span {
+    color: rgba(255, 255, 255, 0.70);
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* DETAIL VALUE */
+
+.patientDetails strong {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.patientDetails strong i {
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   PATIENT QUICK INFORMATION
+   ========================================================= */
+
+.patientQuickInfo {
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 18px auto 0;
+
+    padding: 0;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 12px;
+}
+
+
+/* =========================================================
+   QUICK INFO ITEM
+   ========================================================= */
+
+.quickInfoItem {
+    min-width: 0;
+
+    min-height: 80px;
+
+    padding: 17px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    background: #ffffff;
+
+    border: 1px solid #dce5ea;
+    border-radius: 10px;
+
+    box-shadow:
+        0 3px 12px rgba(15, 23, 42, 0.03);
+}
+
+
+/* QUICK INFO ICON */
+
+.quickInfoItem>i {
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e7f5f8;
+
+    color: #0e7490;
+
+    border-radius: 8px;
+
+    font-size: 17px;
+}
+
+
+/* QUICK INFO CONTENT */
+
+.quickInfoItem>div {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+/* QUICK INFO LABEL */
+
+.quickInfoItem span {
+    color: #64748b;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* QUICK INFO VALUE */
+
+.quickInfoItem strong {
+    color: #334155;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   SEARCH & FILTER SECTION
+   ========================================================= */
+
+.recordSearchSection {
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 18px auto 0;
+
+    padding: 25px;
+
+    background: #ffffff;
+
+    border: 1px solid #dce5ea;
+    border-radius: 12px;
+
+    box-shadow:
+        0 3px 14px rgba(15, 23, 42, 0.03);
+}
+
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.sectionHeading {
+    width: 100%;
+
+    margin-bottom: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.sectionHeading>div {
+    min-width: 0;
+}
+
+
+/* SECTION TITLE */
+
+.sectionHeading h2 {
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    color: #334155;
+
+    font-size: 21px;
+    line-height: 1.35;
+    font-weight: 750;
+}
+
+.sectionHeading h2 i {
+    color: #0e7490;
+
+    font-size: 20px;
+}
+
+
+/* SECTION DESCRIPTION */
+
+.sectionHeading p {
+    margin: 6px 0 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   NEW RECORD TOP BUTTON
+   ========================================================= */
+
+.newRecordButton {
+    min-height: 43px;
+
+    flex-shrink: 0;
+
+    padding: 0 16px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    background: #0e7490;
+
+    color: #ffffff;
+
+    border: 1px solid #0e7490;
+    border-radius: 8px;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.newRecordButton:hover {
+    background: #0a6078;
+
+    border-color: #0a6078;
+}
+
+.newRecordButton i {
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   RECORD SEARCH
+   ========================================================= */
+
+.recordSearch {
+    width: 100%;
+
+    min-height: 48px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 0 14px;
+
+    background: #f8fafc;
+
+    border: 1px solid #d9e3e8;
+    border-radius: 8px;
+
+    transition: 0.2s ease;
+}
+
+.recordSearch:focus-within {
+    background: #ffffff;
+
+    border-color: #0e7490;
+
+    box-shadow:
+        0 0 0 3px rgba(14, 116, 144, 0.07);
+}
+
+.recordSearch>i {
+    flex-shrink: 0;
+
+    color: #0e7490;
+
+    font-size: 16px;
+}
+
+
+/* SEARCH INPUT */
+
+.recordSearch input {
+    width: 100%;
+
+    min-width: 0;
+
+    padding: 2px 0;
+
+    background: transparent;
+
+    color: #334155;
+
+    border: none;
+    outline: none;
+
+    font-family: inherit;
+    font-size: 13px;
+}
+
+.recordSearch input::placeholder {
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   FILTERS
+   ========================================================= */
+
+.recordFilters {
+    width: 100%;
+
+    margin-top: 18px;
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) auto;
+
+    align-items: end;
+
+    gap: 12px;
+}
+
+
+/* =========================================================
+   FILTER ITEM
+   ========================================================= */
+
+.filterItem {
+    min-width: 0;
+}
+
+.filterItem label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #475569;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   SELECT BOX
+   ========================================================= */
+
+.selectBox {
+    width: 100%;
+
+    min-height: 45px;
+
+    padding: 0 11px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    background: #ffffff;
+
+    border: 1px solid #d9e3e8;
+    border-radius: 8px;
+
+    transition: 0.2s ease;
+}
+
+.selectBox:focus-within {
+    border-color: #0e7490;
+
+    box-shadow:
+        0 0 0 3px rgba(14, 116, 144, 0.06);
+}
+
+.selectBox>i:first-child {
+    flex-shrink: 0;
+
+    color: #0e7490;
+
+    font-size: 14px;
+}
+
+
+/* SELECT */
+
+.selectBox select {
+    width: 100%;
+    min-width: 0;
+
+    appearance: none;
+
+    background: transparent;
+
+    color: #334155;
+
+    border: none;
+    outline: none;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+/* SELECT ARROW */
+
+.selectBox>i:last-child {
+    flex-shrink: 0;
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   APPLY FILTER BUTTON
+   ========================================================= */
+
+.applyFilterButton {
+    min-height: 45px;
+
+    padding: 0 17px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    background: #0e7490;
+
+    color: #ffffff;
+
+    border: 1px solid #0e7490;
+    border-radius: 8px;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.applyFilterButton:hover {
+    background: #0a6078;
+
+    border-color: #0a6078;
+}
+
+.applyFilterButton i {
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   RECORD SUMMARY
+   ========================================================= */
+
+.recordsSummary {
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 18px auto 0;
+
+    min-height: 48px;
+
+    padding: 0 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+
+/* SUMMARY TEXT */
+
+.recordsSummary>div {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+}
+
+.recordsSummary span {
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+.recordsSummary strong {
+    color: #334155;
+
+    font-size: 13px;
+    font-weight: 750;
+}
+
+
+/* =========================================================
+   CLEAR FILTERS
+   ========================================================= */
+
+.clearFiltersButton {
+    min-height: 36px;
+
+    padding: 0 11px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    background: transparent;
+
+    color: #64748b;
+
+    border: 1px solid #d9e3e8;
+    border-radius: 7px;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.clearFiltersButton:hover {
+    background: #eef8fa;
+
+    color: #0e7490;
+
+    border-color: #a9d2dc;
+}
+
+.clearFiltersButton i {
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   RESPONSIVE — 1100px
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .recordsPage {
+        padding: 20px;
+    }
+
+
+    /* PATIENT HEADER */
+
+    .patientHeader {
+        padding: 25px;
+
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .patientIdentity {
+        width: 100%;
+    }
+
+    .patientDetails {
+        width: 100%;
+
+        border-left: none;
+
+        border-top: 1px solid rgba(255, 255, 255, 0.25);
+
+        padding-top: 20px;
+    }
+
+    .patientDetails>div:first-child {
+        padding-left: 0;
+    }
+
+
+    /* QUICK INFO */
+
+    .patientQuickInfo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* FILTERS */
+
+    .recordFilters {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .applyFilterButton {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 768px
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .recordsPage {
+        padding: 16px;
+    }
+
+
+    /* TOP NAVIGATION */
+
+    .topNavigation {
+        margin-bottom: 15px;
+    }
+
+
+    /* PATIENT HEADER */
+
+    .patientHeader {
+        padding: 23px;
+
+        border-radius: 12px;
+    }
+
+    .patientAvatar {
+        width: 65px;
+        height: 65px;
+
+        font-size: 21px;
+    }
+
+    .patientName h1 {
+        font-size: 24px;
+    }
+
+
+    /* PATIENT DETAILS */
+
+    .patientDetails {
+        grid-template-columns: repeat(2, 1fr);
+
+        row-gap: 17px;
+    }
+
+    .patientDetails>div {
+        padding: 0;
+    }
+
+
+    /* QUICK INFO */
+
+    .patientQuickInfo {
+        gap: 10px;
+    }
+
+
+    /* SEARCH SECTION */
+
+    .recordSearchSection {
+        padding: 20px;
+    }
+
+    .sectionHeading {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .newRecordButton {
+        width: 100%;
+    }
+
+
+    /* FILTERS */
+
+    .recordFilters {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 600px
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    /* TOP NAVIGATION */
+
+    .topNavigation {
+        align-items: stretch;
+    }
+
+    .backButton {
+        flex: 1;
+
+        justify-content: flex-start;
+    }
+
+    .printButton span {
+        display: none;
+    }
+
+    .printButton {
+        width: 42px;
+        padding: 0;
+    }
+
+
+    /* PATIENT HEADER */
+
+    .patientHeader {
+        padding: 20px;
+
+        gap: 23px;
+    }
+
+    .patientIdentity {
+        align-items: flex-start;
+    }
+
+    .patientAvatar {
+        width: 58px;
+        height: 58px;
+
+        font-size: 19px;
+    }
+
+    .patientName h1 {
+        font-size: 22px;
+    }
+
+    .patientName p {
+        font-size: 12px;
+    }
+
+
+    /* PATIENT DETAILS */
+
+    .patientDetails {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .patientDetails strong {
+        font-size: 13px;
+    }
+
+
+    /* QUICK INFO */
+
+    .patientQuickInfo {
+        grid-template-columns: 1fr;
+    }
+
+    .quickInfoItem {
+        min-height: 70px;
+    }
+
+
+    /* SEARCH */
+
+    .recordSearchSection {
+        padding: 18px;
+    }
+
+    .sectionHeading h2 {
+        font-size: 19px;
+    }
+
+    .sectionHeading p {
+        font-size: 12px;
+    }
+
+
+    /* FILTERS */
+
+    .recordFilters {
+        grid-template-columns: 1fr;
+    }
+
+    .applyFilterButton {
+        width: 100%;
+    }
+
+
+    /* SUMMARY */
+
+    .recordsSummary {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        padding: 0 2px;
+    }
+
+    .clearFiltersButton {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 480px
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .recordsPage {
+        padding: 12px;
+    }
+
+
+    /* TOP NAVIGATION */
+
+    .backButton {
+        min-height: 40px;
+
+        padding: 0 11px;
+
+        font-size: 12px;
+    }
+
+    .backButton i {
+        font-size: 14px;
+    }
+
+    .patientAction,
+    .printButton {
+        width: 40px;
+        height: 40px;
+    }
+
+
+    /* PATIENT HEADER */
+
+    .patientHeader {
+        padding: 18px;
+
+        border-radius: 10px;
+    }
+
+    .patientIdentity {
+        gap: 12px;
+    }
+
+    .patientAvatar {
+        width: 52px;
+        height: 52px;
+
+        font-size: 17px;
+    }
+
+    .patientLabel {
+        font-size: 10px;
+    }
+
+    .patientName h1 {
+        font-size: 20px;
+    }
+
+    .patientName p {
+        font-size: 11px;
+    }
+
+
+    /* PATIENT DETAILS */
+
+    .patientDetails {
+        grid-template-columns: 1fr;
+
+        gap: 13px;
+
+        padding-top: 17px;
+    }
+
+    .patientDetails>div {
+        padding-bottom: 11px;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .patientDetails>div:last-child {
+        padding-bottom: 0;
+
+        border-bottom: none;
+    }
+
+
+    /* QUICK INFO */
+
+    .quickInfoItem {
+        padding: 14px;
+    }
+
+
+    /* SEARCH SECTION */
+
+    .recordSearchSection {
+        padding: 16px;
+    }
+
+    .sectionHeading h2 {
+        font-size: 18px;
+    }
+
+    .recordSearch {
+        min-height: 45px;
+    }
+
+    .recordSearch input {
+        font-size: 12px;
+    }
+
+
+    /* SUMMARY */
+
+    .recordsSummary span,
+    .recordsSummary strong {
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================================
+   CREATE NEW RECORD SECTION
+   ========================================================= */
+
+.newRecordSection {
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 18px auto 0;
+    padding: 25px;
+
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    background: #ffffff;
+
+    border: 1px dashed #a9cbd3;
+    border-radius: 13px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   NEW RECORD ICON
+   ========================================================= */
+
+.newRecordIcon {
+    width: 53px;
+    height: 53px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e5f5f8;
+    color: #0e7490;
+
+    border-radius: 10px;
+}
+
+.newRecordIcon i {
+    font-size: 21px;
+}
+
+
+/* =========================================================
+   NEW RECORD CONTENT
+   ========================================================= */
+
+.newRecordContent {
+    min-width: 0;
+    flex: 1;
+}
+
+.newRecordContent h2 {
+    margin: 0;
+
+    color: #334155;
+
+    font-size: 17px;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+.newRecordContent p {
+    margin: 5px 0 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   CREATE NEW RECORD BUTTON
+   ========================================================= */
+
+.newRecordButtonBottom {
+    min-height: 43px;
+
+    flex-shrink: 0;
+
+    padding: 0 17px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    background: #0e7490;
+    color: #ffffff;
+
+    border: 1px solid #0e7490;
+    border-radius: 8px;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.newRecordButtonBottom:hover {
+    background: #0a6078;
+    border-color: #0a6078;
+
+    transform: translateY(-1px);
+}
+
+.newRecordButtonBottom:active {
+    transform: translateY(0);
+}
+
+.newRecordButtonBottom i {
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   PAGE FOOTER
+   ========================================================= */
+
+.pageFooter {
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 22px auto 0;
+    padding: 5px 3px 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    box-sizing: border-box;
+}
+
+
+/* FOOTER LEFT SIDE */
+
+.pageFooter>div {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    min-width: 0;
+}
+
+
+/* FOOTER ICON */
+
+.pageFooter i {
+    flex-shrink: 0;
+
+    color: #0e7490;
+
+    font-size: 14px;
+}
+
+
+/* FOOTER TEXT */
+
+.pageFooter>div span {
+    line-height: 1.5;
+}
+
+
+/* PATIENT ID */
+
+.pageFooter>span {
+    flex-shrink: 0;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   HOVER / FOCUS ACCESSIBILITY
+   ========================================================= */
+
+.newRecordButtonBottom:focus-visible {
+    outline: 3px solid rgba(14, 116, 144, 0.20);
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   TABLET — 768px
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .newRecordSection {
+        padding: 21px;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .newRecordButtonBottom {
+        align-self: center;
+    }
+
+    .pageFooter {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 8px;
+
+        padding-bottom: 16px;
+    }
+
+    .pageFooter>span {
+        white-space: normal;
+    }
+}
+
+
+/* =========================================================
+   MOBILE — 600px
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .newRecordSection {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 20px;
+    }
+
+    .newRecordIcon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .newRecordIcon i {
+        font-size: 20px;
+    }
+
+    .newRecordContent {
+        width: 100%;
+    }
+
+    .newRecordContent h2 {
+        font-size: 16px;
+    }
+
+    .newRecordContent p {
+        font-size: 12px;
+    }
+
+    .newRecordButtonBottom {
+        width: 100%;
+
+        align-self: stretch;
+    }
+}
+
+
+/* =========================================================
+   MOBILE — 480px
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .newRecordSection {
+        margin-top: 15px;
+
+        padding: 18px;
+
+        border-radius: 11px;
+
+        gap: 13px;
+    }
+
+    .newRecordIcon {
+        width: 45px;
+        height: 45px;
+
+        border-radius: 9px;
+    }
+
+    .newRecordIcon i {
+        font-size: 18px;
+    }
+
+    .newRecordContent h2 {
+        font-size: 16px;
+    }
+
+    .newRecordContent p {
+        margin-top: 6px;
+
+        font-size: 12px;
+        line-height: 1.55;
+    }
+
+    .newRecordButtonBottom {
+        min-height: 42px;
+
+        font-size: 12px;
+    }
+
+    .pageFooter {
+        margin-top: 18px;
+
+        padding: 3px 2px 15px;
+
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE — 360px
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .newRecordSection {
+        padding: 15px;
+
+        gap: 12px;
+    }
+
+    .newRecordIcon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .newRecordContent h2 {
+        font-size: 15px;
+    }
+
+    .newRecordContent p {
+        font-size: 11px;
+    }
+
+    .newRecordButtonBottom {
+        min-height: 40px;
+
+        padding: 0 12px;
+
+        font-size: 11px;
+    }
+
+    .pageFooter {
+        font-size: 10px;
+    }
+}
+
+/* =========================================================
+   GLOBAL RECORDS PAGE
+   ========================================================= */
+
+.recordsPage {
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 24px 30px 35px;
+
+    background: #f5f8fa;
+
+    color: #334155;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    box-sizing: border-box;
+
+    overflow-x: hidden;
+}
+
+.recordsPage *,
+.recordsPage *::before,
+.recordsPage *::after {
+    box-sizing: border-box;
+}
+
+.recordsPage button,
+.recordsPage input,
+.recordsPage textarea,
+.recordsPage select {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   TOP NAVIGATION
+   ========================================================= */
+
+.topNavigation {
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+
+/* BACK BUTTON */
+
+.backButton {
+    min-height: 40px;
+
+    padding: 0 13px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    background: transparent;
+
+    color: #475569;
+
+    border: 1px solid #d9e3e8;
+    border-radius: 8px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.backButton:hover {
+    background: #ffffff;
+
+    color: #0e7490;
+
+    border-color: #b8d5dd;
+}
+
+.backButton i {
+    font-size: 14px;
+}
+
+
+/* TOP ACTIONS */
+
+.topActions {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+/* PRINT BUTTON */
+
+.printButton {
+    min-height: 40px;
+
+    padding: 0 14px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    background: #ffffff;
+
+    color: #475569;
+
+    border: 1px solid #d9e3e8;
+    border-radius: 8px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.printButton:hover {
+    color: #0e7490;
+
+    border-color: #a9cbd3;
+
+    background: #f8fdfe;
+}
+
+.printButton i {
+    font-size: 14px;
+}
+
+
+/* PATIENT ACTION */
+
+.patientAction {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+
+    color: #475569;
+
+    border: 1px solid #d9e3e8;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.patientAction:hover {
+    background: #e5f5f8;
+
+    color: #0e7490;
+
+    border-color: #b7d9e1;
+}
+
+.patientAction i {
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   PATIENT HEADER
+   ========================================================= */
+
+.patientHeader {
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 0 auto;
+
+    padding: 27px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 35px;
+
+    /*
+       YOUR PRIMARY COLOUR
+       Used as the main patient header background.
+    */
+    background: #0e7490;
+
+    color: #ffffff;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 7px 22px rgba(14, 116, 144, 0.15);
+
+    overflow: hidden;
+}
+
+
+/* PATIENT IDENTITY */
+
+.patientIdentity {
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+}
+
+
+/* PATIENT AVATAR */
+
+.patientAvatar {
+    width: 68px;
+    height: 68px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.16);
+
+    color: #ffffff;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+
+    font-size: 21px;
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* PATIENT NAME */
+
+.patientName {
+    min-width: 0;
+}
+
+
+/* PATIENT LABEL */
+
+.patientLabel {
+    margin-bottom: 4px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+.patientLabel i {
+    font-size: 12px;
+}
+
+
+/* PATIENT NAME HEADING */
+
+.patientName h1 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 25px;
+    line-height: 1.25;
+    font-weight: 700;
+}
+
+
+/* PATIENT ID */
+
+.patientName p {
+    margin: 5px 0 0;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    font-size: 12px;
+}
+
+.patientName p strong {
+    color: #ffffff;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   PATIENT DETAILS
+   ========================================================= */
+
+.patientDetails {
+    flex-shrink: 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(90px, 1fr));
+
+    gap: 24px;
+}
+
+.patientDetails>div {
+    min-width: 0;
+}
+
+
+/* DETAIL LABEL */
+
+.patientDetails span {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: rgba(255, 255, 255, 0.68);
+
+    font-size: 10px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* DETAIL VALUE */
+
+.patientDetails strong {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.patientDetails strong i {
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   PATIENT QUICK INFORMATION
+   ========================================================= */
+
+.patientQuickInfo {
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 14px auto 0;
+
+    padding: 18px 23px;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+
+    background: #ffffff;
+
+    border: 1px solid #dce5ea;
+    border-radius: 12px;
+
+    box-shadow:
+        0 3px 12px rgba(15, 23, 42, 0.03);
+}
+
+
+/* QUICK ITEM */
+
+.quickInfoItem {
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 4px 8px;
+}
+
+
+/* QUICK ICON */
+
+.quickInfoItem>i {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e5f5f8;
+
+    color: #0e7490;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+}
+
+
+/* QUICK TEXT */
+
+.quickInfoItem>div {
+    min-width: 0;
+}
+
+.quickInfoItem span {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #64748b;
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.quickInfoItem strong {
+    display: block;
+
+    color: #334155;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   SEARCH & FILTER SECTION
+   ========================================================= */
+
+.recordSearchSection {
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 18px auto 0;
+
+    padding: 24px 25px;
+
+    background: #ffffff;
+
+    border: 1px solid #dce5ea;
+    border-radius: 13px;
+
+    box-shadow:
+        0 4px 15px rgba(15, 23, 42, 0.03);
+}
+
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.sectionHeading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 19px;
+}
+
+.sectionHeading>div {
+    min-width: 0;
+}
+
+.sectionHeading h2 {
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: #334155;
+
+    font-size: 19px;
+    line-height: 1.35;
+    font-weight: 700;
+}
+
+.sectionHeading h2 i {
+    color: #0e7490;
+
+    font-size: 18px;
+}
+
+.sectionHeading p {
+    margin: 5px 0 0;
+
+    color: #64748b;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   NEW RECORD TOP BUTTON
+   ========================================================= */
+
+.newRecordButton {
+    min-height: 41px;
+
+    flex-shrink: 0;
+
+    padding: 0 15px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    background: #0e7490;
+
+    color: #ffffff;
+
+    border: 1px solid #0e7490;
+    border-radius: 8px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.newRecordButton:hover {
+    background: #0a6078;
+
+    border-color: #0a6078;
+
+    transform: translateY(-1px);
+}
+
+.newRecordButton i {
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   SEARCH BOX
+   ========================================================= */
+
+.recordSearch {
+    width: 100%;
+
+    min-height: 45px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 0 13px;
+
+    background: #f8fafc;
+
+    border: 1px solid #dce5ea;
+    border-radius: 8px;
+
+    transition: 0.2s ease;
+}
+
+.recordSearch:focus-within {
+    background: #ffffff;
+
+    border-color: #0e7490;
+
+    box-shadow:
+        0 0 0 3px rgba(14, 116, 144, 0.07);
+}
+
+.recordSearch>i {
+    flex-shrink: 0;
+
+    color: #94a3b8;
+
+    font-size: 14px;
+}
+
+.recordSearch input {
+    width: 100%;
+
+    min-width: 0;
+
+    height: 43px;
+
+    padding: 0;
+
+    background: transparent;
+
+    color: #334155;
+
+    border: none;
+
+    outline: none;
+
+    font-size: 12px;
+}
+
+.recordSearch input::placeholder {
+    color: #9aa7b4;
+}
+
+
+/* =========================================================
+   FILTERS
+   ========================================================= */
+
+.recordFilters {
+    width: 100%;
+
+    margin-top: 15px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(130px, 1fr) minmax(130px, 1fr) minmax(150px, 1.1fr) minmax(150px, 1.1fr) auto;
+
+    gap: 12px;
+
+    align-items: end;
+}
+
+
+/* FILTER ITEM */
+
+.filterItem {
+    min-width: 0;
+}
+
+.filterItem label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #475569;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* SELECT BOX */
+
+.selectBox {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 42px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 0 11px;
+
+    background: #ffffff;
+
+    border: 1px solid #d8e2e8;
+    border-radius: 7px;
+
+    transition: 0.2s ease;
+}
+
+.selectBox:focus-within {
+    border-color: #0e7490;
+
+    box-shadow:
+        0 0 0 3px rgba(14, 116, 144, 0.06);
+}
+
+.selectBox>i:first-child {
+    flex-shrink: 0;
+
+    color: #0e7490;
+
+    font-size: 13px;
+}
+
+
+/* SELECT */
+
+.selectBox select {
+    width: 100%;
+    min-width: 0;
+
+    height: 40px;
+
+    padding: 0 20px 0 0;
+
+    appearance: none;
+
+    background: transparent;
+
+    color: #334155;
+
+    border: none;
+
+    outline: none;
+
+    cursor: pointer;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* SELECT ARROW */
+
+.selectBox>i:last-child {
+    position: absolute;
+
+    right: 10px;
+
+    pointer-events: none;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   APPLY FILTER
+   ========================================================= */
+
+.applyFilterButton {
+    min-height: 42px;
+
+    padding: 0 15px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    background: #0e7490;
+
+    color: #ffffff;
+
+    border: 1px solid #0e7490;
+    border-radius: 7px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.applyFilterButton:hover {
+    background: #0a6078;
+
+    border-color: #0a6078;
+}
+
+.applyFilterButton i {
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   RECORD SUMMARY
+   ========================================================= */
+
+.recordsSummary {
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 14px auto 0;
+
+    min-height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+
+/* SUMMARY TEXT */
+
+.recordsSummary>div {
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+}
+
+.recordsSummary span {
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+.recordsSummary strong {
+    color: #334155;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* CLEAR FILTERS */
+
+.clearFiltersButton {
+    min-height: 34px;
+
+    padding: 0 10px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    background: transparent;
+
+    color: #64748b;
+
+    border: 1px solid transparent;
+    border-radius: 6px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.clearFiltersButton:hover {
+    background: #ffffff;
+
+    color: #0e7490;
+
+    border-color: #d8e2e8;
+}
+
+.clearFiltersButton i {
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   RECORD CARD
+   ========================================================= */
+
+.recordCard {
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 18px auto 0;
+
+    background: #ffffff;
+
+    border: 1px solid #dce5ea;
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 4px 16px rgba(15, 23, 42, 0.04);
+}
+
+
+/* =========================================================
+   RECORD CARD HEADER
+   ========================================================= */
+
+.recordCardHeader {
+    width: 100%;
+
+    padding: 23px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    border-bottom: 1px solid #e5eaf0;
+}
+
+
+/* RECORD TITLE */
+
+.recordTitleArea {
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+}
+
+.recordIcon {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e5f5f8;
+
+    color: #0e7490;
+
+    border-radius: 10px;
+}
+
+.recordIcon i {
+    font-size: 20px;
+}
+
+.recordType {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #0e7490;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 0.8px;
+}
+
+.recordTitleArea h2 {
+    margin: 0;
+
+    color: #334155;
+
+    font-size: 19px;
+    line-height: 1.35;
+    font-weight: 700;
+}
+
+.recordTitleArea p {
+    margin: 5px 0 0;
+
+    color: #64748b;
+
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   RECORD ACTIONS
+   ========================================================= */
+
+.recordCardActions {
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+}
+
+.recordStatus {
+    min-height: 31px;
+
+    padding: 0 10px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    border-radius: 7px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.recordStatus i {
+    font-size: 12px;
+}
+
+.completed {
+    background: #e8f7ee;
+    color: #168044;
+}
+
+.updated {
+    background: #e5f5f8;
+    color: #0e7490;
+}
+
+
+/* ICON ACTION */
+
+.iconAction {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f8fafc;
+
+    color: #475569;
+
+    border: 1px solid #dce5ea;
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.iconAction:hover {
+    background: #e5f5f8;
+
+    color: #0e7490;
+
+    border-color: #b7d9e1;
+}
+
+.iconAction i {
+    font-size: 15px;
+}
+
+.iconAction.deleteAction:hover {
+    background: #fef2f2;
+
+    color: #dc2626;
+
+    border-color: #fecaca;
+}
+
+
+/* =========================================================
+   RECORD META
+   ========================================================= */
+
+.recordMeta {
+    width: 100%;
+
+    padding: 18px 25px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    background: #f8fafc;
+
+    border-bottom: 1px solid #e5eaf0;
+}
+
+.recordMeta>div {
+    min-width: 0;
+}
+
+.recordMeta span {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #64748b;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.recordMeta strong {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    color: #334155;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.recordMeta strong i {
+    color: #0e7490;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   INFORMATION SECTION
+   ========================================================= */
+
+.informationSection {
+    width: 100%;
+
+    padding: 25px;
+}
+
+.informationHeader {
+    margin-bottom: 19px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+.informationHeader h3 {
+    margin: 0;
+
+    color: #334155;
+
+    font-size: 17px;
+    line-height: 1.35;
+    font-weight: 700;
+}
+
+.informationHeader p {
+    margin: 5px 0 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   CUSTOM FIELD
+   ========================================================= */
+
+.customField {
+    width: 100%;
+
+    margin-bottom: 12px;
+
+    padding: 14px;
+
+    display: grid;
+
+    grid-template-columns: 175px minmax(0, 1fr) 38px;
+
+    align-items: start;
+
+    gap: 15px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e1e8ed;
+    border-radius: 9px;
+
+    transition: 0.2s ease;
+}
+
+.customField:focus-within {
+    background: #ffffff;
+
+    border-color: #a9d1da;
+
+    box-shadow:
+        0 0 0 3px rgba(14, 116, 144, 0.05);
+}
+
+.fieldName {
+    min-width: 0;
+
+    padding-top: 5px;
+}
+
+.fieldName label {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #334155;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    overflow-wrap: anywhere;
+}
+
+.fieldName span {
+    display: block;
+
+    color: #94a3b8;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+}
+
+.fieldValue {
+    min-width: 0;
+}
+
+.fieldValue textarea {
+    width: 100%;
+    min-height: 58px;
+
+    display: block;
+
+    padding: 11px 12px;
+
+    resize: vertical;
+
+    background: #ffffff;
+
+    color: #334155;
+
+    border: 1px solid #d8e2e8;
+    border-radius: 7px;
+
+    outline: none;
+
+    font-family: inherit;
+    font-size: 13px;
+    line-height: 1.5;
+
+    transition: 0.2s ease;
+}
+
+.fieldValue textarea::placeholder {
+    color: #a0acb8;
+}
+
+.fieldValue textarea:focus {
+    border-color: #0e7490;
+
+    box-shadow:
+        0 0 0 3px rgba(14, 116, 144, 0.07);
+}
+
+
+/* DELETE FIELD */
+
+.fieldDelete {
+    width: 36px;
+    height: 36px;
+
+    margin-top: 2px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+
+    color: #94a3b8;
+
+    border: 1px solid #dce5ea;
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.fieldDelete:hover {
+    background: #fef2f2;
+
+    color: #dc2626;
+
+    border-color: #fecaca;
+}
+
+.fieldDelete i {
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   ADD FIELD
+   ========================================================= */
+
+.addFieldButton {
+    width: 100%;
+
+    min-height: 45px;
+
+    margin-top: 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    background: #f8fdfe;
+
+    color: #0e7490;
+
+    border: 1px dashed #9fcbd5;
+    border-radius: 8px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.addFieldButton:hover {
+    background: #eaf7f9;
+
+    border-color: #0e7490;
+}
+
+.addFieldButton i {
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   RECORD FOOTER
+   ========================================================= */
+
+.recordFooter {
+    width: 100%;
+
+    padding: 17px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    background: #fafcfd;
+
+    border-top: 1px solid #e5eaf0;
+}
+
+.lastModified {
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+.lastModified i {
+    flex-shrink: 0;
+
+    color: #0e7490;
+
+    font-size: 14px;
+}
+
+.saveActions {
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+}
+
+.cancelButton {
+    min-height: 39px;
+
+    padding: 0 16px;
+
+    background: #ffffff;
+
+    color: #475569;
+
+    border: 1px solid #d8e2e8;
+    border-radius: 7px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.cancelButton:hover {
+    background: #f8fafc;
+
+    border-color: #b8c6d0;
+}
+
+.saveButton {
+    min-height: 39px;
+
+    padding: 0 17px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    background: #0e7490;
+
+    color: #ffffff;
+
+    border: 1px solid #0e7490;
+    border-radius: 7px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.saveButton:hover {
+    background: #0a6078;
+
+    border-color: #0a6078;
+}
+
+.saveButton i {
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   CREATE NEW RECORD
+   ========================================================= */
+
+.newRecordSection {
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 18px auto 0;
+
+    padding: 25px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    background: #ffffff;
+
+    border: 1px dashed #a9cbd3;
+    border-radius: 13px;
+}
+
+.newRecordIcon {
+    width: 53px;
+    height: 53px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e5f5f8;
+
+    color: #0e7490;
+
+    border-radius: 10px;
+}
+
+.newRecordIcon i {
+    font-size: 21px;
+}
+
+.newRecordContent {
+    min-width: 0;
+
+    flex: 1;
+}
+
+.newRecordContent h2 {
+    margin: 0;
+
+    color: #334155;
+
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.newRecordContent p {
+    margin: 5px 0 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.newRecordButtonBottom {
+    min-height: 43px;
+
+    flex-shrink: 0;
+
+    padding: 0 17px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    background: #0e7490;
+
+    color: #ffffff;
+
+    border: 1px solid #0e7490;
+    border-radius: 8px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.newRecordButtonBottom:hover {
+    background: #0a6078;
+
+    border-color: #0a6078;
+}
+
+.newRecordButtonBottom i {
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   PAGE FOOTER
+   ========================================================= */
+
+.pageFooter {
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 22px auto 0;
+
+    padding: 5px 3px 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+.pageFooter>div {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+}
+
+.pageFooter i {
+    color: #0e7490;
+
+    font-size: 14px;
+}
+
+.pageFooter>span {
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   TABLET — 1000px
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .recordsPage {
+        padding: 20px;
+    }
+
+    .patientHeader {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 25px;
+    }
+
+    .patientIdentity {
+        width: 100%;
+    }
+
+    .patientDetails {
+        width: 100%;
+
+        grid-template-columns: repeat(4, 1fr);
+
+        gap: 15px;
+    }
+
+    .recordFilters {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .applyFilterButton {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   TABLET — 768px
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .recordsPage {
+        padding: 18px 15px 30px;
+    }
+
+    .patientHeader {
+        padding: 23px;
+    }
+
+    .patientDetails {
+        grid-template-columns: repeat(2, 1fr);
+
+        row-gap: 18px;
+    }
+
+    .patientQuickInfo {
+        grid-template-columns: repeat(2, 1fr);
+
+        padding: 17px;
+    }
+
+    .sectionHeading {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .newRecordButton {
+        width: 100%;
+    }
+
+    .recordCardHeader {
+        padding: 20px;
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 17px;
+    }
+
+    .recordTitleArea {
+        width: 100%;
+    }
+
+    .recordCardActions {
+        width: 100%;
+    }
+
+    .recordStatus {
+        margin-right: auto;
+    }
+
+    .recordMeta {
+        padding: 17px 20px;
+    }
+
+    .informationSection {
+        padding: 20px;
+    }
+
+    .customField {
+        grid-template-columns: 150px minmax(0, 1fr) 38px;
+
+        gap: 11px;
+
+        padding: 12px;
+    }
+
+    .recordFooter {
+        padding: 17px 20px;
+
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .saveActions {
+        width: 100%;
+    }
+
+    .cancelButton,
+    .saveButton {
+        flex: 1;
+    }
+
+    .newRecordSection {
+        padding: 21px;
+
+        align-items: flex-start;
+    }
+
+    .newRecordButtonBottom {
+        align-self: center;
+    }
+
+    .pageFooter {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 8px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE — 600px
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .topNavigation {
+        align-items: stretch;
+
+        flex-direction: column;
+    }
+
+    .backButton {
+        width: 100%;
+    }
+
+    .topActions {
+        width: 100%;
+    }
+
+    .printButton {
+        flex: 1;
+    }
+
+    .patientHeader {
+        padding: 20px;
+
+        border-radius: 12px;
+    }
+
+    .patientAvatar {
+        width: 55px;
+        height: 55px;
+
+        font-size: 18px;
+    }
+
+    .patientName h1 {
+        font-size: 21px;
+    }
+
+    .patientDetails {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .patientQuickInfo {
+        grid-template-columns: 1fr;
+    }
+
+    .recordSearchSection {
+        padding: 20px;
+    }
+
+    .recordFilters {
+        grid-template-columns: 1fr;
+    }
+
+    .recordsSummary {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .recordTitleArea {
+        align-items: flex-start;
+    }
+
+    .recordIcon {
+        width: 43px;
+        height: 43px;
+    }
+
+    .recordIcon i {
+        font-size: 18px;
+    }
+
+    .recordTitleArea h2 {
+        font-size: 17px;
+    }
+
+    .recordTitleArea p {
+        font-size: 11px;
+    }
+
+    .recordCardActions {
+        flex-wrap: wrap;
+    }
+
+    .recordMeta {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .recordMeta>div {
+        padding-bottom: 13px;
+
+        border-bottom: 1px solid #e5eaf0;
+    }
+
+    .recordMeta>div:last-child {
+        padding-bottom: 0;
+
+        border-bottom: none;
+    }
+
+    .informationHeader h3 {
+        font-size: 16px;
+    }
+
+    .informationHeader p {
+        font-size: 12px;
+    }
+
+    .customField {
+        grid-template-columns: 1fr 38px;
+
+        gap: 9px;
+    }
+
+    .fieldName {
+        grid-column: 1 / -1;
+
+        padding-top: 0;
+    }
+
+    .fieldValue {
+        grid-column: 1;
+    }
+
+    .fieldDelete {
+        grid-column: 2;
+
+        grid-row: 2;
+    }
+
+    .newRecordSection {
+        flex-direction: column;
+    }
+
+    .newRecordContent {
+        width: 100%;
+    }
+
+    .newRecordButtonBottom {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   MOBILE — 480px
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .recordsPage {
+        padding: 14px 10px 25px;
+    }
+
+    .patientHeader {
+        padding: 17px;
+
+        gap: 20px;
+    }
+
+    .patientIdentity {
+        gap: 12px;
+    }
+
+    .patientAvatar {
+        width: 48px;
+        height: 48px;
+
+        font-size: 16px;
+    }
+
+    .patientLabel {
+        font-size: 9px;
+    }
+
+    .patientName h1 {
+        font-size: 19px;
+    }
+
+    .patientName p {
+        font-size: 10px;
+    }
+
+    .patientDetails {
+        grid-template-columns: 1fr;
+    }
+
+    .patientDetails>div {
+        padding-bottom: 11px;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .patientDetails>div:last-child {
+        padding-bottom: 0;
+
+        border-bottom: none;
+    }
+
+    .patientQuickInfo {
+        padding: 14px;
+    }
+
+    .quickInfoItem {
+        padding: 4px;
+    }
+
+    .recordSearchSection {
+        padding: 17px;
+    }
+
+    .sectionHeading h2 {
+        font-size: 17px;
+    }
+
+    .sectionHeading p {
+        font-size: 11px;
+    }
+
+    .recordSearch input {
+        font-size: 11px;
+    }
+
+    .recordCard {
+        border-radius: 11px;
+    }
+
+    .recordCardHeader {
+        padding: 17px;
+    }
+
+    .recordStatus {
+        min-height: 30px;
+
+        padding: 0 8px;
+
+        font-size: 10px;
+    }
+
+    .iconAction {
+        width: 34px;
+        height: 34px;
+    }
+
+    .recordMeta {
+        padding: 15px 17px;
+    }
+
+    .informationSection {
+        padding: 17px;
+    }
+
+    .customField {
+        padding: 11px;
+    }
+
+    .fieldName label {
+        font-size: 12px;
+    }
+
+    .fieldValue textarea {
+        min-height: 62px;
+
+        font-size: 12px;
+    }
+
+    .recordFooter {
+        padding: 15px 17px;
+    }
+
+    .lastModified {
+        align-items: flex-start;
+
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    .saveActions {
+        flex-direction: column;
+    }
+
+    .cancelButton,
+    .saveButton {
+        width: 100%;
+
+        flex: none;
+    }
+
+    .newRecordSection {
+        padding: 18px;
+    }
+
+    .newRecordContent h2 {
+        font-size: 16px;
+    }
+
+    .newRecordContent p {
+        font-size: 12px;
+    }
+
+    .pageFooter {
+        font-size: 11px;
+    }
+
+    .pageFooter>span {
+        white-space: normal;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE — 360px
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .recordsPage {
+        padding: 12px 8px 20px;
+    }
+
+    .patientHeader {
+        padding: 15px;
+    }
+
+    .patientName h1 {
+        font-size: 17px;
+    }
+
+    .patientQuickInfo {
+        padding: 12px;
+    }
+
+    .recordSearchSection {
+        padding: 14px;
+    }
+
+    .recordCardHeader {
+        padding: 14px;
+    }
+
+    .recordTitleArea {
+        gap: 10px;
+    }
+
+    .recordIcon {
+        width: 39px;
+        height: 39px;
+    }
+
+    .recordTitleArea h2 {
+        font-size: 16px;
+    }
+
+    .recordTitleArea p {
+        font-size: 10px;
+    }
+
+    .informationSection {
+        padding: 14px;
+    }
+
+    .recordFooter {
+        padding: 14px;
+    }
+
+    .newRecordSection {
+        padding: 15px;
+    }
+}
