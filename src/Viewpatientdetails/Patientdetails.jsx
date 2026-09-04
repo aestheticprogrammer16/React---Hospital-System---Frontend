@@ -839,62 +839,44 @@ function Patientdetails() {
 
 
                                         <div className={PD.summaryCard}>
-
                                             <i className="bi bi-person-vcard"></i>
 
                                             <div>
-
                                                 <strong>
                                                     Personal Information
                                                 </strong>
 
                                                 <span>
-                                                    Name, age, gender and date of birth
-                                                    information.
+                                                    {firstName[0].toUpperCase() + firstName.slice(1).toLowerCase(0)}  {lastName[0].toUpperCase() + lastName.slice(1).toLowerCase(0)}  - {gender} - {age} years - {dob.split("T")[0]}
                                                 </span>
-
                                             </div>
-
                                         </div>
 
 
                                         <div className={PD.summaryCard}>
-
                                             <i className="bi bi-telephone"></i>
 
                                             <div>
-
                                                 <strong>
                                                     Contact Details
                                                 </strong>
-
                                                 <span>
-                                                    Phone number, email and residential
-                                                    address.
+                                                    {phone} - {email} - {address}
                                                 </span>
-
                                             </div>
-
                                         </div>
 
-
                                         <div className={PD.summaryCard}>
-
                                             <i className="bi bi-person-heart"></i>
-
                                             <div>
-
                                                 <strong>
                                                     Emergency Contact
+
                                                 </strong>
-
                                                 <span>
-                                                    Emergency contact person, relationship
-                                                    and phone number.
+                                                    {emergencyName} - {emergencyRelation} -  {emergencyPhone}
                                                 </span>
-
                                             </div>
-
                                         </div>
 
 
@@ -909,8 +891,7 @@ function Patientdetails() {
                                                 </strong>
 
                                                 <span>
-                                                    Registered identification type and
-                                                    identification number.
+                                                    {idType} - Card number: {idNumber}
                                                 </span>
 
                                             </div>
