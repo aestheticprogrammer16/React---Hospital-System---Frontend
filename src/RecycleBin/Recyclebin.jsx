@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import P from "./Recyclebin.module.css";
+import P from "./RecycleBin.module.css";
 import { Helmet } from 'react-helmet-async'
 
 function Recyclebin() {
