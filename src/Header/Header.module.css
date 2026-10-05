@@ -1,0 +1,2319 @@
+/* =========================================================
+   HEADER CONTAINER
+========================================================= */
+
+.headerContainer {
+    width: 100%;
+    position: fixed;
+    top: 18px;
+    left: 0;
+    z-index: 10;
+    padding: 0 24px;
+    box-sizing: border-box;
+    animation: headerEnter 0.7s ease both;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.hide {
+    display: none;
+}
+
+/* =========================================================
+   MAIN HEADER
+========================================================= */
+
+.header {
+    width: 100%;
+    min-height: 64px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 8px 12px;
+
+    background: #ffffff;
+
+    border: 1px solid #dce8ec;
+    border-radius: 15px;
+
+    box-shadow:
+        0 8px 25px rgba(8, 126, 164, 0.08),
+        0 3px 10px rgba(15, 23, 42, 0.04);
+
+    box-sizing: border-box;
+
+    position: relative;
+
+    transition:
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+.header:hover {
+    box-shadow:
+        0 12px 30px rgba(8, 126, 164, 0.11),
+        0 4px 12px rgba(15, 23, 42, 0.05);
+}
+
+.header::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background: linear-gradient(90deg,
+            #087ea4,
+            #0e7490,
+            #810b38);
+
+    border-radius: 15px 15px 0 0;
+}
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.brand {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    text-decoration: none;
+
+    flex-shrink: 0;
+
+    color: #334155;
+
+    font-family: "Segoe UI", sans-serif;
+}
+
+.brandIcon {
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e8f5f8;
+    color: #087ea4;
+
+    border-radius: 11px;
+
+    font-size: 19px;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.brand:hover .brandIcon {
+    background: #087ea4;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.brandText {
+    display: flex;
+    flex-direction: column;
+
+    line-height: 1.15;
+}
+
+.brandText strong {
+    color: #334155;
+
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.brandText span {
+    margin-top: 3px;
+
+    color: #64748b;
+
+    font-size: 9px;
+    font-weight: 600;
+}
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.navigation {
+    display: flex;
+    align-items: center;
+
+    gap: 4px;
+
+    margin-left: auto;
+    margin-right: 12px;
+}
+
+.navItem {
+    position: relative;
+
+    min-height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 0 11px;
+
+    color: #64748b;
+
+    text-decoration: none;
+
+    border-radius: 9px;
+
+    font-family: "Segoe UI", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+
+    transition:
+        color 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.navItem i {
+    font-size: 14px;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.navItem:hover {
+    color: #087ea4;
+    background: #f1f8fa;
+
+    transform: translateY(-1px);
+}
+
+.navItem:hover i {
+    transform: translateY(-1px);
+}
+
+.active {
+    color: #087ea4;
+    background: #edf7f9;
+}
+
+.active::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: -1px;
+    left: 50%;
+
+    width: 20px;
+    height: 3px;
+
+    background: #087ea4;
+
+    border-radius: 10px;
+
+    transform: translateX(-50%);
+}
+
+/* =========================================================
+   HEADER ACTIONS
+========================================================= */
+
+.headerActions {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    flex-shrink: 0;
+
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* =========================================================
+   NOTIFICATION
+========================================================= */
+
+.notificationButton {
+    position: relative;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #dce8ec;
+    background: #f8fbfc;
+    color: #475569;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-family: "Segoe UI", sans-serif;
+    font-size: 16px;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.notificationButton:hover {
+    background: #edf7f9;
+    color: #087ea4;
+    border-color: #b9dbe4;
+
+    transform: translateY(-2px);
+}
+
+.notificationButton i {
+    transition: transform 0.3s ease;
+}
+
+.notificationButton:hover i {
+    transform: rotate(-8deg);
+}
+
+/* =========================================================
+   NOTIFICATION BADGE
+========================================================= */
+
+.notificationBadge {
+    position: absolute;
+
+    top: -5px;
+    right: -5px;
+
+    min-width: 18px;
+    height: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 4px;
+
+    background: #810b38;
+    color: #ffffff;
+
+    border: 2px solid #ffffff;
+
+    border-radius: 50px;
+
+    font-family: "Segoe UI", sans-serif;
+    font-size: 8px;
+    font-weight: 800;
+
+    box-sizing: border-box;
+
+    animation: notificationPulse 2.2s ease-in-out infinite;
+}
+
+@keyframes notificationPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+}
+
+/* =========================================================
+   PROFILE
+========================================================= */
+
+.adminProfile {
+    min-height: 42px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 4px 10px 4px 5px;
+
+    border: 1px solid #dce8ec;
+    background: #f8fbfc;
+    color: #334155;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-family: "Segoe UI", sans-serif;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.adminProfile:hover {
+    background: #edf7f9;
+    border-color: #b9dbe4;
+
+    transform: translateY(-2px);
+}
+
+/* PROFILE AVATAR */
+
+.adminAvatar {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e8f5f8;
+    color: #087ea4;
+
+    border-radius: 9px;
+
+    font-size: 15px;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+.adminProfile:hover .adminAvatar {
+    background: #087ea4;
+    color: #ffffff;
+}
+
+/* PROFILE TEXT */
+
+.adminInfo {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+
+    text-align: left;
+}
+
+.adminInfo strong {
+    color: #334155;
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.adminInfo span {
+    display: none;
+}
+
+/* PROFILE ARROW */
+
+.adminArrow {
+    color: #64748b;
+
+    font-size: 9px;
+
+    transition: transform 0.25s ease;
+}
+
+.adminProfile:hover .adminArrow {
+    /* transform: rotate(180deg); */
+}
+
+/* =========================================================
+   LOGOUT
+========================================================= */
+
+.logoutButton {
+    min-height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    margin-left: 4px;
+
+    padding: 0 12px;
+
+    border: 1px solid #dce8ec;
+    background: #ffffff;
+    color: #64748b;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    font-family: "Segoe UI", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.logoutButton:hover {
+    background: #fff5f6;
+    color: #810b38;
+    border-color: #e6c2ce;
+
+    transform: translateY(-1px);
+}
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.menuButton {
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #dce8ec;
+    background: #f8fbfc;
+    color: #475569;
+
+    cursor: pointer;
+
+    font-family: "Segoe UI", sans-serif;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.menuButton:hover {
+    background: #edf7f9;
+    color: #087ea4;
+}
+
+.menuButtonOpen {
+    background: #087ea4;
+    color: #ffffff;
+}
+
+/* =========================================================
+   LARGE SCREENS
+========================================================= */
+
+@media (min-width: 1400px) {
+
+    .headerContainer {
+        padding: 0 35px;
+    }
+
+    .navigation {
+        gap: 7px;
+    }
+
+    .navItem {
+        padding: 0 13px;
+        font-size: 12px;
+    }
+}
+
+/* =========================================================
+   MEDIUM SCREENS
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .headerContainer {
+        padding: 0 16px;
+    }
+
+    .navigation {
+        gap: 2px;
+        margin-right: 8px;
+    }
+
+    .navItem {
+        padding: 0 8px;
+        gap: 5px;
+        font-size: 10px;
+    }
+
+    .navItem i {
+        font-size: 13px;
+    }
+
+    .brandText span {
+        display: none;
+    }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 980px) {
+
+    .header {
+        min-height: 60px;
+    }
+
+    .navigation {
+        gap: 2px;
+    }
+
+    .navItem {
+        padding: 0 7px;
+        font-size: 9px;
+    }
+
+    .navItem i {
+        font-size: 12px;
+    }
+
+    .logoutButton {
+        padding: 0 9px;
+        font-size: 10px;
+    }
+
+    .adminInfo strong {
+        font-size: 10px;
+    }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+
+    .headerContainer {
+        top: 9px;
+        padding: 0 10px;
+    }
+
+    /* =====================================================
+       CLOSED HEADER
+    ===================================================== */
+
+    .header {
+        min-height: 53px;
+        max-height: 53px;
+
+        padding: 7px;
+
+        display: grid;
+
+        grid-template-columns: 1fr auto auto;
+
+        grid-template-areas:
+            "brand notification menu"
+            "navigation navigation navigation"
+            "logout logout logout";
+
+        gap: 7px;
+
+        border-radius: 14px;
+
+        overflow: hidden;
+
+        transition:
+            max-height 0.65s cubic-bezier(0.4, 0, 0.2, 1),
+            box-shadow 0.3s ease;
+    }
+
+    /* =====================================================
+       OPEN HEADER
+    ===================================================== */
+
+    .headerOpen {
+        max-height: 560px;
+
+        box-shadow:
+            0 18px 45px rgba(8, 126, 164, 0.16),
+            0 6px 18px rgba(129, 11, 56, 0.07);
+    }
+
+    /* =====================================================
+       BRAND
+    ===================================================== */
+
+    .brand {
+        grid-area: brand;
+
+        min-width: 0;
+
+        gap: 8px;
+    }
+
+    .brandIcon {
+        width: 38px;
+        height: 38px;
+
+        border-radius: 9px;
+
+        font-size: 17px;
+    }
+
+    .brandText strong {
+        font-size: 14px;
+    }
+
+    .brandText span {
+        display: none;
+    }
+
+    /* =====================================================
+       NOTIFICATION
+    ===================================================== */
+
+    .headerActions {
+        grid-area: notification;
+
+        display: flex;
+        align-items: center;
+
+        gap: 6px;
+
+        width: auto;
+
+        opacity: 1;
+        max-height: none;
+
+        padding: 0;
+
+        overflow: visible;
+
+        pointer-events: auto;
+
+        transform: none;
+
+        font-family: "Segoe UI", sans-serif;
+    }
+
+    .notificationButton {
+        width: 38px;
+        height: 38px;
+
+        flex-shrink: 0;
+
+        border-radius: 9px;
+
+        font-size: 16px;
+    }
+
+    .notificationBadge {
+        top: -4px;
+        right: -4px;
+
+        min-width: 18px;
+        height: 18px;
+
+        font-size: 8px;
+    }
+
+    /* =====================================================
+       PROFILE
+    ===================================================== */
+
+    .adminProfile {
+        grid-area: notification;
+
+        width: 38px;
+        min-width: 38px;
+        height: 38px;
+        min-height: 38px;
+
+        padding: 0;
+
+        justify-content: center;
+
+        border-radius: 9px;
+    }
+
+    .adminAvatar {
+        width: 34px;
+        height: 34px;
+
+        border-radius: 8px;
+
+        font-size: 14px;
+    }
+
+    .adminInfo {
+        display: none;
+    }
+
+    .adminArrow {
+        display: none;
+    }
+
+    /*
+       Put notification + profile beside each other
+       inside the header action area.
+    */
+
+    .headerActions {
+        position: relative;
+
+        width: auto;
+
+        padding-right: 0;
+    }
+
+    .notificationButton {
+        margin-right: 0;
+    }
+
+    /* =====================================================
+       MENU BUTTON
+    ===================================================== */
+
+    .menuButton {
+        grid-area: menu;
+
+        display: flex;
+
+        width: 38px;
+        height: 38px;
+
+        border-radius: 9px;
+
+        font-size: 19px;
+
+        flex-shrink: 0;
+    }
+
+    /* =====================================================
+       NAVIGATION
+    ===================================================== */
+
+    .navigation {
+        grid-area: navigation;
+
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 6px;
+
+        max-height: 0;
+
+        padding-top: 0;
+
+        opacity: 0;
+
+        overflow: hidden;
+
+        pointer-events: none;
+
+        transform: translateY(-10px);
+
+        transition:
+            max-height 0.55s ease,
+            opacity 0.3s ease,
+            transform 0.45s ease,
+            padding-top 0.4s ease;
+    }
+
+    .navigationOpen {
+        max-height: 360px;
+
+        padding-top: 11px;
+
+        opacity: 1;
+
+        pointer-events: auto;
+
+        transform: translateY(0);
+    }
+
+    /* =====================================================
+       MOBILE NAV ITEMS
+    ===================================================== */
+
+    .navItem {
+        width: 100%;
+
+        min-height: 45px;
+
+        padding: 0 13px;
+
+        justify-content: flex-start;
+
+        gap: 11px;
+
+        border-radius: 10px;
+
+        font-size: 12px;
+
+        box-sizing: border-box;
+    }
+
+    .navItem i {
+        width: 22px;
+
+        text-align: center;
+
+        font-size: 15px;
+    }
+
+    /* =====================================================
+       LOGOUT
+    ===================================================== */
+
+    .logoutButton {
+        grid-area: logout;
+
+        width: 100%;
+
+        min-height: 45px;
+
+        margin-top: 0;
+
+        padding: 0 13px;
+
+        justify-content: flex-start;
+
+        border-radius: 10px;
+
+        font-size: 12px;
+
+        opacity: 0;
+
+        max-height: 0;
+
+        overflow: hidden;
+
+        pointer-events: none;
+
+        transform: translateY(-7px);
+
+        border-color: transparent;
+
+        transition:
+            max-height 0.45s ease,
+            opacity 0.3s ease,
+            margin-top 0.35s ease,
+            transform 0.35s ease,
+            border-color 0.25s ease;
+    }
+
+    .navigationOpen~.logoutButton {
+        max-height: 55px;
+
+        margin-top: 7px;
+
+        opacity: 1;
+
+        pointer-events: auto;
+
+        transform: translateY(0);
+
+        border-color: #c9dfe6;
+    }
+
+    .logoutButton:hover {
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   NOTIFICATION OVERLAY
+========================================================= */
+
+.notificationOverlay {
+    position: absolute;
+
+    top: 76px;
+    right: 12px;
+
+    width: 430px;
+
+    max-width: calc(100vw - 30px);
+
+    background: #ffffff;
+
+    border: 1px solid #dce8ec;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 20px 55px rgba(15, 23, 42, 0.15),
+        0 5px 18px rgba(8, 126, 164, 0.08);
+
+    overflow: hidden;
+
+    z-index: 99999;
+
+    font-family: "Segoe UI", sans-serif;
+
+    animation:
+        notificationOverlayIn 0.25s ease both;
+
+    box-sizing: border-box;
+
+    transition:
+        width 0.3s ease,
+        right 0.3s ease,
+        left 0.3s ease;
+}
+
+/* =========================================================
+   EXPANDED
+========================================================= */
+
+.notificationOverlayExpanded {
+    width: 90vw;
+
+    max-width: 90vw;
+
+    right: 5vw;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.notificationHeader {
+    width: 100%;
+
+    min-height: 68px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding: 12px 15px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e5edf0;
+
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.notificationHeading {
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.notificationHeadingIcon {
+    width: 40px;
+    height: 40px;
+
+    min-width: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #e8f5f8;
+
+    color: #087ea4;
+
+    border-radius: 10px;
+
+    font-size: 17px;
+}
+
+.notificationHeading h3 {
+    margin: 0;
+
+    color: #334155;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    line-height: 1.2;
+}
+
+.notificationHeading span {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #64748b;
+
+    font-size: 10px;
+
+    font-weight: 600;
+}
+
+/* =========================================================
+   HEADER ACTIONS
+========================================================= */
+
+.notificationHeaderActions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    flex-shrink: 0;
+}
+
+.notificationToolButton {
+    width: 34px;
+    height: 34px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid #dce8ec;
+
+    background: #f8fbfc;
+
+    color: #64748b;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-family: "Segoe UI", sans-serif;
+
+    font-size: 12px;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.notificationToolButton:hover {
+    background: #edf7f9;
+
+    color: #087ea4;
+
+    border-color: #b9dbe4;
+
+    transform: translateY(-1px);
+}
+
+.notificationCloseButton:hover {
+    background: #fff3f5;
+
+    color: #810b38;
+
+    border-color: #e2bec9;
+}
+
+/* =========================================================
+   BODY
+========================================================= */
+
+.notificationBody {
+    width: 100%;
+
+    max-height: 570px;
+
+    overflow-y: auto;
+
+    padding: 10px;
+
+    box-sizing: border-box;
+}
+
+.notificationBody::-webkit-scrollbar {
+    width: 5px;
+}
+
+.notificationBody::-webkit-scrollbar-track {
+    background: #f8fafb;
+}
+
+.notificationBody::-webkit-scrollbar-thumb {
+    background: #c8dce2;
+
+    border-radius: 20px;
+}
+
+/* =========================================================
+   NOTIFICATION ITEM
+========================================================= */
+
+.notificationItem {
+    width: 100%;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 11px;
+
+    padding: 13px;
+
+    margin-bottom: 8px;
+
+    border: 1px solid #dce8ec;
+
+    border-left: 4px solid #94a3b8;
+
+    background: #ffffff;
+
+    border-radius: 11px;
+
+    box-sizing: border-box;
+
+    transition:
+        background 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.notificationItem:last-child {
+    margin-bottom: 0;
+}
+
+.notificationItem:hover {
+    background: #fbfdfe;
+
+    box-shadow:
+        0 5px 15px rgba(15, 23, 42, 0.05);
+
+    transform: translateY(-1px);
+}
+
+/* =========================================================
+   UNREAD
+========================================================= */
+
+.notificationUnread {
+    border-left-color: #204d4d5a;
+
+    background: #f7fcfd;
+}
+
+.notificationUnread .notificationItemIcon {
+    background: #e5f4f7;
+
+    color: #087ea4;
+}
+
+.bd {
+    border-color: #01adcc;
+
+}
+
+.notificationUnread .notificationStatus {
+    color: #087ea4;
+
+    background: #e5f4f7;
+}
+
+/* =========================================================
+   READ
+========================================================= */
+
+.notificationRead {
+    border-left-color: #94a3b8;
+
+    background: #ffffff;
+}
+
+.notificationRead .notificationItemIcon {
+    background: #f1f5f9;
+
+    color: #64748b;
+}
+
+.notificationRead .notificationStatus {
+    color: #64748b;
+
+    background: #f1f5f9;
+}
+
+/* =========================================================
+   ITEM ICON
+========================================================= */
+
+.notificationItemIcon {
+    width: 38px;
+    height: 38px;
+
+    min-width: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 9px;
+
+    font-size: 16px;
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.notificationItemContent {
+    min-width: 0;
+
+    flex: 1;
+}
+
+.notificationItemTop {
+    width: 100%;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 8px;
+}
+
+.notificationItemTop>div {
+    min-width: 0;
+}
+
+.notificationItem h4 {
+    margin: 0;
+
+    color: #334155;
+
+    font-size: 12px;
+
+    line-height: 1.35;
+
+    font-weight: 800;
+
+    word-break: break-word;
+}
+
+.notificationTime {
+    flex-shrink: 0;
+
+    color: #94a3b8;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.notificationStatus {
+    display: inline-flex;
+
+    align-items: center;
+
+    margin-top: 5px;
+
+    padding: 3px 7px;
+
+    border-radius: 20px;
+
+    font-size: 8px;
+
+    font-weight: 800;
+}
+
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+.notificationItem p {
+    margin: 8px 0 11px;
+
+    color: #64748b;
+
+    font-size: 10px;
+
+    line-height: 1.55;
+
+    word-break: break-word;
+}
+
+/* =========================================================
+   ITEM BUTTONS
+========================================================= */
+
+.notificationItemFooter {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 6px;
+}
+
+.notificationAction,
+.notificationDelete {
+    min-height: 28px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    padding: 0 8px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-family: "Segoe UI", sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    box-sizing: border-box;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.notificationAction {
+    border: 1px solid #cce2e8;
+
+    background: #f5fafb;
+
+    color: #087ea4;
+}
+
+.notificationAction:hover {
+    background: #e7f4f7;
+
+    border-color: #9fcbd6;
+}
+
+.notificationDelete {
+    border: 1px solid #ead2d9;
+
+    background: #fff8f9;
+
+    color: #810b38;
+}
+
+.notificationDelete:hover {
+    background: #fff0f3;
+
+    border-color: #dcb3c0;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.notificationFooter {
+    width: 100%;
+
+    min-height: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    padding: 8px 12px;
+
+    background: #f9fbfc;
+
+    border-top: 1px solid #e5edf0;
+
+    box-sizing: border-box;
+}
+
+.notificationFooterButton {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 5px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #087ea4;
+
+    cursor: pointer;
+
+    font-family: "Segoe UI", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.notificationFooterButton:hover {
+    color: #810b38;
+
+    transform: translateY(-1px);
+}
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes notificationOverlayIn {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(-7px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0) scale(1);
+    }
+}
+
+/* =========================================================
+   MOBILE NOTIFICATION OVERLAY
+========================================================= */
+
+@media (max-width: 760px) {
+
+    /*
+       Keep the header itself from clipping
+       the notification overlay.
+    */
+
+    .headerContainer {
+        overflow: visible;
+    }
+
+    .header {
+        overflow: visible;
+    }
+
+    /* =====================================================
+       NOTIFICATION OVERLAY
+    ===================================================== */
+
+    .notificationOverlay {
+        top: 62px;
+
+        left: 10px;
+        right: 10px;
+
+        width: auto;
+
+        max-width: none;
+
+        border-radius: 13px;
+
+        transform: none;
+    }
+
+    /*
+       Expanded mode on mobile.
+       Almost the entire screen width.
+    */
+
+    .notificationOverlayExpanded {
+        left: 5vw;
+        right: 5vw;
+
+        width: 90vw;
+
+        max-width: 90vw;
+    }
+
+    /* =====================================================
+       HEADER
+    ===================================================== */
+
+    .notificationHeader {
+        min-height: 61px;
+
+        padding: 9px 10px;
+
+        gap: 8px;
+    }
+
+    /* =====================================================
+       HEADING
+    ===================================================== */
+
+    .notificationHeading {
+        gap: 8px;
+
+        min-width: 0;
+    }
+
+    .notificationHeadingIcon {
+        width: 35px;
+        height: 35px;
+
+        min-width: 35px;
+
+        border-radius: 8px;
+
+        font-size: 15px;
+    }
+
+    .notificationHeading h3 {
+        font-size: 13px;
+    }
+
+    .notificationHeading span {
+        font-size: 8px;
+
+        white-space: nowrap;
+    }
+
+    /* =====================================================
+       HEADER BUTTONS
+    ===================================================== */
+
+    .notificationHeaderActions {
+        gap: 4px;
+    }
+
+    .notificationToolButton {
+        width: 31px;
+        height: 31px;
+
+        font-size: 10px;
+
+        border-radius: 7px;
+    }
+
+    /* =====================================================
+       BODY
+    ===================================================== */
+
+    .notificationBody {
+        max-height: 62vh;
+
+        padding: 7px;
+
+        overflow-x: hidden;
+
+        overflow-y: auto;
+    }
+
+    /* =====================================================
+       ITEMS
+    ===================================================== */
+
+    .notificationItem {
+        gap: 8px;
+
+        padding: 10px;
+
+        margin-bottom: 7px;
+
+        border-left-width: 3px;
+
+        border-radius: 9px;
+    }
+
+    .notificationItemIcon {
+        width: 34px;
+        height: 34px;
+
+        min-width: 34px;
+
+        border-radius: 8px;
+
+        font-size: 14px;
+    }
+
+    .notificationItemTop {
+        display: block;
+    }
+
+    .notificationItem h4 {
+        font-size: 10px;
+
+        padding-right: 0;
+    }
+
+    .notificationTime {
+        display: block;
+
+        margin-top: 4px;
+
+        font-size: 7px;
+    }
+
+    .notificationStatus {
+        margin-top: 4px;
+
+        font-size: 7px;
+
+        padding: 3px 6px;
+    }
+
+    .notificationItem p {
+        margin: 7px 0 9px;
+
+        font-size: 8px;
+
+        line-height: 1.5;
+    }
+
+    /* =====================================================
+       ITEM BUTTONS
+    ===================================================== */
+
+    .notificationItemFooter {
+        width: 100%;
+
+        gap: 5px;
+    }
+
+    .notificationAction,
+    .notificationDelete {
+        min-height: 26px;
+
+        padding: 0 7px;
+
+        font-size: 7px;
+    }
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    .notificationFooter {
+        min-height: 46px;
+
+        padding: 6px 8px;
+    }
+
+    .notificationFooterButton {
+        font-size: 8px;
+
+        gap: 4px;
+    }
+}
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .notificationOverlay {
+        top: 59px;
+
+        left: 6px;
+        right: 6px;
+
+        width: auto;
+
+        border-radius: 11px;
+    }
+
+    .notificationOverlayExpanded {
+        left: 3vw;
+        right: 3vw;
+
+        width: 94vw;
+
+        max-width: 94vw;
+    }
+
+    .notificationHeader {
+        min-height: 57px;
+
+        padding: 8px;
+    }
+
+    .notificationHeading {
+        gap: 6px;
+    }
+
+    .notificationHeadingIcon {
+        width: 32px;
+        height: 32px;
+
+        min-width: 32px;
+
+        font-size: 13px;
+    }
+
+    .notificationHeading h3 {
+        font-size: 12px;
+    }
+
+    .notificationHeading span {
+        font-size: 7px;
+    }
+
+    .notificationToolButton {
+        width: 28px;
+        height: 28px;
+
+        font-size: 9px;
+    }
+
+    .notificationBody {
+        max-height: 60vh;
+
+        padding: 6px;
+    }
+
+    .notificationItem {
+        gap: 7px;
+
+        padding: 9px;
+    }
+
+    .notificationItemIcon {
+        width: 31px;
+        height: 31px;
+
+        min-width: 31px;
+
+        font-size: 12px;
+    }
+
+    .notificationItem h4 {
+        font-size: 9px;
+    }
+
+    .notificationTime {
+        font-size: 6px;
+    }
+
+    .notificationItem p {
+        font-size: 7px;
+    }
+
+    .notificationAction,
+    .notificationDelete {
+        min-height: 24px;
+
+        padding: 0 6px;
+
+        font-size: 6.5px;
+    }
+
+    .notificationFooterButton {
+        font-size: 7px;
+    }
+}
+
+
+/* =========================================================
+   NOTIFICATION OVERLAY — DESKTOP
+========================================================= */
+
+.notificationOverlay {
+    position: absolute;
+
+    top: 76px;
+    right: 12px;
+
+    width: 430px;
+
+    max-width: calc(100vw - 30px);
+
+    /* Keep the overlay short */
+    max-height: 520px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #ffffff;
+
+    border: 1px solid #dce8ec;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 20px 55px rgba(15, 23, 42, 0.15),
+        0 5px 18px rgba(8, 126, 164, 0.08);
+
+    overflow: hidden;
+
+    z-index: 99999;
+
+    box-sizing: border-box;
+
+    font-family: "Segoe UI", sans-serif;
+
+    animation:
+        notificationOverlayIn 0.25s ease both;
+}
+
+/* =========================================================
+   EXPANDED
+========================================================= */
+
+.notificationOverlayExpanded {
+    width: 90vw;
+
+    max-width: 90vw;
+
+    right: 5vw;
+
+    max-height: 80vh;
+}
+
+/* =========================================================
+   NOTIFICATION BODY
+========================================================= */
+
+.notificationBody {
+    width: 100%;
+
+    /*
+       The body takes the available space.
+       Extra notifications scroll inside here
+       instead of making the whole overlay longer.
+    */
+    flex: 1;
+
+    min-height: 0;
+
+    max-height: 390px;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    padding: 10px;
+
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   EXPANDED BODY
+========================================================= */
+
+.notificationOverlayExpanded .notificationBody {
+    max-height: calc(80vh - 120px);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+
+    .notificationOverlay {
+        top: 62px;
+
+        left: 10px;
+        right: 10px;
+
+        width: auto;
+
+        max-width: none;
+
+        max-height: 75vh;
+
+        border-radius: 13px;
+    }
+
+    .notificationOverlayExpanded {
+        left: 5vw;
+        right: 5vw;
+
+        width: 90vw;
+
+        max-width: 90vw;
+
+        max-height: 88vh;
+    }
+
+    .notificationBody {
+        max-height: none;
+
+        flex: 1;
+
+        min-height: 0;
+
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        padding: 7px;
+    }
+}
+
+
+.notificationAction span i {
+    color: rgb(4, 179, 59);
+    font-size: 1.5em;
+}
+
+/* =========================================================
+   EMPTY NOTIFICATIONS
+========================================================= */
+
+.notificationEmpty {
+    width: 100%;
+    min-height: 260px;
+    padding: 45px 25px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.notificationEmpty>i {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: #eef7fa;
+    color: #087ea4;
+
+    font-size: 28px;
+}
+
+.notificationEmpty h4 {
+    margin: 0 0 8px;
+    color: #334155;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.4;
+
+}
+
+.notificationEmpty p {
+    max-width: 330px;
+    margin: 0;
+    color: #64748b;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+
+    .notificationEmpty {
+        min-height: 230px;
+        padding: 35px 20px;
+    }
+
+    .notificationEmpty>i {
+        width: 58px;
+        height: 58px;
+        margin-bottom: 15px;
+
+        font-size: 25px;
+    }
+
+    .notificationEmpty h4 {
+        font-size: 17px;
+    }
+
+    .notificationEmpty p {
+        max-width: 280px;
+        font-size: 13px;
+    }
+}
+
+.connectionWarning {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    width: 420px;
+    max-width: calc(100vw - 48px);
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 18px 20px;
+    background: #ffffff;
+    border: 1px solid #fecaca;
+    border-left: 5px solid #dc2626;
+    border-radius: 14px;
+    box-shadow: 0 12px 35px rgba(15, 23, 42, 0.15);
+    z-index: 10000;
+    font-family: "Segoe UI", sans-serif;
+    animation: connectionWarningShow 0.35s ease;
+}
+
+.connectionWarningIcon {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    border-radius: 50%;
+    background: #fef2f2;
+    color: #dc2626;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+}
+
+.connectionWarningContent {
+    flex: 1;
+    min-width: 0;
+}
+
+.connectionWarningContent h3 {
+    margin: 0 0 5px;
+    color: #1e293b;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.connectionWarningContent p {
+    margin: 0 0 10px;
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.connectionWarningContent span {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #dc2626;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.connectionWarningContent span i {
+    font-size: 14px;
+    animation: connectionWarningRotate 1.4s linear infinite;
+}
+
+@keyframes connectionWarningShow {
+    from {
+        opacity: 0;
+        transform: translateX(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes connectionWarningRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .connectionWarning {
+        top: 16px;
+        right: 16px;
+        width: 340px;
+        max-width: calc(100vw - 32px);
+        gap: 12px;
+        padding: 15px 16px;
+        border-radius: 12px;
+    }
+
+    .connectionWarningIcon {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        font-size: 18px;
+    }
+
+    .connectionWarningContent h3 {
+        font-size: 14px;
+        margin-bottom: 4px;
+    }
+
+    .connectionWarningContent p {
+        font-size: 12px;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+
+    .connectionWarningContent span {
+        font-size: 11px;
+        gap: 6px;
+    }
+
+    .connectionWarningContent span i {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .connectionWarning {
+        top: 12px;
+        right: 12px;
+        width: 300px;
+        max-width: calc(100vw - 24px);
+        gap: 10px;
+        padding: 13px 14px;
+        border-left-width: 4px;
+    }
+
+    .connectionWarningIcon {
+        width: 34px;
+        height: 34px;
+        min-width: 34px;
+        font-size: 15px;
+    }
+
+    .connectionWarningContent h3 {
+
+        font-size: 13px;
+    }
+
+    .connectionWarningContent p {
+        font-size: 11px;
+        margin-bottom: 7px;
+    }
+
+    .connectionWarningContent span {
+        font-size: 10px;
+    }
+
+    .connectionWarningContent span i {
+        font-size: 11px;
+    }
+}
+
+.connectionWarningCloseButton {
+    margin-top: 14px;
+    padding: 8px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #334155;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.connectionWarningCloseButton:hover {
+    background: #dc2626;
+    border-color: #dc2626;
+    color: #ffffff;
+}
+
+.connectionWarningCloseButton:active {
+    transform: scale(0.97);
+}
+
+@media (max-width: 600px) {
+
+    .connectionWarningCloseButton {
+        margin-top: 11px;
+        padding: 7px 12px;
+        font-size: 11px;
+    }
+
+}

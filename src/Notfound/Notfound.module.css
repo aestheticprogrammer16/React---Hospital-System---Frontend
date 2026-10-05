@@ -1,0 +1,562 @@
+/* =========================================================
+   PAGE
+========================================================= */
+
+.page {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 20px;
+
+    box-sizing: border-box;
+
+    background:
+        radial-gradient(circle at top right,
+            rgba(8, 126, 164, 0.10),
+            transparent 35%),
+        #f8fafc;
+
+    color: #334155;
+
+    font-family: "Times New Roman", Times, serif;
+
+    overflow: hidden;
+    position: absolute;
+    z-index: 1000000;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.card {
+    width: 100%;
+    max-width: 650px;
+
+    padding: 55px 45px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 1px solid #d7e5ea;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 25px 70px rgba(8, 126, 164, 0.12),
+        0 8px 25px rgba(15, 23, 42, 0.06);
+
+    animation: cardAppear 0.7s ease both;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   TOP DECORATION
+========================================================= */
+
+.card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background:
+        linear-gradient(90deg,
+            #087ea4,
+            #0b91b8,
+            #810b38);
+
+    animation: topLine 4s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.iconWrapper {
+    width: 82px;
+    height: 82px;
+
+    margin: 0 auto 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 22px;
+
+    background: #eaf6f9;
+
+    border: 1px solid #c7e1e8;
+
+    color: #087ea4;
+
+    font-size: 34px;
+
+    animation: iconFloat 3s ease-in-out infinite;
+}
+
+.iconWrapper i {
+    animation: iconPulse 2.5s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   404
+========================================================= */
+
+.errorCode {
+    display: block;
+
+    color: #087ea4;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: clamp(72px, 12vw, 125px);
+
+    font-weight: 900;
+
+    line-height: 0.9;
+
+    letter-spacing: -5px;
+
+    margin-bottom: 20px;
+
+    animation: numberPulse 4s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.card h1 {
+    margin: 0 0 14px;
+
+    color: #172033;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: clamp(28px, 4vw, 40px);
+
+    font-weight: 800;
+
+    letter-spacing: -1px;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.card p {
+    max-width: 500px;
+
+    margin: 0 auto;
+
+    color: #64748b;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.actions {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 30px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.backButton,
+.dashboardButton {
+    min-height: 48px;
+
+    padding: 0 20px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    border-radius: 11px;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.backButton {
+    background: #ffffff;
+
+    border: 1px solid #cbdde3;
+
+    color: #087ea4;
+}
+
+.backButton:hover {
+    transform: translateY(-3px);
+
+    background: #eaf6f9;
+
+    border-color: #087ea4;
+
+    box-shadow:
+        0 8px 20px rgba(8, 126, 164, 0.13);
+}
+
+
+/* =========================================================
+   DASHBOARD BUTTON
+========================================================= */
+
+.dashboardButton {
+    background:
+        linear-gradient(135deg,
+            #087ea4,
+            #0a91b7);
+
+    border: 1px solid #087ea4;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 7px 18px rgba(8, 126, 164, 0.20);
+}
+
+.dashboardButton:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 26px rgba(8, 126, 164, 0.28);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+    margin-top: 38px;
+
+    padding-top: 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    border-top: 1px dotted #d6e2e6;
+
+    color: #82949c;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+.footer i {
+    color: #087ea4;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(25px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0) scale(1);
+    }
+}
+
+
+@keyframes iconFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+
+@keyframes iconPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+}
+
+
+@keyframes numberPulse {
+
+    0%,
+    100% {
+        opacity: 0.9;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.025);
+    }
+}
+
+
+@keyframes topLine {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .page {
+        padding: 30px 16px;
+    }
+
+    .card {
+        padding: 45px 30px;
+        border-radius: 20px;
+    }
+
+    .iconWrapper {
+        width: 72px;
+        height: 72px;
+
+        font-size: 30px;
+    }
+
+    .card p {
+        font-size: 15px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .page {
+        padding: 20px 12px;
+    }
+
+    .card {
+        padding: 40px 20px;
+
+        border-radius: 18px;
+    }
+
+    .iconWrapper {
+        width: 65px;
+        height: 65px;
+
+        margin-bottom: 18px;
+
+        border-radius: 18px;
+
+        font-size: 27px;
+    }
+
+    .errorCode {
+        font-size: 82px;
+
+        letter-spacing: -3px;
+
+        margin-bottom: 17px;
+    }
+
+    .card h1 {
+        font-size: 27px;
+    }
+
+    .card p {
+        font-size: 14px;
+
+        line-height: 1.65;
+    }
+
+    .actions {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    .backButton,
+    .dashboardButton {
+        width: 100%;
+    }
+
+    .footer {
+        font-size: 11px;
+
+        line-height: 1.5;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 350px) {
+
+    .card {
+        padding: 35px 16px;
+    }
+
+    .errorCode {
+        font-size: 70px;
+    }
+
+    .card h1 {
+        font-size: 24px;
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.backButton:focus-visible,
+.dashboardButton:focus-visible {
+    outline: 3px solid rgba(8, 126, 164, 0.25);
+
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .card,
+    .iconWrapper,
+    .iconWrapper i,
+    .errorCode,
+    .card::before {
+        animation: none !important;
+    }
+
+    .backButton,
+    .dashboardButton {
+        transition: none;
+    }
+}
