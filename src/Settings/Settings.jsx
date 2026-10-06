@@ -167,7 +167,7 @@ function Settings() {
 
 
     async function submitCredentials(e) {
-        setActive1(false)
+        setActive1(true)
         setActive2(false)
         setActive3(false)
         setActive4(false)
@@ -186,7 +186,7 @@ function Settings() {
 
             if (results.success === true && results.complete === true) {
                 setActive5(false)
-                setActive1(true)
+                setActive1(false)
                 localStorage.setItem("token",)
             } else if (results.success === true && results.complete === false) {
                 setActive5(false)
