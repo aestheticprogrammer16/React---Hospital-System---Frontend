@@ -8,7 +8,7 @@ const API = import.meta.env.VITE_HOSTING_API;
 function Settings() {
     const inputFocus = useRef()
     const fileInputRef = useRef(null);
-    const [active1, setActive1] = useState(false)
+    const [active1, setActive1] = useState(true)
     const [active2, setActive2] = useState(false)
     const [active3, setActive3] = useState(false)
     const [active4, setActive4] = useState(false)
