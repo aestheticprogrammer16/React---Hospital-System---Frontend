@@ -19,6 +19,7 @@ function Settings() {
     const [active9, setActive9] = useState(false)
     const [active10, setActive10] = useState(false)
     const [active11, setActive11] = useState(false)
+    const [active12, setActive12] = useState(false)
 
 
     const [email, setEmail] = useState("")
@@ -77,6 +78,8 @@ function Settings() {
     async function Submitedit() {
         setActive8(true)
         setActive11(false)
+        const token = localStorage.getItem("token")
+
 
         try {
             const response = await axios.put(`${API}/login/updatehospitalsettings`,
@@ -95,7 +98,13 @@ function Settings() {
                     reportFooter: reportFooter,
                     reportAddress: reportAddress,
                     websiteDomain: websiteDomain
+                },
+                {
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
                 }
+
             )
             const results = response.data;
 
@@ -122,10 +131,13 @@ function Settings() {
             alert(`catch block`)
             setActive8(false)
             setActive11(false)
-            setActive10(true)
             console.log(error.message)
+            if (error.response?.status === 401) {
+                setActive12(true)
+            } else {
+                setActive10(true)
+            }
         }
-
     }
 
 
@@ -166,6 +178,7 @@ function Settings() {
     }, [])
 
 
+
     async function submitCredentials(e) {
         setActive1(true)
         setActive2(false)
@@ -187,7 +200,7 @@ function Settings() {
             if (results.success === true && results.complete === true) {
                 setActive5(false)
                 setActive1(false)
-                localStorage.setItem("token",)
+                localStorage.setItem("token")
             } else if (results.success === true && results.complete === false) {
                 setActive5(false)
                 setActive2(true)
@@ -205,6 +218,7 @@ function Settings() {
         } catch (error) {
             setActive5(false)
             setActive4(true)
+            console.log(error.message)
 
         }
     }
@@ -1461,6 +1475,40 @@ function Settings() {
             )}
 
 
+            {active12 && (
+                <div className={S.securityOverlay}>
+                    <div className={S.securityOverlayBox}>
+
+                        <button
+                            className={S.securityOverlayClose}
+                            onClick={() => setActive12(false)}
+                        >
+                            <i className="bi bi-x-lg"></i>
+                        </button>
+
+                        <div className={S.securityOverlayIcon}>
+                            <i className="bi bi-shield-lock"></i>
+                        </div>
+
+                        <div className={S.securityOverlayContent}>
+                            <h3>Access Denied</h3>
+
+                            <p>
+                                You do not have permission to perform this action.
+                            </p>
+                        </div>
+
+                        <button
+                            className={S.securityOverlayButton}
+                            onClick={() => setActive12(false)}
+                        >
+                            <i className="bi bi-check2"></i>
+                            Okay
+                        </button>
+
+                    </div>
+                </div>
+            )}
 
         </div>
     );
