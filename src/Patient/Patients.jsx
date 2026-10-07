@@ -103,15 +103,23 @@ function Patients() {
         dashbaord()
     }, [])
 
+
     async function fetchPatients() {
         setActive(false)
         setActive8(false)
         setActive3(false)
         filter4()
+        const token = localStorage.getItem("token")
 
         try {
 
-            const response = await axios.get(`${API}/patient/view-patients`)
+            const response = await axios.get(`${API}/patient/view-patients`,
+                {
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
+                }
+            )
             const results = response.data;
 
             if (results.success === true && results.count === true) {
@@ -148,6 +156,11 @@ function Patients() {
                 const patients = JSON.parse(retrieveCachedPatients)
                 setFetchedPatients(patients);
                 setFilteredPatients(patients);
+            }
+
+            if (error.response?.status === 401) {
+                navigateTo("/login");
+                localStorage.removeItem("token");
             }
         }
     }
