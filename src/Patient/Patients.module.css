@@ -1,0 +1,2342 @@
+/* =========================================
+   PATIENTS PAGE
+========================================= */
+
+.patientsPage {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 30px 25px 45px;
+    box-sizing: border-box;
+    background: #f8fafc;
+    color: #334155;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.pageHeader {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 42px;
+}
+
+.headerText {
+    min-width: 0;
+}
+
+.pageLabel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    color: #0e7490;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.pageLabel i {
+    font-size: 19px;
+}
+
+.headerText h1 {
+    margin: 0;
+    color: #334155;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.7px;
+}
+
+.headerText p {
+    max-width: 700px;
+    margin: 12px 0 0;
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   HEADER ACTIONS
+========================================= */
+
+.headerActions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-shrink: 0;
+}
+
+.refreshButton,
+.addPatientButton {
+    height: 50px;
+    padding: 0 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 9px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.refreshButton {
+    border: 1px solid #dbe3ea;
+    background: #ffffff;
+    color: #475569;
+}
+
+.refreshButton:hover {
+    border-color: #0e7490;
+    color: #0e7490;
+}
+
+.addPatientButton {
+    border: 1px solid #0e7490;
+    background: #0e7490;
+    color: #ffffff;
+}
+
+.addPatientButton:hover {
+    background: #0b647d;
+    border-color: #0b647d;
+}
+
+
+/* =========================================
+   PATIENT STATISTICS
+========================================= */
+
+.patientStats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.statCard {
+    min-height: 145px;
+    padding: 26px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 13px;
+    box-sizing: border-box;
+}
+
+.statIcon {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 24px;
+}
+
+.blue {
+    background: #e6f6fa;
+    color: #0e7490;
+}
+
+.green {
+    background: #ecfdf5;
+    color: #059669;
+}
+
+.pink {
+    background: #fdf2f8;
+    color: #db2777;
+}
+
+.orange {
+    background: #fff7ed;
+    color: #ea580c;
+}
+
+.statInfo {
+    min-width: 0;
+}
+
+.statInfo>span {
+    display: block;
+    margin-bottom: 7px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.statInfo h2 {
+    margin: 0;
+    color: #334155;
+    font-size: 32px;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.statInfo p {
+    margin: 7px 0 0;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+.statInfo p i {
+    color: #0e7490;
+}
+
+
+/* =========================================
+   SEARCH / FILTER
+========================================= */
+
+.searchSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 38px;
+}
+
+.searchBox {
+    width: 100%;
+    max-width: 700px;
+    height: 54px;
+    padding: 0 19px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    background: #ffffff;
+    border: 1px solid #dbe3ea;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.searchBox:focus-within {
+    border-color: #0e7490;
+    box-shadow: 0 0 0 4px rgba(14, 116, 144, 0.08);
+}
+
+.searchBox>i {
+    color: #94a3b8;
+    font-size: 19px;
+}
+
+.searchBox input {
+    width: 100%;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #334155;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.searchBox input::placeholder {
+    color: #94a3b8;
+}
+
+.filterGroup {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0.4;
+}
+
+.filterButton,
+.sortButton {
+    height: 50px;
+    padding: 0 19px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    border: 1px solid #dbe3ea;
+    border-radius: 9px;
+    background: #ffffff;
+    color: #475569;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.filterButton:hover,
+.sortButton:hover {
+    border-color: #0e7490;
+    color: #0e7490;
+}
+
+.filterButton i:last-child {
+    margin-left: 4px;
+    font-size: 11px;
+}
+
+
+/* =========================================
+   PATIENT LIST HEADER
+========================================= */
+
+.listHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 24px;
+}
+
+.listHeader h2 {
+    margin: 0;
+    color: #334155;
+    font-size: 25px;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.listHeader p {
+    margin: 8px 0 0;
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.patientCount {
+    padding: 9px 14px;
+    border-radius: 8px;
+    background: #e6f6fa;
+    color: #0e7490;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   PATIENT GRID
+========================================= */
+
+.patientGrid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+
+/* =========================================
+   PATIENT FOLDER
+========================================= */
+
+.patientFolder {
+    min-width: 0;
+    min-height: 330px;
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 13px;
+    box-sizing: border-box;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.patientFolder:hover {
+    border-color: #cbd5e1;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.07);
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   FOLDER TOP
+========================================= */
+
+.folderTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+.folderIcon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    background: #e6f6fa;
+    color: #0e7490;
+    font-size: 21px;
+}
+
+.moreButton {
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: #94a3b8;
+    font-size: 19px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    position: relative;
+}
+
+.moreButton:hover {
+    background: #f1f5f9;
+    color: #334155;
+}
+
+
+/* =========================================
+   PATIENT AVATAR
+========================================= */
+
+.patientAvatar {
+    width: 66px;
+    height: 66px;
+    margin-bottom: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #f1f5f9;
+    color: #334155;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   PATIENT DETAILS
+========================================= */
+
+.patientDetails h3 {
+    margin: 0;
+    color: #334155;
+    font-size: 20px;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.patientDetails p {
+    margin: 8px 0 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.patientDetails p i {
+    color: #0e7490;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   PATIENT META
+========================================= */
+
+.patientMeta {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-top: 22px;
+    padding-top: 17px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.patientMeta span {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.patientMeta i {
+    color: #0e7490;
+    font-size: 15px;
+}
+
+
+/* =========================================
+   FOLDER FOOTER
+========================================= */
+
+.folderFooter {
+    margin-top: auto;
+    padding-top: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.folderFooter>span {
+    min-width: 0;
+    color: #94a3b8;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.openButton {
+    flex-shrink: 0;
+    padding: 6px 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    border: none;
+    background: transparent;
+    color: #0e7490;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.openButton:hover {
+    color: #0b647d;
+}
+
+.openButton i {
+    font-size: 13px;
+}
+
+
+/* =========================================
+   PAGINATION
+========================================= */
+
+.pagination {
+    margin-top: 32px;
+    padding: 22px 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.pagination>span {
+    color: #64748b;
+    font-size: 13px;
+}
+
+.paginationButtons {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.paginationButtons button {
+    min-width: 40px;
+    height: 40px;
+    padding: 0 10px;
+    border: 1px solid #dbe3ea;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #475569;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.paginationButtons button:hover:not(:disabled) {
+    border-color: #0e7490;
+    color: #0e7490;
+}
+
+.paginationButtons button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.paginationButtons .activePage {
+    background: #0e7490;
+    border-color: #0e7490;
+    color: #ffffff;
+}
+
+.paginationButtons>span {
+    padding: 0 5px;
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   LARGE LAPTOPS
+========================================= */
+
+@media (max-width: 1250px) {
+
+    .patientsPage {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+
+
+    .patientStats {
+        gap: 18px;
+    }
+
+    .statCard {
+        padding: 21px;
+    }
+
+    .patientGrid {
+        gap: 18px;
+    }
+
+    .patientFolder {
+        padding: 22px;
+    }
+}
+
+
+/* =========================================
+   TABLETS / SMALL LAPTOPS
+========================================= */
+
+@media (max-width: 1050px) {
+
+    .patientsPage {
+        padding: 28px 20px 40px;
+    }
+
+    .pageHeader {
+        gap: 25px;
+    }
+
+    .headerText h1 {
+        font-size: 34px;
+    }
+
+
+    .patientStats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .patientGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .searchSection {
+        align-items: stretch;
+    }
+
+    .searchBox {
+        max-width: none;
+    }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+@media (max-width:960px) {
+    .filterGroup {
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .b5 {
+        display: none;
+    }
+
+    .patientsPage {
+        padding: 25px 18px 35px;
+    }
+
+    .pageHeader {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .headerText h1 {
+        font-size: 32px;
+    }
+
+    .headerText p {
+        font-size: 15px;
+    }
+
+    .headerActions {
+        width: 100%;
+    }
+
+    .refreshButton,
+    .addPatientButton {
+        flex: 1;
+    }
+
+    .searchSection {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .searchBox {
+        max-width: none;
+    }
+
+    /* 
+    .filterGroup {
+        width: 100%;
+    } */
+
+    .filterGroup {
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .filterButton,
+    .sortButton {
+        flex: 1;
+    }
+
+    .listHeader {
+        align-items: flex-start;
+    }
+}
+
+
+/* =========================================
+   LARGE MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .b5 {
+        display: none;
+    }
+
+    .patientsPage {
+        padding: 25px 18px 35px;
+    }
+
+    .pageHeader {
+        margin-bottom: 30px;
+    }
+
+    .pageLabel {
+        font-size: 14px;
+    }
+
+    .headerText h1 {
+        font-size: 30px;
+    }
+
+    .headerText p {
+        font-size: 14px;
+    }
+
+    .headerActions {
+        gap: 10px;
+    }
+
+    .refreshButton,
+    .addPatientButton {
+        height: 48px;
+        padding: 0 15px;
+        font-size: 13px;
+    }
+
+    .patientStats {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin-bottom: 30px;
+    }
+
+    .statCard {
+        min-height: 125px;
+        padding: 22px;
+    }
+
+    .statIcon {
+        width: 52px;
+        height: 52px;
+        font-size: 21px;
+    }
+
+    .statInfo h2 {
+        font-size: 29px;
+    }
+
+    .searchSection {
+        margin-bottom: 30px;
+    }
+
+    .searchBox {
+        height: 52px;
+    }
+
+    .searchBox input {
+        font-size: 14px;
+    }
+
+    .filterButton,
+    .sortButton {
+        height: 48px;
+    }
+
+    .listHeader {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 18px;
+    }
+
+    .listHeader h2 {
+        font-size: 22px;
+    }
+
+    .listHeader p {
+        font-size: 13px;
+    }
+
+    .patientGrid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .patientFolder {
+        min-height: 320px;
+        padding: 23px;
+    }
+
+    .patientDetails h3 {
+        font-size: 19px;
+    }
+
+    .pagination {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .paginationButtons {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 3px;
+    }
+
+    .filterGroup {
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 12px;
+    }
+}
+
+
+/* =========================================
+   NORMAL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .patientsPage {
+        padding: 20px 14px 30px
+    }
+
+    .pageHeader {
+        margin-bottom: 27px;
+    }
+
+    .pageLabel {
+        font-size: 13px;
+    }
+
+    .headerText h1 {
+        font-size: 28px;
+    }
+
+    .headerText p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .headerActions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .refreshButton,
+    .addPatientButton {
+        width: 100%;
+        flex: none;
+    }
+
+    .statCard {
+        min-height: 120px;
+        padding: 20px;
+    }
+
+    .statIcon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .statInfo>span {
+        font-size: 13px;
+    }
+
+    .statInfo h2 {
+        font-size: 27px;
+    }
+
+    .filterGroup {
+        gap: 8px;
+    }
+
+    .filterButton,
+    .sortButton {
+        padding: 0 12px;
+        font-size: 12px;
+    }
+
+    .listHeader h2 {
+        font-size: 21px;
+    }
+
+    .patientFolder {
+        min-height: 315px;
+        padding: 21px;
+    }
+
+    .folderTop {
+        margin-bottom: 19px;
+    }
+
+    .patientAvatar {
+        width: 62px;
+        height: 62px;
+        font-size: 17px;
+    }
+
+    .patientDetails h3 {
+        font-size: 18px;
+    }
+
+    .patientMeta {
+        gap: 18px;
+    }
+
+    .patientMeta span {
+        font-size: 12px;
+    }
+
+    .folderFooter>span {
+        font-size: 11px;
+    }
+
+    .openButton {
+        font-size: 12px;
+    }
+
+    .pagination>span {
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 360px) {
+
+    .patientsPage {
+        padding: 20px 12px 30px;
+    }
+
+    .headerText h1 {
+        font-size: 26px;
+    }
+
+    .patientFolder {
+        padding: 19px;
+    }
+
+    .patientMeta {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .folderFooter {
+        align-items: flex-end;
+    }
+
+    .folderFooter>span {
+        max-width: 60%;
+    }
+
+    .paginationButtons {
+        gap: 4px;
+    }
+
+    .paginationButtons button {
+        min-width: 36px;
+        height: 36px;
+    }
+}
+
+.specific {
+    position: relative;
+}
+
+
+/*  s*/
+/* s */
+.patientMenuWrapper {
+    position: relative;
+    display: inline-flex;
+}
+
+.moreButton {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid transparent;
+    border-radius: 9px;
+
+    background: transparent;
+    color: #64748b;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.moreButton:hover {
+    background: #eaf6f9;
+    border-color: #c9dfe6;
+    color: #087ea4;
+}
+
+
+/* ================================
+   PATIENT POPUP
+================================ */
+
+.patientMenu {
+    position: absolute;
+
+    right: 1.3em;
+    top: 0.2em;
+
+    width: 160px;
+
+    padding: 5px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+    background: #ffffff;
+
+    border: 1px solid #087ea4;
+    border-radius: 10px;
+
+    box-shadow:
+        0 8px 20px rgba(8, 126, 164, 0.15),
+        0 3px 8px rgba(51, 65, 85, 0.08);
+
+    z-index: 1000;
+
+    animation: patientMenuOpen 0.18s ease;
+}
+
+
+/* ================================
+   POPUP BUTTONS
+================================ */
+
+.patientMenu button {
+    width: 100%;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 0 10px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: transparent;
+
+    color: #334155;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.patientMenu button:hover {
+    background: #eaf6f9;
+    color: #087ea4;
+}
+
+.patientMenu button i {
+    width: 18px;
+
+    color: #087ea4;
+
+    font-size: 15px;
+
+    text-align: center;
+}
+
+
+/* ================================
+   OPEN ANIMATION
+================================ */
+
+@keyframes patientMenuOpen {
+    from {
+        opacity: 0;
+        transform: translateY(-5px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 480px) {
+
+    .patientMenu {
+        right: 1.4em;
+        top: 1em;
+        width: 145px;
+    }
+
+    .patientMenu button {
+        height: 34px;
+        font-size: 11px;
+    }
+
+    .patientMenu button i {
+        font-size: 14px;
+    }
+}
+
+
+.noPatients {
+    width: 100%;
+    min-height: 320px;
+    padding: 45px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    border: 1px solid #0e7490;
+    border-radius: 18px;
+    background: rgba(14, 116, 144, 0.04);
+    animation: fadeIn 0.6s ease forwards;
+}
+
+.noPatientsIcon {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    border: 1px solid #0e7490;
+
+    margin-bottom: 20px;
+
+    animation: floatIcon 2.5s ease-in-out infinite;
+}
+
+.noPatientsIcon i {
+    font-size: 35px;
+    color: #0e7490;
+}
+
+.noPatients h3 {
+    margin: 0 0 8px;
+    color: #334155;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.noPatients p {
+    margin: 0;
+    color: #64748b;
+    font-size: 15px;
+}
+
+
+/* Animations */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatIcon {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+.x {
+    color: red;
+}
+
+
+
+.deleteOverlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    background: rgba(15, 23, 42, 0.45);
+    backdrop-filter: blur(6px);
+
+    animation: overlayFade 0.25s ease;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.deleteModal {
+    width: 100%;
+    max-width: 680px;
+
+    padding: 45px 55px;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border: 1px solid #0e7490;
+    border-radius: 22px;
+
+    text-align: center;
+
+    box-shadow: 0 25px 60px rgba(15, 23, 42, 0.20);
+
+    animation: modalPop 0.3s ease;
+}
+
+
+/* =========================
+   DELETE ICON
+========================= */
+
+.deleteIcon {
+    width: 84px;
+    height: 84px;
+
+    margin: 0 auto 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #dc2626;
+    border-radius: 50%;
+
+    background: rgba(220, 38, 38, 0.07);
+
+    animation: iconFloat 2.5s ease-in-out infinite;
+}
+
+.deleteIcon i {
+    color: #dc2626;
+    font-size: 35px;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.deleteModal h3 {
+    margin: 0 0 10px;
+
+    color: #334155;
+
+    font-size: 27px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.deleteModal>p {
+    max-width: 520px;
+
+    margin: 0 auto 25px;
+
+    color: #64748b;
+
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   INFORMATION BOX
+========================= */
+
+.deleteWarning {
+    width: 100%;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 14px;
+
+    padding: 20px;
+
+    margin-bottom: 30px;
+
+    box-sizing: border-box;
+
+    text-align: left;
+
+    border: 1px solid #0e7490;
+    border-radius: 13px;
+
+    background: rgba(14, 116, 144, 0.05);
+
+    color: #64748b;
+
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+.deleteWarning i {
+    flex-shrink: 0;
+
+    margin-top: 2px;
+
+    color: #0e7490;
+
+    font-size: 20px;
+}
+
+
+/* =========================
+   BUTTON CONTAINER
+========================= */
+
+.deleteActions {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.deleteActions button {
+    width: 220px;
+    min-width: 220px;
+    min-height: 48px;
+
+    padding: 12px 15px;
+
+    box-sizing: border-box;
+
+    border: none;
+    border-radius: 9px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* =========================
+   CANCEL BUTTON
+========================= */
+
+.cancelDelete {
+    color: #334155;
+
+    background: #f1f5f9;
+
+    border: 1px solid #cbd5e1 !important;
+}
+
+.cancelDelete:hover {
+    color: #334155;
+
+    background: #e2e8f0;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   RECYCLE BIN BUTTON
+========================= */
+
+.confirmDelete {
+    color: #ffffff;
+
+    background: #dc2626;
+}
+
+.confirmDelete:hover {
+    background: #b91c1c;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 6px 18px rgba(220, 38, 38, 0.22);
+}
+
+
+/* =========================
+   LARGE DESKTOP
+========================= */
+
+@media (min-width: 1200px) {
+
+    .deleteModal {
+        max-width: 720px;
+
+        padding: 50px 60px;
+    }
+
+    .deleteModal h3 {
+        font-size: 28px;
+    }
+
+    .deleteModal>p {
+        font-size: 17px;
+    }
+
+    .deleteWarning {
+        padding: 20px;
+
+        font-size: 15px;
+    }
+
+    .deleteActions {
+        gap: 20px;
+    }
+
+    .deleteActions button {
+        width: 225px;
+        min-width: 225px;
+
+        min-height: 50px;
+
+        font-size: 15px;
+    }
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+    .deleteOverlay {
+        padding: 20px;
+    }
+
+    .deleteModal {
+        max-width: 560px;
+
+        padding: 34px 28px;
+
+        border-radius: 18px;
+    }
+
+    .deleteIcon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .deleteIcon i {
+        font-size: 29px;
+    }
+
+    .deleteModal h3 {
+        font-size: 22px;
+    }
+
+    .deleteModal>p {
+        font-size: 15px;
+    }
+
+    .deleteWarning {
+        padding: 15px;
+
+        font-size: 13px;
+    }
+
+    .deleteActions {
+        gap: 12px;
+    }
+
+    .deleteActions button {
+        width: 190px;
+        min-width: 190px;
+
+        min-height: 45px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 550px) {
+
+    .deleteOverlay {
+        padding: 15px;
+    }
+
+    .deleteModal {
+        max-width: 100%;
+
+        padding: 28px 20px;
+
+        border-radius: 16px;
+    }
+
+    .deleteIcon {
+        width: 62px;
+        height: 62px;
+
+        margin-bottom: 18px;
+    }
+
+    .deleteIcon i {
+        font-size: 26px;
+    }
+
+    .deleteModal h3 {
+        font-size: 20px;
+    }
+
+    .deleteModal>p {
+        font-size: 14px;
+    }
+
+    .deleteWarning {
+        padding: 13px;
+
+        gap: 10px;
+
+        font-size: 13px;
+    }
+
+    .deleteWarning i {
+        font-size: 18px;
+    }
+
+
+    /* Equal width buttons */
+
+    .deleteActions {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 10px;
+    }
+
+    .deleteActions button {
+        width: 100%;
+        min-width: 0;
+
+        min-height: 44px;
+
+        padding: 10px 8px;
+
+        font-size: 13px;
+    }
+}
+
+
+/* =========================
+   VERY SMALL PHONES
+========================= */
+
+@media (max-width: 380px) {
+
+    .deleteOverlay {
+        padding: 10px;
+    }
+
+    .deleteModal {
+        padding: 24px 16px;
+    }
+
+    .deleteIcon {
+        width: 58px;
+        height: 58px;
+
+        margin-bottom: 16px;
+    }
+
+    .deleteIcon i {
+        font-size: 24px;
+    }
+
+    .deleteModal h3 {
+        font-size: 18px;
+    }
+
+    .deleteModal>p {
+        font-size: 13px;
+    }
+
+    .deleteWarning {
+        padding: 12px;
+
+        gap: 9px;
+
+        font-size: 12px;
+
+        line-height: 1.5;
+    }
+
+    .deleteWarning i {
+        font-size: 16px;
+    }
+
+
+    /* Stack buttons */
+
+    .deleteActions {
+        grid-template-columns: 1fr;
+
+        gap: 9px;
+    }
+
+    .deleteActions button {
+        width: 100%;
+        min-width: 0;
+
+        min-height: 42px;
+
+        font-size: 13px;
+    }
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes overlayFade {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes modalPop {
+
+    from {
+        opacity: 0;
+        transform: scale(0.94) translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+
+@keyframes iconFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+
+.patientDeleteLoadingSpinner {
+    display: inline-block;
+
+    animation: patientDeleteSpinnerAnimation 0.8s linear infinite;
+}
+
+
+/* =========================
+   DELETE SPINNER ANIMATION
+========================= */
+
+@keyframes patientDeleteSpinnerAnimation {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.hmsPatientFoldersServerError {
+    width: 100%;
+    min-height: 340px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 25px;
+    margin: 15px 0;
+
+    background: #ffffff;
+    border: 1px solid #f1cccc;
+    border-radius: 16px;
+
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+.hmsPatientFoldersServerErrorIcon {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+    border-radius: 50%;
+
+    background: #fff1f1;
+    color: #b42318;
+
+    font-size: 28px;
+}
+
+
+.hmsPatientFoldersServerErrorContent {
+    width: 100%;
+    max-width: 500px;
+}
+
+
+.hmsPatientFoldersServerErrorContent h3 {
+    margin: 0 0 10px;
+
+    color: #334155;
+
+    font-size: 23px;
+    font-weight: 700;
+}
+
+
+.hmsPatientFoldersServerErrorContent p {
+    margin: 0 auto 23px;
+
+    color: #64748b;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+.hmsPatientFoldersServerErrorButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 10px 19px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #087ea4;
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: opacity 0.2s ease;
+}
+
+
+.hmsPatientFoldersServerErrorButton:hover {
+    opacity: 0.88;
+}
+
+
+.hmsPatientFoldersServerErrorButton i {
+    font-size: 15px;
+}
+
+
+@media (max-width: 600px) {
+
+    .hmsPatientFoldersServerError {
+        min-height: 300px;
+        padding: 35px 20px;
+    }
+
+    .hmsPatientFoldersServerErrorIcon {
+        width: 62px;
+        height: 62px;
+        font-size: 25px;
+    }
+
+    .hmsPatientFoldersServerErrorContent h3 {
+        font-size: 21px;
+    }
+
+    .hmsPatientFoldersServerErrorContent p {
+        font-size: 13px;
+    }
+
+}
+
+
+.filterButtons {
+
+    height: 50px;
+    padding: 0 19px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    border: 1px solid #dbe3ea;
+    border-radius: 9px;
+    background: #ffffff;
+    color: #475569;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.statCard span {
+    color: #006688;
+}
+
+.statCard .red {
+    color: rgba(255, 0, 0, 0.645);
+    font-size: 0.85em;
+}
+
+.specialButtons {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.onn {
+    background-color: #087ea4;
+    color: #ffffff;
+    border: 1px solid #087ea4;
+    font-weight: 600;
+}
+
+.hmsPatientFoldersServerErrorOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(0, 0, 0, 0.18);
+    z-index: 9999;
+    animation: hmsPatientFoldersServerErrorOverlayShow 0.25s ease;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.hmsPatientFoldersServerError {
+    position: relative;
+    width: min(460px, 100%);
+    padding: 32px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
+    text-align: center;
+    font-family: "Segoe UI", sans-serif;
+    animation: hmsPatientFoldersServerErrorShow 0.3s ease;
+}
+
+.hmsPatientFoldersServerErrorClose {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background: #f1f5f9;
+    color: #475569;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.hmsPatientFoldersServerErrorClose:hover {
+    background: #dc2626;
+    color: #ffffff;
+}
+
+.hmsPatientFoldersServerErrorIcon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: #fef2f2;
+    color: #dc2626;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+}
+
+.hmsPatientFoldersServerErrorContent h3 {
+    margin: 0 0 10px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.hmsPatientFoldersServerErrorContent p {
+    margin: 0 auto 24px;
+    max-width: 360px;
+    line-height: 1.6;
+    font-size: 15px;
+    color: #64748b;
+}
+
+.hmsPatientFoldersServerErrorButton {
+    border: none;
+    border-radius: 10px;
+    padding: 11px 20px;
+    background: #087ea4;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Segoe UI", sans-serif;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: 0.2s ease;
+}
+
+.hmsPatientFoldersServerErrorButton:hover {
+    transform: translateY(-1px);
+    opacity: 0.92;
+}
+
+@keyframes hmsPatientFoldersServerErrorOverlayShow {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes hmsPatientFoldersServerErrorShow {
+    from {
+        opacity: 0;
+        transform: translateY(10px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .hmsPatientFoldersServerErrorOverlay {
+        padding: 16px;
+    }
+
+    .hmsPatientFoldersServerError {
+        width: min(340px, 100%);
+        padding: 24px 18px;
+        border-radius: 15px;
+    }
+
+    .hmsPatientFoldersServerErrorClose {
+        top: 10px;
+        right: 10px;
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .hmsPatientFoldersServerErrorIcon {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 14px;
+        font-size: 21px;
+    }
+
+    .hmsPatientFoldersServerErrorContent h3 {
+        margin-bottom: 8px;
+        font-size: 18px;
+    }
+
+    .hmsPatientFoldersServerErrorContent p {
+        max-width: 280px;
+        margin-bottom: 18px;
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .hmsPatientFoldersServerErrorButton {
+        padding: 9px 16px;
+        font-size: 13px;
+        border-radius: 8px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .hmsPatientFoldersServerErrorOverlay {
+        padding: 12px;
+    }
+
+    .hmsPatientFoldersServerError {
+        width: min(300px, 100%);
+        padding: 20px 14px;
+        border-radius: 13px;
+    }
+
+    .hmsPatientFoldersServerErrorClose {
+        top: 8px;
+        right: 8px;
+        width: 28px;
+        height: 28px;
+        font-size: 11px;
+    }
+
+    .hmsPatientFoldersServerErrorIcon {
+        width: 44px;
+        height: 44px;
+        margin-bottom: 12px;
+        font-size: 18px;
+    }
+
+    .hmsPatientFoldersServerErrorContent h3 {
+        font-size: 16px;
+        margin-bottom: 7px;
+    }
+
+    .hmsPatientFoldersServerErrorContent p {
+        max-width: 250px;
+        margin-bottom: 16px;
+        font-size: 12px;
+        line-height: 1.45;
+    }
+
+    .hmsPatientFoldersServerErrorButton {
+        padding: 8px 14px;
+        font-size: 12px;
+        gap: 6px;
+    }
+}
+
+.q {
+    background: rgb(222, 8, 8);
+    padding-right: 1.8em;
+    padding-left: 1.8em;
+}
+
+
+.patientLoadingContainer {
+    width: 100%;
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 20px;
+    font-family: "Segoe UI", sans-serif;
+    animation: patientLoadingFadeIn 0.3s ease;
+}
+
+.patientLoadingVisual {
+    position: relative;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.patientLoadingRing {
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    border: 3px solid #e0f2fe;
+    border-top-color: #087ea4;
+    border-right-color: #0e7490;
+    border-radius: 50%;
+    animation: patientLoadingSpin 1.1s linear infinite;
+}
+
+.patientLoadingIcon {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #f0f9ff;
+    color: #087ea4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    box-shadow: 0 3px 10px rgba(8, 126, 164, 0.10);
+}
+
+.patientLoadingContainer h3 {
+    margin: 0 0 6px;
+    color: #1e293b;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.patientLoadingContainer p {
+    margin: 0;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.patientLoadingDots {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 10px;
+}
+
+.patientLoadingDots span {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #087ea4;
+    animation: patientLoadingDot 1.2s infinite ease-in-out;
+}
+
+.patientLoadingDots span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.patientLoadingDots span:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.patientLoadingDots span:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+@keyframes patientLoadingSpin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes patientLoadingDot {
+
+    0%,
+    60%,
+    100% {
+        opacity: 0.3;
+        transform: translateY(0);
+    }
+
+    30% {
+        opacity: 1;
+        transform: translateY(-4px);
+    }
+}
+
+@keyframes patientLoadingFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .patientLoadingContainer {
+        min-height: 220px;
+        padding: 30px 16px;
+    }
+
+    .patientLoadingVisual {
+        width: 46px;
+        height: 46px;
+        margin-bottom: 14px;
+    }
+
+    .patientLoadingRing {
+        width: 46px;
+        height: 46px;
+        border-width: 2.5px;
+    }
+
+    .patientLoadingIcon {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    .patientLoadingContainer h3 {
+        font-size: 16px;
+    }
+
+    .patientLoadingContainer p {
+        font-size: 12px;
+    }
+
+    .patientLoadingDots {
+        margin-top: 9px;
+    }
+}
