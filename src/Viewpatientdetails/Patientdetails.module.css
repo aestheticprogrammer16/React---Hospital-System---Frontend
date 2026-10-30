@@ -1,0 +1,1365 @@
+/* =========================================================
+   PATIENT PERSONAL DETAILS PAGE
+========================================================= */
+
+.patientFormPage {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 125px 28px 60px;
+
+    box-sizing: border-box;
+
+    background: #f8fafc;
+    color: #334155;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.topBar {
+    width: 100%;
+    min-height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    margin-bottom: 25px;
+}
+
+
+.backButton,
+.errorBackButton,
+.cancelButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 44px;
+    padding: 0 17px;
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+    background: #ffffff;
+    color: #0e7490;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.backButton:hover,
+.errorBackButton:hover,
+.cancelButton:hover {
+    background: #f1f5f9;
+    border-color: #94a3b8;
+    color: #0e7490;
+}
+
+.backButton:active,
+.errorBackButton:active,
+.cancelButton:active {
+    transform: translateY(1px);
+}
+
+.backButton i,
+.errorBackButton i,
+.cancelButton i {
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   FORM ACTIONS
+========================================================= */
+
+.formActions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.viewOnlyBadge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    min-height: 38px;
+    padding: 0 14px;
+
+    border: 1px solid #bae6fd;
+    border-radius: 999px;
+
+    background: #ecfeff;
+    color: #0e7490;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.viewOnlyBadge i {
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   PAGE INTRO
+========================================================= */
+
+.pageIntro {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    padding: 26px 28px;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+
+    box-shadow: 0 5px 18px rgba(15, 23, 42, 0.04);
+
+    margin-bottom: 18px;
+}
+
+.introIcon {
+    width: 62px;
+    height: 62px;
+
+    flex: 0 0 62px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background: #0e7490;
+    color: #ffffff;
+
+    font-size: 28px;
+}
+
+.introText {
+    min-width: 0;
+}
+
+.introLabel {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    margin-bottom: 5px;
+
+    color: #0e7490;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+}
+
+.introLabel i {
+    font-size: 13px;
+}
+
+.introText h1 {
+    margin: 0;
+
+    color: #1e293b;
+
+    font-size: clamp(24px, 3vw, 34px);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.introText p {
+    max-width: 850px;
+
+    margin: 8px 0 0;
+
+    color: #64748b;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   STATUS BANNER
+========================================================= */
+
+.statusBanner {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 17px 20px;
+
+    box-sizing: border-box;
+
+    background: #f0fdfa;
+    border: 1px solid #99f6e4;
+    border-left: 4px solid #0e7490;
+    border-radius: 11px;
+
+    margin-bottom: 18px;
+}
+
+.statusIcon {
+    width: 40px;
+    height: 40px;
+
+    flex: 0 0 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #ccfbf1;
+    color: #0e7490;
+
+    font-size: 19px;
+}
+
+.statusContent {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.statusContent strong {
+    color: #134e4a;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.statusContent span {
+    color: #475569;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   RECORD ERROR
+========================================================= */
+
+.recordError {
+    width: 100%;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+
+    padding: 24px;
+
+    box-sizing: border-box;
+
+    background: #fff7f7;
+    border: 1px solid #fecaca;
+    border-left: 5px solid #dc2626;
+    border-radius: 13px;
+
+    margin-bottom: 18px;
+}
+
+.recordErrorIcon {
+    width: 48px;
+    height: 48px;
+
+    flex: 0 0 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: #fee2e2;
+    color: #dc2626;
+
+    font-size: 22px;
+}
+
+.recordErrorContent {
+    min-width: 0;
+}
+
+.recordErrorLabel {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    margin-bottom: 5px;
+
+    color: #b91c1c;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+}
+
+.recordErrorContent h2 {
+    margin: 0 0 7px;
+
+    color: #7f1d1d;
+
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.recordErrorContent p {
+    max-width: 900px;
+
+    margin: 6px 0;
+
+    color: #7f1d1d;
+
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+.recordErrorActions {
+    margin-top: 16px;
+}
+
+.errorBackButton {
+    border-color: #fecaca;
+    background: #ffffff;
+    color: #b91c1c;
+}
+
+.errorBackButton:hover {
+    background: #fef2f2;
+    border-color: #fca5a5;
+    color: #991b1b;
+}
+
+
+/* =========================================================
+   INFORMATION BOX
+========================================================= */
+
+.infoBox {
+    width: 100%;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+
+    padding: 20px 22px;
+
+    box-sizing: border-box;
+
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+
+    margin-bottom: 28px;
+}
+
+.infoBoxIcon {
+    width: 40px;
+    height: 40px;
+
+    flex: 0 0 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #e0f2fe;
+    color: #0369a1;
+
+    font-size: 18px;
+}
+
+.infoBox h3 {
+    margin: 0 0 9px;
+
+    color: #1e293b;
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.infoBox p {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+
+    margin: 6px 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.infoBox p i {
+    flex: 0 0 auto;
+
+    margin-top: 2px;
+
+    color: #0e7490;
+}
+
+
+/* =========================================================
+   PATIENT FORM
+========================================================= */
+
+.patientForm {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+/* =========================================================
+   FORM SECTION
+========================================================= */
+
+.formSection {
+    width: 100%;
+
+    padding: 26px;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.035);
+}
+
+.sectionHeader {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+
+    padding-bottom: 20px;
+    margin-bottom: 22px;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.sectionNumber {
+    width: 42px;
+    height: 42px;
+
+    flex: 0 0 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #ecfeff;
+    color: #0e7490;
+
+    border: 1px solid #a5f3fc;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.sectionHeader h2 {
+    margin: 1px 0 4px;
+
+    color: #1e293b;
+
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.sectionHeader p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   FIELDS GRID
+========================================================= */
+
+.fieldsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 20px 22px;
+}
+
+.inputGroup {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.inputGroup label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    color: #475569;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.inputGroup label i {
+    color: #0e7490;
+    font-size: 14px;
+}
+
+.viewValue {
+    width: 100%;
+    min-height: 48px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 14px;
+
+    box-sizing: border-box;
+
+    background: #f8fafc;
+    border: 1px solid #dbe3eb;
+    border-radius: 9px;
+
+    color: #334155;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.viewValue>i {
+    flex: 0 0 auto;
+
+    color: #64748b;
+    font-size: 15px;
+}
+
+.largeValue {
+    min-height: 72px;
+
+    align-items: flex-start;
+
+    line-height: 1.6;
+}
+
+.fullWidth {
+    grid-column: 1 / -1;
+}
+
+.inputGroup small {
+    color: #94a3b8;
+
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   SUMMARY SECTION
+========================================================= */
+
+.summarySection {
+    width: 100%;
+
+    padding: 26px;
+
+    box-sizing: border-box;
+
+    background: #f0fdfa;
+    border: 1px solid #ccfbf1;
+    border-radius: 14px;
+}
+
+.summaryHeader {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+
+    margin-bottom: 22px;
+}
+
+.summaryIcon {
+    width: 45px;
+    height: 45px;
+
+    flex: 0 0 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: #0e7490;
+    color: #ffffff;
+
+    font-size: 19px;
+}
+
+.summaryHeader h2 {
+    margin: 1px 0 4px;
+
+    color: #134e4a;
+
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.summaryHeader p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.summaryGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 14px;
+}
+
+.summaryCard {
+    min-width: 0;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+
+    padding: 17px;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+    border: 1px solid #ccfbf1;
+    border-radius: 11px;
+}
+
+.summaryCard>i {
+    width: 36px;
+    height: 36px;
+
+    flex: 0 0 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background: #ecfeff;
+    color: #0e7490;
+
+    font-size: 16px;
+}
+
+.summaryCard div {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.summaryCard strong {
+    color: #334155;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.summaryCard span {
+    color: #64748b;
+
+    font-size: 12px;
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.formFooter {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 20px 22px;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 13px;
+
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.035);
+}
+
+.footerMessage {
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.footerMessage>i {
+    width: 40px;
+    height: 40px;
+
+    flex: 0 0 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: #f1f5f9;
+    color: #0e7490;
+
+    font-size: 18px;
+}
+
+.footerMessage div {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.footerMessage strong {
+    color: #334155;
+
+    font-size: 13px;
+}
+
+.footerMessage span {
+    color: #64748b;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.footerActions {
+    flex: 0 0 auto;
+}
+
+
+/* =========================================================
+   LARGE SCREENS
+========================================================= */
+
+@media (min-width: 1400px) {
+
+    .patientFormPage {
+        padding-left: 38px;
+        padding-right: 38px;
+    }
+
+    .formSection,
+    .summarySection {
+        padding: 30px;
+    }
+
+    .fieldsGrid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .summaryGrid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+
+/* =========================================================
+   TABLETS
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .patientFormPage {
+        padding: 110px 20px 45px;
+    }
+
+    .pageIntro {
+        padding: 23px;
+    }
+
+    .formSection,
+    .summarySection {
+        padding: 22px;
+    }
+
+    .fieldsGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .summaryGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .formFooter {
+        align-items: flex-start;
+    }
+}
+
+
+/* =========================================================
+   SMALL TABLETS / LARGE PHONES
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .patientFormPage {
+        padding: 100px 15px 35px;
+    }
+
+    .topBar {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .backButton {
+        width: fit-content;
+    }
+
+    .formActions {
+        justify-content: flex-start;
+    }
+
+    .pageIntro {
+        align-items: flex-start;
+
+        padding: 20px;
+
+        gap: 14px;
+    }
+
+    .introIcon {
+        width: 52px;
+        height: 52px;
+        flex-basis: 52px;
+
+        font-size: 23px;
+    }
+
+    .introText h1 {
+        font-size: 25px;
+    }
+
+    .introText p {
+        font-size: 13px;
+    }
+
+    .statusBanner {
+        align-items: flex-start;
+
+        padding: 16px;
+    }
+
+    .recordError {
+        padding: 20px;
+    }
+
+    .infoBox {
+        padding: 18px;
+    }
+
+    .formSection,
+    .summarySection {
+        padding: 19px;
+    }
+
+    .fieldsGrid {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+
+    .fullWidth {
+        grid-column: auto;
+    }
+
+    .summaryGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .formFooter {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .footerActions {
+        width: 100%;
+    }
+
+    .cancelButton {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .patientFormPage {
+        padding: 88px 11px 30px;
+    }
+
+    .topBar {
+        margin-bottom: 17px;
+    }
+
+    .backButton {
+        width: 100%;
+    }
+
+    .formActions {
+        width: 100%;
+    }
+
+    .viewOnlyBadge {
+        width: 100%;
+    }
+
+    .pageIntro {
+        flex-direction: column;
+
+        padding: 18px;
+
+        border-radius: 11px;
+    }
+
+    .introIcon {
+        width: 48px;
+        height: 48px;
+        flex-basis: 48px;
+    }
+
+    .introText h1 {
+        font-size: 22px;
+    }
+
+    .introText p {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    .statusBanner {
+        gap: 11px;
+        padding: 14px;
+    }
+
+    .statusIcon {
+        width: 36px;
+        height: 36px;
+        flex-basis: 36px;
+
+        font-size: 16px;
+    }
+
+    .statusContent strong {
+        font-size: 13px;
+    }
+
+    .statusContent span {
+        font-size: 12px;
+    }
+
+    .recordError {
+        flex-direction: column;
+
+        gap: 12px;
+
+        padding: 17px;
+    }
+
+    .recordErrorIcon {
+        width: 42px;
+        height: 42px;
+        flex-basis: 42px;
+    }
+
+    .recordErrorContent h2 {
+        font-size: 17px;
+    }
+
+    .recordErrorContent p {
+        font-size: 12px;
+    }
+
+    .errorBackButton {
+        width: 100%;
+    }
+
+    .infoBox {
+        gap: 11px;
+        padding: 16px;
+    }
+
+    .infoBoxIcon {
+        width: 35px;
+        height: 35px;
+        flex-basis: 35px;
+
+        font-size: 15px;
+    }
+
+    .infoBox h3 {
+        font-size: 14px;
+    }
+
+    .infoBox p {
+        font-size: 12px;
+    }
+
+    .patientForm {
+        gap: 15px;
+    }
+
+    .formSection,
+    .summarySection {
+        padding: 17px;
+        border-radius: 11px;
+    }
+
+    .sectionHeader {
+        gap: 11px;
+
+        padding-bottom: 16px;
+        margin-bottom: 17px;
+    }
+
+    .sectionNumber {
+        width: 35px;
+        height: 35px;
+        flex-basis: 35px;
+
+        font-size: 11px;
+    }
+
+    .sectionHeader h2 {
+        font-size: 16px;
+    }
+
+    .sectionHeader p {
+        font-size: 11px;
+    }
+
+    .fieldsGrid {
+        gap: 15px;
+    }
+
+    .inputGroup label {
+        font-size: 11px;
+    }
+
+    .viewValue {
+        min-height: 45px;
+
+        padding: 10px 11px;
+
+        font-size: 13px;
+
+        border-radius: 8px;
+    }
+
+    .largeValue {
+        min-height: 65px;
+    }
+
+    .inputGroup small {
+        font-size: 10px;
+    }
+
+    .summaryHeader {
+        gap: 11px;
+    }
+
+    .summaryIcon {
+        width: 39px;
+        height: 39px;
+        flex-basis: 39px;
+
+        font-size: 16px;
+    }
+
+    .summaryHeader h2 {
+        font-size: 16px;
+    }
+
+    .summaryHeader p {
+        font-size: 11px;
+    }
+
+    .summaryGrid {
+        gap: 10px;
+    }
+
+    .summaryCard {
+        padding: 13px;
+        gap: 10px;
+    }
+
+    .summaryCard>i {
+        width: 32px;
+        height: 32px;
+        flex-basis: 32px;
+
+        font-size: 14px;
+    }
+
+    .summaryCard strong {
+        font-size: 12px;
+    }
+
+    .summaryCard span {
+        font-size: 11px;
+    }
+
+    .formFooter {
+        padding: 16px;
+    }
+
+    .footerMessage {
+        align-items: flex-start;
+    }
+
+    .footerMessage>i {
+        width: 35px;
+        height: 35px;
+        flex-basis: 35px;
+
+        font-size: 15px;
+    }
+
+    .footerMessage strong {
+        font-size: 12px;
+    }
+
+    .footerMessage span {
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 350px) {
+
+    .patientFormPage {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .pageIntro,
+    .formSection,
+    .summarySection,
+    .infoBox,
+    .recordError {
+        padding-left: 13px;
+        padding-right: 13px;
+    }
+
+    .introText h1 {
+        font-size: 20px;
+    }
+
+    .sectionHeader h2 {
+        font-size: 15px;
+    }
+
+    .viewValue {
+        font-size: 12px;
+    }
+}
+
+
+.loadingOverlay {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 99999;
+
+    background: rgba(14, 116, 144, 0.12);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+
+    animation: PDOverlayIn 0.2s ease-out;
+}
+
+.loadingBox {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    width: fit-content;
+    max-width: 100%;
+    padding: 22px 28px;
+
+    background: #ffffff;
+    border: 1px solid #99f6e4;
+    border-radius: 12px;
+
+    box-shadow: 0 12px 35px rgba(14, 116, 144, 0.13);
+    font-family: "Segoe UI", sans-serif;
+
+    animation: PDBoxIn 0.25s ease-out;
+}
+
+.loadingSpinner {
+    width: 35px;
+    height: 35px;
+    flex-shrink: 0;
+    border: 4px solid #ccfbf1;
+    border-top-color: #0e7490;
+    border-right-color: #0e7490;
+    border-radius: 50%;
+
+    animation: PDSpin 0.7s linear infinite;
+}
+
+.loadingText {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+}
+
+.loadingText h3 {
+    margin: 0;
+    color: #0e7490;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.loadingText p {
+    margin: 0;
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+@keyframes PDSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes PDOverlayIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes PDBoxIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media (max-width: 480px) {
+    .loadingBox {
+        gap: 13px;
+        padding: 18px 20px;
+        border-radius: 10px;
+    }
+
+    .loadingSpinner {
+        width: 30px;
+        height: 30px;
+        border-width: 3px;
+    }
+
+    .loadingText h3 {
+        font-size: 15px;
+    }
+
+    .loadingText p {
+        font-size: 12px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .loadingOverlay,
+    .loadingBox {
+        animation: none;
+    }
+
+    .loadingSpinner {
+        animation-duration: 1.5s;
+    }
+}
