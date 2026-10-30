@@ -55,17 +55,25 @@ function Reports() {
             const response = await axios.get(`${API}/patient/fetch-patient-records`)
             const results = response.data
 
-            if (results.success === true) {
+            if (results.success === true && results.exist === true) {
                 setActive(true)
                 setFetchedPatients(results.patients)
                 setFilterPatients(results.patients)
                 console.log(results.patients)
                 setCount(results.patients.length)
 
-            } else {
+            } else if (results.success === true && results.exist === false) {
                 setActive(true)
                 setFetchedPatients([])
                 setFilterPatients([])
+                console.log(results.message)
+
+            } else {
+                setActive(true)
+                setActive2(true)
+                setFetchedPatients([])
+                setFilterPatients([])
+                console.log(results.message)
 
             }
         } catch (error) {
